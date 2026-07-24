@@ -69,6 +69,7 @@ export default function Home() {
           <div className="real-phone real-phone-side">
             <span className="dynamic-island" aria-hidden="true" />
             <img src="/screens/chat-list-real.png" alt="Real Waow chat list populated with recent conversations" />
+            <img className="chat-row-overlay" src="/screens/single-chat-overlay.png" alt="Andrew unread chat preview" />
           </div>
           <img className="hero-app-icon" src="/waow-app-icon.png" alt="Waow app icon" />
         </div>
@@ -213,15 +214,11 @@ export default function Home() {
               <span className="dynamic-island" aria-hidden="true" />
               <img src="/screens/translation-real.png" alt="Real Waow conversation translated between Lao and English" />
             </div>
-            <div className="translation-card translation-original">
-              <span>LAO</span>
-              <p>ສະບາຍດີ, ພົບກັນຕອນແລງໄດ້ບໍ?</p>
-            </div>
-            <div className="translation-card translation-result">
-              <span>ENGLISH · TRANSLATED</span>
-              <p>Hello, can we meet this evening?</p>
-              <small>Instant translation</small>
-            </div>
+            <img
+              className="translation-message-overlay"
+              src="/screens/translation-overlay.png"
+              alt="Real Waow message showing English translation, Lao script and Latin transliteration"
+            />
           </div>
           <div className="translation-copy">
             <span className="eyebrow eyebrow-light">Instant translation</span>
