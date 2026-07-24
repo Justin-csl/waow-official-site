@@ -33,11 +33,11 @@ test("server-renders the finished Waow homepage and metadata", async () => {
   assert.match(html, /Every conversation deserves a little/);
   assert.match(html, /Private messaging, expressive media and clear calling/);
   assert.match(html, /waow-app-icon\.png/);
+  assert.match(html, /new-land\.png/);
   assert.match(html, /screens\/chat-list-real\.png/);
   assert.match(html, /screens\/chat-real\.png/);
   assert.match(html, /screens\/translation-real\.png/);
   assert.match(html, /screens\/translation-overlay\.png/);
-  assert.match(html, /screens\/single-chat-overlay\.png/);
   assert.match(html, /screens\/login-real\.png/);
   assert.match(html, /Available on the App Store soon/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Starter Project/);

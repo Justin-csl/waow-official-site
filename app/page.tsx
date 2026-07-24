@@ -59,15 +59,12 @@ export default function Home() {
           <p className="microcopy">Available on the App Store soon.</p>
         </div>
 
-        <div className="hero-visual real-product-hero" aria-label="Real Waow app screens">
-          <div className="real-phone real-phone-main">
-            <img src="/screens/chat-real.png" alt="Real Waow conversation showing messages and calling controls" />
-          </div>
-          <div className="real-phone real-phone-side">
-            <img src="/screens/chat-list-real.png" alt="Real Waow chat list populated with recent conversations" />
-            <img className="chat-row-overlay" src="/screens/single-chat-overlay.png" alt="Andrew unread chat preview" />
-          </div>
-          <img className="hero-app-icon" src="/waow-app-icon.png" alt="Waow app icon" />
+        <div className="hero-visual real-product-hero" aria-label="Waow app showcase">
+          <img
+            className="hero-landing-art"
+            src="/new-land.png"
+            alt="Waow app shown across chat list, welcome and Lao cultural screens"
+          />
         </div>
       </section>
 
