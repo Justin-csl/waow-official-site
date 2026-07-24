@@ -7,7 +7,7 @@ const features = [
     title: "Conversations that feel effortless.",
     copy: "Reply, react, edit and share the moments that matter—in one-to-one chats or with your whole group.",
     visual: "message",
-    image: "/screens/personal-chat.png",
+    image: "/screens/chat-real.png",
     imageAlt: "Real Waow conversation screen",
   },
   {
@@ -15,7 +15,7 @@ const features = [
     title: "Calls that bring everyone together.",
     copy: "Move naturally from a message to a private voice or video call, with group calling for the people who matter.",
     visual: "call",
-    image: "/screens/group-chat.png",
+    image: "/screens/translation-real.png",
     imageAlt: "Real Waow group conversation with calling controls",
   },
   {
@@ -64,11 +64,11 @@ export default function Home() {
           <div className="orbit orbit-two" />
           <div className="real-phone real-phone-main">
             <span className="dynamic-island" aria-hidden="true" />
-            <img src="/screens/personal-chat.png" alt="Waow personal chat showing messages, calls and shared media" />
+            <img src="/screens/chat-real.png" alt="Real Waow conversation showing messages and calling controls" />
           </div>
           <div className="real-phone real-phone-side">
             <span className="dynamic-island" aria-hidden="true" />
-            <img src="/screens/chat-list.png" alt="Waow chat list in Lao" />
+            <img src="/screens/chat-list-real.png" alt="Real Waow chat list populated with recent conversations" />
           </div>
           <img className="hero-app-icon" src="/waow-app-icon.png" alt="Waow app icon" />
         </div>
@@ -192,15 +192,15 @@ export default function Home() {
         <div className="screen-gallery">
           <div className="gallery-phone gallery-left">
             <span className="dynamic-island" aria-hidden="true" />
-            <img src="/screens/chat-list.png" alt="Waow chats screen" />
+            <img src="/screens/chat-list-real.png" alt="Real Waow chats screen" />
           </div>
           <div className="gallery-phone gallery-centre">
             <span className="dynamic-island" aria-hidden="true" />
-            <img src="/screens/group-chat.png" alt="Waow group conversation screen" />
+            <img src="/screens/chat-real.png" alt="Real Waow conversation screen" />
           </div>
           <div className="gallery-phone gallery-right">
             <span className="dynamic-island" aria-hidden="true" />
-            <img src="/screens/contact-info.png" alt="Waow contact information screen" />
+            <img src="/screens/translation-real.png" alt="Real Waow instant translation conversation" />
           </div>
         </div>
       </section>
@@ -211,7 +211,7 @@ export default function Home() {
             <div className="translation-glow" />
             <div className="translation-phone">
               <span className="dynamic-island" aria-hidden="true" />
-              <img src="/screens/personal-chat.png" alt="Real Waow conversation translated between Lao and English" />
+              <img src="/screens/translation-real.png" alt="Real Waow conversation translated between Lao and English" />
             </div>
             <div className="translation-card translation-original">
               <span>LAO</span>
@@ -241,13 +241,19 @@ export default function Home() {
       <section className="onboarding-band">
         <div className="shell onboarding-layout">
           <div className="onboarding-screens">
-            <div className="setup-phone setup-back"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/login.png" alt="Waow login screen" /></div>
-            <div className="setup-phone setup-front"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/onboarding.png" alt="Waow onboarding screen" /></div>
+            <div className="setup-phone setup-back"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/login-real.png" alt="Real Waow phone-number login screen" /></div>
+            <div className="setup-phone setup-middle"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/onboarding-stay-connected.png" alt="Real Waow stay-connected onboarding screen" /></div>
+            <div className="setup-phone setup-front"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/onboarding-connection.png" alt="Real Waow connection onboarding screen" /></div>
           </div>
           <div className="onboarding-copy">
             <span className="eyebrow eyebrow-light">Simple from the start</span>
             <h2>From hello to your first message in a few clear steps.</h2>
             <p>Sign in with your phone number, verify securely, set up your profile and start talking.</p>
+            <div className="onboarding-preview-row" aria-label="Real Waow onboarding screens">
+              <img src="/screens/onboarding-stay-connected.png" alt="Stay connected onboarding preview" />
+              <img src="/screens/onboarding-typing.png" alt="Typing and conversation onboarding preview" />
+              <img src="/screens/onboarding-connection.png" alt="Connection onboarding preview" />
+            </div>
           </div>
         </div>
       </section>
