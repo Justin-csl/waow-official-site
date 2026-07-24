@@ -180,28 +180,34 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section shell product-showcase">
-        <div className="showcase-copy">
-          <span className="eyebrow">The real Waow experience</span>
-          <h2>Designed around real conversations.</h2>
-          <p>
-            Browse chats, share media, talk in groups and manage the details
-            that make every conversation feel personal.
-          </p>
-          <Link className="text-link" href="/features">Explore every feature <span>→</span></Link>
-        </div>
-        <div className="screen-gallery">
-          <div className="gallery-phone gallery-left">
-            <span className="dynamic-island" aria-hidden="true" />
-            <img src="/screens/chat-list-real.png" alt="Real Waow chats screen" />
+      <section className="campaign-showcase">
+        <div className="campaign-beam campaign-beam-left" />
+        <div className="campaign-beam campaign-beam-right" />
+        <div className="shell campaign-inner">
+          <div className="campaign-heading">
+            <img src="/waow-app-icon.png" alt="" />
+            <span className="eyebrow eyebrow-light">The real Waow experience</span>
+            <h2>Every conversation.<br />One beautiful place.</h2>
+            <p>Real chats, instant translation and simple calling—shown exactly as they feel inside Waow.</p>
           </div>
-          <div className="gallery-phone gallery-centre">
-            <span className="dynamic-island" aria-hidden="true" />
-            <img src="/screens/chat-real.png" alt="Real Waow conversation screen" />
+          <div className="screen-gallery">
+            <span className="phone-glow phone-glow-left" />
+            <span className="phone-glow phone-glow-right" />
+            <div className="gallery-phone gallery-left">
+              <span className="dynamic-island" aria-hidden="true" />
+              <img src="/screens/chat-list-real.png" alt="Real Waow chats screen" />
+            </div>
+            <div className="gallery-phone gallery-centre">
+              <span className="dynamic-island" aria-hidden="true" />
+              <img src="/screens/chat-real.png" alt="Real Waow conversation screen" />
+            </div>
+            <div className="gallery-phone gallery-right">
+              <span className="dynamic-island" aria-hidden="true" />
+              <img src="/screens/translation-real.png" alt="Real Waow instant translation conversation" />
+            </div>
           </div>
-          <div className="gallery-phone gallery-right">
-            <span className="dynamic-island" aria-hidden="true" />
-            <img src="/screens/translation-real.png" alt="Real Waow instant translation conversation" />
+          <div className="campaign-action">
+            <Link className="button button-light" href="/features">Explore every feature <span>→</span></Link>
           </div>
         </div>
       </section>

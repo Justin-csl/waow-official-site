@@ -263,18 +263,43 @@ h1, h2, h3, p { margin-top: 0; }
 .tablet-contact small { color: #52a97d; font-size: 8px; }
 .tablet-message, .tablet-reply { width: fit-content; max-width: 72%; padding: 12px 14px; border-radius: 14px; background: white; box-shadow: 0 5px 15px rgba(16,33,72,.07); font-size: 10px; }
 .tablet-reply { margin: 15px 0 0 auto; background: var(--blue); color: white; }
-.product-showcase { display: grid; grid-template-columns: .72fr 1.28fr; align-items: center; gap: 70px; }
-.showcase-copy p { margin: 28px 0 30px; color: var(--muted); font-size: 17px; line-height: 1.65; }
-.showcase-copy h2 { margin-bottom: 0; font-size: clamp(42px, 5vw, 66px); line-height: 1.04; letter-spacing: -.052em; }
-.screen-gallery { position: relative; min-height: 650px; }
+.campaign-showcase {
+  position: relative; overflow: hidden; min-height: 980px; color: white;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(139,67,255,.58), transparent 30%),
+    radial-gradient(circle at 7% 58%, rgba(31,98,255,.42), transparent 27%),
+    radial-gradient(circle at 92% 61%, rgba(212,48,255,.34), transparent 26%),
+    linear-gradient(135deg, #061943 0%, #102e83 40%, #4b168e 72%, #1d0b4f 100%);
+}
+.campaign-showcase::before {
+  content: ""; position: absolute; inset: 0; opacity: .22;
+  background: repeating-linear-gradient(115deg, transparent 0 115px, rgba(255,255,255,.08) 116px 117px, transparent 118px 235px);
+}
+.campaign-showcase::after {
+  content: ""; position: absolute; width: 760px; height: 250px; left: 50%; bottom: -130px; transform: translateX(-50%);
+  border-radius: 50%; background: #6528d7; filter: blur(80px); opacity: .62;
+}
+.campaign-inner { position: relative; padding-block: 76px 66px; z-index: 2; }
+.campaign-heading { position: relative; z-index: 6; max-width: 760px; margin: 0 auto -24px; text-align: center; }
+.campaign-heading > img { width: 58px; height: 58px; margin-bottom: 16px; border: 3px solid rgba(255,255,255,.72); border-radius: 17px; box-shadow: 0 14px 34px rgba(0,0,0,.28); }
+.campaign-heading h2 { margin: 14px 0 15px; font-size: clamp(45px, 5vw, 68px); line-height: .98; letter-spacing: -.055em; }
+.campaign-heading p { max-width: 620px; margin-inline: auto; color: #d4d9f6; font-size: 16px; line-height: 1.6; }
+.campaign-beam { position: absolute; width: 330px; height: 120%; top: -10%; opacity: .18; filter: blur(18px); background: linear-gradient(90deg, transparent, #e570ff, transparent); }
+.campaign-beam-left { left: 8%; transform: rotate(18deg); }
+.campaign-beam-right { right: 7%; transform: rotate(-17deg); }
+.screen-gallery { position: relative; min-height: 660px; max-width: 850px; margin-inline: auto; perspective: 1300px; }
 .gallery-phone {
   position: absolute; top: 50%; overflow: hidden; border: 7px solid #101a38; border-radius: 34px;
-  background: #111b3a; box-shadow: -5px 6px 0 #293858, 0 35px 65px rgba(16,33,72,.22);
+  background: #111b3a; box-shadow: -6px 7px 0 #293858, 0 42px 75px rgba(0,0,0,.44), 0 0 42px rgba(189,68,255,.34);
 }
 .gallery-phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
-.gallery-left { width: 225px; height: 490px; left: 0; transform: translateY(-46%) rotate(-7deg); }
-.gallery-centre { width: 265px; height: 575px; left: 32%; z-index: 2; transform: translateY(-50%); }
-.gallery-right { width: 220px; height: 490px; right: 0; transform: translateY(-46%) rotate(7deg); }
+.gallery-left { width: 260px; height: 565px; left: 2%; z-index: 1; transform: translateY(-43%) rotateY(18deg) rotateZ(-8deg); }
+.gallery-centre { width: 305px; height: 650px; left: 50%; z-index: 3; transform: translate(-50%, -45%) rotateY(-2deg); }
+.gallery-right { width: 255px; height: 555px; right: 2%; z-index: 2; transform: translateY(-43%) rotateY(-18deg) rotateZ(8deg); }
+.phone-glow { position: absolute; top: 47%; z-index: 5; width: 34px; height: 34px; border-radius: 50%; background: white; filter: blur(3px); box-shadow: 0 0 14px white, 0 0 35px #e067ff, 0 0 80px #b633ff; }
+.phone-glow-left { left: 18%; }
+.phone-glow-right { right: 17%; }
+.campaign-action { position: relative; z-index: 6; margin-top: -42px; text-align: center; }
 .translation-band {
   position: relative; overflow: hidden; color: white;
   background: radial-gradient(circle at 18% 45%, rgba(81,139,255,.38), transparent 32%), linear-gradient(125deg, #07152f, #102d70 55%, #1754e8);
