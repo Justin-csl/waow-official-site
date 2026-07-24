@@ -63,9 +63,11 @@ export default function Home() {
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
           <div className="real-phone real-phone-main">
+            <span className="dynamic-island" aria-hidden="true" />
             <img src="/screens/personal-chat.png" alt="Waow personal chat showing messages, calls and shared media" />
           </div>
           <div className="real-phone real-phone-side">
+            <span className="dynamic-island" aria-hidden="true" />
             <img src="/screens/chat-list.png" alt="Waow chat list in Lao" />
           </div>
           <img className="hero-app-icon" src="/waow-app-icon.png" alt="Waow app icon" />
@@ -189,13 +191,49 @@ export default function Home() {
         </div>
         <div className="screen-gallery">
           <div className="gallery-phone gallery-left">
+            <span className="dynamic-island" aria-hidden="true" />
             <img src="/screens/chat-list.png" alt="Waow chats screen" />
           </div>
           <div className="gallery-phone gallery-centre">
+            <span className="dynamic-island" aria-hidden="true" />
             <img src="/screens/group-chat.png" alt="Waow group conversation screen" />
           </div>
           <div className="gallery-phone gallery-right">
+            <span className="dynamic-island" aria-hidden="true" />
             <img src="/screens/contact-info.png" alt="Waow contact information screen" />
+          </div>
+        </div>
+      </section>
+
+      <section className="translation-band">
+        <div className="shell translation-layout">
+          <div className="translation-visual" aria-label="Instant translation inside a real Waow conversation">
+            <div className="translation-glow" />
+            <div className="translation-phone">
+              <span className="dynamic-island" aria-hidden="true" />
+              <img src="/screens/personal-chat.png" alt="Real Waow conversation translated between Lao and English" />
+            </div>
+            <div className="translation-card translation-original">
+              <span>LAO</span>
+              <p>ສະບາຍດີ, ພົບກັນຕອນແລງໄດ້ບໍ?</p>
+            </div>
+            <div className="translation-card translation-result">
+              <span>ENGLISH · TRANSLATED</span>
+              <p>Hello, can we meet this evening?</p>
+              <small>Instant translation</small>
+            </div>
+          </div>
+          <div className="translation-copy">
+            <span className="eyebrow eyebrow-light">Instant translation</span>
+            <h2>Understand every conversation, instantly.</h2>
+            <p>
+              Translate messages inside the chat while keeping the original
+              meaning close at hand. Move naturally between Lao and English
+              without leaving Waow.
+            </p>
+            <div className="language-pills">
+              <span>ລາວ</span><b>⇄</b><span>English</span>
+            </div>
           </div>
         </div>
       </section>
@@ -203,8 +241,8 @@ export default function Home() {
       <section className="onboarding-band">
         <div className="shell onboarding-layout">
           <div className="onboarding-screens">
-            <div className="setup-phone setup-back"><img src="/screens/login.png" alt="Waow login screen" /></div>
-            <div className="setup-phone setup-front"><img src="/screens/onboarding.png" alt="Waow onboarding screen" /></div>
+            <div className="setup-phone setup-back"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/login.png" alt="Waow login screen" /></div>
+            <div className="setup-phone setup-front"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/onboarding.png" alt="Waow onboarding screen" /></div>
           </div>
           <div className="onboarding-copy">
             <span className="eyebrow eyebrow-light">Simple from the start</span>
