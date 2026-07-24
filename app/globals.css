@@ -106,8 +106,8 @@ h1, h2, h3, p { margin-top: 0; }
 .promise-inner p { margin: 0; display: flex; align-items: center; gap: 13px; color: #53627f; font-size: 13px; font-weight: 650; letter-spacing: .03em; }
 .promise-icon {
   width: 43px; height: 43px; display: grid; place-items: center; flex: 0 0 43px;
-  border: 1px solid #d9e4fa; border-radius: 14px; background: #eef4ff;
-  box-shadow: 0 9px 20px rgba(23,84,232,.1); font-size: 20px; line-height: 1;
+  border: 1px solid #d9e4fa; border-radius: 14px; background: #eef4ff; color: var(--blue);
+  box-shadow: 0 9px 20px rgba(23,84,232,.1); font-size: 23px; line-height: 1;
 }
 .laos-story {
   position: relative; overflow: hidden; color: white;
