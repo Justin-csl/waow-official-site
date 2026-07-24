@@ -80,11 +80,13 @@ export default function Home() {
           <div className="laos-art" aria-label="Illustrated cultural landmarks and symbols of Laos">
             <div className="laos-sun" />
             <img className="laos-map-art" src="/laos/laos-map-culture.png" alt="Map of Laos illustrated with temples, monuments, an elephant, flowers and a tuk-tuk" />
-            <img className="laos-gate-art" src="/laos/traditional-gate.png" alt="" />
-            <img className="laos-tuktuk-art" src="/laos/tuk-tuk.png" alt="" />
+            <div className="laos-brand-chip">
+              <img src="/waow-app-icon.png" alt="" />
+              <span><b>Designed in Laos</b><small>Made to connect everyone</small></span>
+            </div>
           </div>
           <div className="laos-story-copy">
-            <span className="eyebrow eyebrow-gold">Rooted in Laos</span>
+            <span className="eyebrow eyebrow-laos">Rooted in Laos</span>
             <h2>Local character.<br />A world of conversations.</h2>
             <p>
               Waow takes inspiration from the warmth, colour and unmistakable
