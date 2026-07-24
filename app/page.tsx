@@ -6,19 +6,25 @@ const features = [
     tag: "MESSAGE FREELY",
     title: "Conversations that feel effortless.",
     copy: "Reply, react, edit and share the moments that matter—in one-to-one chats or with your whole group.",
-    icon: "✦",
+    visual: "message",
+    image: "/screens/personal-chat.png",
+    imageAlt: "Real Waow conversation screen",
   },
   {
     tag: "STAY CLOSE",
     title: "Calls that bring everyone together.",
     copy: "Move naturally from a message to a private voice or video call, with group calling for the people who matter.",
-    icon: "◉",
+    visual: "call",
+    image: "/screens/group-chat.png",
+    imageAlt: "Real Waow group conversation with calling controls",
   },
   {
     tag: "MAKE IT YOURS",
     title: "Create before you send.",
     copy: "Crop photos, shape video clips, add captions and choose the quality that fits the moment.",
-    icon: "◇",
+    visual: "media",
+    image: "/laos/lao-character.png",
+    imageAlt: "Lao character being prepared to share in Waow",
   },
 ];
 
@@ -116,7 +122,29 @@ export default function Home() {
         <div className="feature-grid">
           {features.map((feature, index) => (
             <article className={`feature-card feature-${index + 1}`} key={feature.title}>
-              <div className="feature-icon">{feature.icon}</div>
+              <div className={`feature-visual feature-visual-${feature.visual}`}>
+                <img src={feature.image} alt={feature.imageAlt} />
+                {feature.visual === "message" && (
+                  <div className="feature-visual-badge">
+                    <span className="badge-symbol">♥</span>
+                    <span><b>Reply sent</b><small>Delivered instantly</small></span>
+                  </div>
+                )}
+                {feature.visual === "call" && (
+                  <div className="feature-call-actions" aria-label="Voice and video calling">
+                    <span aria-hidden="true">●</span>
+                    <b>Voice &amp; video</b>
+                  </div>
+                )}
+                {feature.visual === "media" && (
+                  <>
+                    <div className="feature-edit-toolbar" aria-label="Photo editing controls">
+                      <span>↶</span><span>Crop</span><span>Adjust</span><b>Done</b>
+                    </div>
+                    <div className="feature-caption">Add a caption…</div>
+                  </>
+                )}
+              </div>
               <span>{feature.tag}</span>
               <h3>{feature.title}</h3>
               <p>{feature.copy}</p>
