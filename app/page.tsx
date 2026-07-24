@@ -29,10 +29,10 @@ const features = [
 ];
 
 const trustPoints = [
-  ["Chat lock", "Protect selected conversations with Face ID."],
-  ["Hidden chats", "Keep your locked-chat folder out of the normal inbox."],
-  ["Private previews", "Conceal sensitive notification details."],
-  ["Clear controls", "Choose who can reach you and what they can see."],
+  ["Chat lock", "Protect selected conversations with Face ID.", "lock"],
+  ["Hidden chats", "Keep your locked-chat folder out of the normal inbox.", "visibility_off"],
+  ["Private previews", "Conceal sensitive notification details.", "notifications_off"],
+  ["Clear controls", "Choose who can reach you and what they can see.", "privacy_tip"],
 ];
 
 export default function Home() {
@@ -163,9 +163,12 @@ export default function Home() {
             </Link>
           </div>
           <div className="privacy-list">
-            {trustPoints.map(([title, copy], index) => (
+            {trustPoints.map(([title, copy, icon], index) => (
               <div className="privacy-point" key={title}>
-                <span>0{index + 1}</span>
+                <div className="privacy-point-icon">
+                  <span className="material-symbols-rounded" aria-hidden="true">{icon}</span>
+                  <small>0{index + 1}</small>
+                </div>
                 <div><h3>{title}</h3><p>{copy}</p></div>
               </div>
             ))}
