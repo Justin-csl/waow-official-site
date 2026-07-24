@@ -74,6 +74,32 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="laos-story">
+        <div className="laos-pattern" aria-hidden="true" />
+        <div className="shell laos-story-layout">
+          <div className="laos-art" aria-label="Illustrated cultural landmarks and symbols of Laos">
+            <div className="laos-sun" />
+            <img className="laos-map-art" src="/laos/laos-map-culture.png" alt="Map of Laos illustrated with temples, monuments, an elephant, flowers and a tuk-tuk" />
+            <img className="laos-gate-art" src="/laos/traditional-gate.png" alt="" />
+            <img className="laos-tuktuk-art" src="/laos/tuk-tuk.png" alt="" />
+          </div>
+          <div className="laos-story-copy">
+            <span className="eyebrow eyebrow-gold">Rooted in Laos</span>
+            <h2>Local character.<br />A world of conversations.</h2>
+            <p>
+              Waow takes inspiration from the warmth, colour and unmistakable
+              spirit of Laos—from temple rooftops and handwoven patterns to the
+              everyday energy of life along the Mekong.
+            </p>
+            <div className="lao-values">
+              <div><span>ສ</span><b>Warm by nature</b><small>Made for genuine connection</small></div>
+              <div><span>ລ</span><b>Proudly Lao</b><small>Designed with local identity</small></div>
+              <div><span>ວ</span><b>Open to everyone</b><small>Built to connect beyond borders</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section shell" id="features">
         <div className="section-heading">
           <div>
