@@ -60,6 +60,12 @@ h1, h2, h3, p { margin-top: 0; }
 .hero h1 { max-width: 610px; margin-bottom: 28px; font-size: clamp(54px, 6vw, 82px); line-height: .98; letter-spacing: -.065em; font-weight: 690; }
 .hero h1 em { color: var(--blue); font-family: Georgia, serif; font-weight: 500; }
 .hero-lede { max-width: 560px; color: var(--muted); font-size: 20px; line-height: 1.6; }
+.hero-trust {
+  width: fit-content; margin-top: 22px; padding: 9px 13px; display: flex; align-items: center; gap: 8px;
+  border: 1px solid #d9e4fa; border-radius: 999px; background: white; color: #405274;
+  box-shadow: 0 8px 24px rgba(23,84,232,.08); font-size: 12px; font-weight: 720;
+}
+.hero-trust .material-symbols-rounded { color: var(--blue); font-size: 18px; }
 .hero-actions { display: flex; align-items: center; gap: 28px; margin-top: 34px; }
 .microcopy { margin: 14px 0 0 5px; color: #8a96ad; font-size: 12px; }
 
@@ -100,6 +106,18 @@ h1, h2, h3, p { margin-top: 0; }
 .real-product-hero { min-height: 640px; align-self: start; padding: 0; }
 .real-product-hero::before { display: none; }
 .hero-landing-art { display: block; width: min(650px, 110%); height: auto; max-height: 650px; object-fit: contain; filter: drop-shadow(0 30px 42px rgba(16,33,72,.18)); }
+.love-orbit {
+  position: absolute; z-index: 2; display: grid; place-items: center; color: white;
+  background: linear-gradient(145deg, #ff7fac, #e94d86); box-shadow: 0 14px 30px rgba(222,55,115,.28);
+  animation: love-float 5s ease-in-out infinite;
+}
+.love-orbit-one { width: 46px; height: 46px; top: 18%; left: 8%; border-radius: 16px 16px 16px 5px; font-size: 18px; }
+.love-orbit-two { width: 34px; height: 34px; top: 10%; right: 12%; border-radius: 50%; font-size: 13px; animation-delay: -1.8s; }
+.love-orbit-three { width: 40px; height: 40px; right: 3%; bottom: 22%; border-radius: 14px 14px 5px 14px; font-size: 15px; animation-delay: -3.2s; }
+@keyframes love-float {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50% { transform: translateY(-13px) rotate(4deg); }
+}
 
 .promise-strip { border-block: 1px solid var(--line); background: white; }
 .promise-inner { min-height: 110px; display: flex; align-items: center; justify-content: space-around; gap: 20px; }
@@ -391,6 +409,9 @@ footer div > a:not(.brand) { display: block; margin: 15px 0; color: #c6d0e2; fon
   .hero-actions { flex-direction: column; gap: 20px; }
   .hero-visual { min-height: 560px; transform: scale(.9); margin-inline: -20px; }
   .hero-landing-art { width: 112%; max-width: none; }
+  .love-orbit-one { left: 3%; }
+  .love-orbit-two { right: 6%; }
+  .love-orbit-three { right: 1%; }
   .floating-lock { left: -3%; }
   .floating-call { right: -5%; }
   .promise-inner { min-height: 210px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 13px; }

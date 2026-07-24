@@ -29,10 +29,10 @@ const features = [
 ];
 
 const trustPoints = [
+  ["End-to-end encryption", "Personal messages and calls stay between you and the people you choose.", "encrypted"],
   ["Chat lock", "Protect selected conversations with Face ID.", "lock"],
   ["Hidden chats", "Keep your locked-chat folder out of the normal inbox.", "visibility_off"],
   ["Private previews", "Conceal sensitive notification details.", "notifications_off"],
-  ["Clear controls", "Choose who can reach you and what they can see.", "privacy_tip"],
 ];
 
 export default function Home() {
@@ -42,12 +42,16 @@ export default function Home() {
 
       <section className="hero shell">
         <div className="hero-copy">
-          <div className="eyebrow">A better way to stay close</div>
-          <h1>Every conversation deserves a little <em>waow.</em></h1>
+          <div className="eyebrow">Made for the people you love</div>
+          <h1>Keep love moving, one <em>waow</em> at a time.</h1>
           <p className="hero-lede">
-            Private messaging, expressive media and clear calling—thoughtfully
-            designed for iPhone and iPad.
+            End-to-end encrypted messaging, expressive media and clear
+            calling—made to keep your favourite people close.
           </p>
+          <div className="hero-trust">
+            <span className="material-symbols-rounded" aria-hidden="true">encrypted</span>
+            End-to-end encrypted
+          </div>
           <div className="hero-actions">
             <Link className="button button-primary" href="/download">
               Download for iOS <span>↗</span>
@@ -60,6 +64,9 @@ export default function Home() {
         </div>
 
         <div className="hero-visual real-product-hero" aria-label="Waow app showcase">
+          <span className="love-orbit love-orbit-one" aria-hidden="true">♥</span>
+          <span className="love-orbit love-orbit-two" aria-hidden="true">♥</span>
+          <span className="love-orbit love-orbit-three" aria-hidden="true">♥</span>
           <img
             className="hero-landing-art"
             src="/new-land.png"
@@ -70,8 +77,8 @@ export default function Home() {
 
       <section className="promise-strip">
         <div className="shell promise-inner">
-          <p><span className="promise-icon material-symbols-rounded" aria-hidden="true">connect_without_contact</span>Built for connection.</p>
-          <p><span className="promise-icon material-symbols-rounded" aria-hidden="true">lock</span>Designed for privacy.</p>
+          <p><span className="promise-icon material-symbols-rounded" aria-hidden="true">favorite</span>Made for people you love.</p>
+          <p><span className="promise-icon material-symbols-rounded" aria-hidden="true">encrypted</span>End-to-end encrypted.</p>
           <p><span className="promise-icon material-symbols-rounded" aria-hidden="true">location_on</span>Made in Laos.</p>
         </div>
       </section>
@@ -152,11 +159,12 @@ export default function Home() {
       <section className="privacy-band">
         <div className="shell privacy-layout">
           <div className="privacy-copy">
-            <span className="eyebrow eyebrow-light">Privacy, made practical</span>
-            <h2>Your private spaces stay private.</h2>
+            <span className="eyebrow eyebrow-light">Love freely. Speak privately.</span>
+            <h2>Protected from hello to heart.</h2>
             <p>
+              End-to-end encryption protects personal messages and calls, while
               Face ID chat lock, hidden conversations and discreet previews give
-              you understandable control without getting in the way.
+              you clear control over your private spaces.
             </p>
             <Link className="button button-light" href="/privacy">
               Explore privacy <span>→</span>

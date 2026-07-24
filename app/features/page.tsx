@@ -3,10 +3,11 @@ import { PageHero, SiteFooter, SiteHeader } from "../site-shell";
 
 export const metadata: Metadata = {
   title: "Features",
-  description: "Discover messaging, calls, media, groups and iPad experiences in Waow.",
+  description: "Discover end-to-end encrypted messaging, calls, media, groups and iPad experiences in Waow.",
 };
 
 const items = [
+  ["End-to-end encryption", "Personal messages and calls are protected so they stay between you and the people you choose.", "encrypted"],
   ["Messaging", "Reply, edit, react and share without losing the natural rhythm of a conversation.", "mark_chat_unread"],
   ["Groups", "Create a space for family, friends or teams, with media and group calling close at hand.", "groups"],
   ["Voice & video", "Start clear one-to-one or group calls directly from the people and conversations you know.", "video_call"],

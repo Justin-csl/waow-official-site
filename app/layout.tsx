@@ -7,18 +7,18 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://waow.chat"),
-  title: { default: "Waow — Every conversation deserves a little waow", template: "%s · Waow" },
-  description: "Private messaging, expressive media and clear calling—thoughtfully designed for iPhone and iPad.",
+  title: { default: "Waow — Keep love moving", template: "%s · Waow" },
+  description: "End-to-end encrypted messaging, expressive media and clear calling—made to keep your favourite people close.",
   icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
   openGraph: {
-    title: "Waow — Stay close, beautifully",
-    description: "Private messaging, expressive media and clear calling for iPhone and iPad.",
+    title: "Waow — Keep love moving",
+    description: "End-to-end encrypted messaging, expressive media and clear calling—made for the people you love.",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Waow — Stay close, beautifully",
-    description: "Private messaging, expressive media and clear calling for iPhone and iPad.",
+    title: "Waow — Keep love moving",
+    description: "End-to-end encrypted messaging, expressive media and clear calling—made for the people you love.",
   },
 };
 
