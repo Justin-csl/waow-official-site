@@ -191,18 +191,13 @@ export default function Home() {
             <p>Real chats, instant translation and simple calling—shown exactly as they feel inside Waow.</p>
           </div>
           <div className="screen-gallery">
-            <span className="phone-glow phone-glow-left" />
-            <span className="phone-glow phone-glow-right" />
             <div className="gallery-phone gallery-left">
-              <span className="dynamic-island" aria-hidden="true" />
               <img src="/screens/chat-list-real.png" alt="Real Waow chats screen" />
             </div>
             <div className="gallery-phone gallery-centre">
-              <span className="dynamic-island" aria-hidden="true" />
               <img src="/screens/chat-real.png" alt="Real Waow conversation screen" />
             </div>
             <div className="gallery-phone gallery-right">
-              <span className="dynamic-island" aria-hidden="true" />
               <img src="/screens/translation-real.png" alt="Real Waow instant translation conversation" />
             </div>
           </div>
