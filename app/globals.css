@@ -139,11 +139,15 @@ h1, h2, h3, p { margin-top: 0; }
   backdrop-filter: blur(16px);
 }
 .laos-map-art {
-  position: absolute; width: min(560px, 91%); height: 610px; left: 3%; bottom: 22px; object-fit: contain;
-  filter: saturate(.88) brightness(1.08) drop-shadow(0 30px 38px rgba(1,14,52,.36));
+  position: absolute; width: min(420px, 70%); height: 540px; left: -2%; top: 40px; object-fit: contain;
+  opacity: .7; filter: saturate(.78) brightness(1.12) drop-shadow(0 30px 38px rgba(1,14,52,.3));
+}
+.lao-character-art {
+  position: absolute; height: 620px; width: auto; right: 1%; bottom: 0; z-index: 2;
+  filter: drop-shadow(0 32px 34px rgba(1,14,52,.38));
 }
 .laos-brand-chip {
-  position: absolute; right: -24px; bottom: 74px; display: flex; align-items: center; gap: 12px;
+  position: absolute; left: 18px; bottom: 82px; z-index: 3; display: flex; align-items: center; gap: 12px;
   padding: 12px 17px 12px 12px; border: 1px solid rgba(255,255,255,.52); border-radius: 18px;
   background: rgba(255,255,255,.92); color: #102148; box-shadow: 0 22px 45px rgba(3,21,70,.26);
 }
@@ -307,7 +311,9 @@ footer div > a:not(.brand) { display: block; margin: 15px 0; color: #c6d0e2; fon
   .laos-art { min-height: 465px; margin-inline: -10px; }
   .laos-sun { inset: 45px 0; }
   .laos-map-art { height: 490px; width: 92%; }
-  .laos-brand-chip { right: -2%; bottom: 45px; }
+  .lao-character-art { height: 475px; right: 0; }
+  .laos-map-art { width: 62%; left: -5%; top: 10px; }
+  .laos-brand-chip { left: 0; bottom: 45px; }
   .laos-story-copy h2 { font-size: 43px; }
   .laos-story-copy > p { font-size: 16px; }
   .section { padding-block: 85px; }
