@@ -32,7 +32,9 @@ test("server-renders the finished Waow homepage and metadata", async () => {
   assert.match(html, /<title>Waow — Every conversation deserves a little waow<\/title>/i);
   assert.match(html, /Every conversation deserves a little/);
   assert.match(html, /Private messaging, expressive media and clear calling/);
-  assert.match(html, /og\.png/);
+  assert.match(html, /waow-app-icon\.png/);
+  assert.match(html, /screens\/personal-chat\.png/);
+  assert.match(html, /screens\/group-chat\.png/);
   assert.match(html, /Available on the App Store soon/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Starter Project/);
 });
@@ -65,5 +67,9 @@ test("keeps the official site isolated from the chat application", async () => {
   assert.match(page, /Every conversation deserves a little/);
   assert.match(layout, /Waow — Every conversation deserves/);
   assert.doesNotMatch(packageJson, /react-native|react-loading-skeleton/);
-  assert.deepEqual(JSON.parse(hosting), { d1: null, r2: null });
+  assert.deepEqual(JSON.parse(hosting), {
+    project_id: "appgprj_6a62e18d1cb08191b5b331a9cbff858c",
+    d1: null,
+    r2: null,
+  });
 });

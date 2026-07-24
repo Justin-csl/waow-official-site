@@ -3,7 +3,7 @@ import Link from "next/link";
 export function Brand() {
   return (
     <Link className="brand" href="/" aria-label="Waow home">
-      <span className="brand-mark">w</span>
+      <img className="brand-mark" src="/waow-app-icon.png" alt="" />
       <span>waow</span>
     </Link>
   );

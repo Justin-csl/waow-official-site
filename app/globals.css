@@ -32,8 +32,8 @@ button { font: inherit; }
 .header-inner { height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 36px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-size: 24px; font-weight: 780; letter-spacing: -1.2px; }
 .brand-mark {
-  width: 36px; height: 36px; border-radius: 13px 13px 13px 5px; display: grid; place-items: center;
-  background: var(--blue); color: white; font: 700 25px/1 Georgia, serif; box-shadow: 0 8px 20px rgba(23, 84, 232, .22);
+  width: 38px; height: 38px; border-radius: 12px; display: block; object-fit: cover;
+  box-shadow: 0 8px 20px rgba(23, 84, 232, .22);
 }
 nav { display: flex; align-items: center; gap: 32px; font-size: 14px; font-weight: 620; color: #354565; }
 nav a, footer a { transition: color .2s ease; }
@@ -97,6 +97,20 @@ h1, h2, h3, p { margin-top: 0; }
 .round-icon, .avatar { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 10px; background: var(--sky); color: var(--blue); font-weight: 800; }
 .avatar { border-radius: 50%; background: var(--blue); color: white; }
 .call-dot { margin-left: 8px; color: #26b875; }
+.real-product-hero { min-height: 640px; }
+.real-product-hero::before { inset: 40px 2% 20px 8%; }
+.real-phone {
+  position: absolute; overflow: hidden; background: #080f26; border: 7px solid #101a38;
+  border-radius: 38px; box-shadow: 0 42px 80px rgba(16, 33, 72, .32);
+}
+.real-phone img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.real-phone-main { width: 300px; height: 610px; z-index: 3; transform: rotate(3deg); }
+.real-phone-side { width: 225px; height: 486px; left: 1%; bottom: 18px; z-index: 2; transform: rotate(-8deg); opacity: .98; }
+.hero-app-icon {
+  position: absolute; width: 104px; height: 104px; right: -1%; top: 13%; z-index: 4;
+  border: 5px solid rgba(255,255,255,.9); border-radius: 27px;
+  box-shadow: 0 24px 45px rgba(16,33,72,.25); transform: rotate(8deg);
+}
 
 .promise-strip { border-block: 1px solid var(--line); background: white; }
 .promise-inner { min-height: 90px; display: flex; align-items: center; justify-content: space-around; gap: 20px; }
@@ -145,6 +159,30 @@ h1, h2, h3, p { margin-top: 0; }
 .tablet-contact small { color: #52a97d; font-size: 8px; }
 .tablet-message, .tablet-reply { width: fit-content; max-width: 72%; padding: 12px 14px; border-radius: 14px; background: white; box-shadow: 0 5px 15px rgba(16,33,72,.07); font-size: 10px; }
 .tablet-reply { margin: 15px 0 0 auto; background: var(--blue); color: white; }
+.product-showcase { display: grid; grid-template-columns: .72fr 1.28fr; align-items: center; gap: 70px; }
+.showcase-copy p { margin: 28px 0 30px; color: var(--muted); font-size: 17px; line-height: 1.65; }
+.showcase-copy h2 { margin-bottom: 0; font-size: clamp(42px, 5vw, 66px); line-height: 1.04; letter-spacing: -.052em; }
+.screen-gallery { position: relative; min-height: 650px; }
+.gallery-phone {
+  position: absolute; top: 50%; overflow: hidden; border: 7px solid #101a38; border-radius: 34px;
+  background: #111b3a; box-shadow: 0 35px 65px rgba(16,33,72,.22);
+}
+.gallery-phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.gallery-left { width: 225px; height: 490px; left: 0; transform: translateY(-46%) rotate(-7deg); }
+.gallery-centre { width: 265px; height: 575px; left: 32%; z-index: 2; transform: translateY(-50%); }
+.gallery-right { width: 220px; height: 490px; right: 0; transform: translateY(-46%) rotate(7deg); }
+.onboarding-band { background: var(--ink); color: white; overflow: hidden; }
+.onboarding-layout { min-height: 720px; display: grid; grid-template-columns: 1.15fr .85fr; gap: 90px; align-items: center; }
+.onboarding-screens { position: relative; min-height: 650px; }
+.setup-phone {
+  position: absolute; top: 50%; overflow: hidden; border: 7px solid #101a38; border-radius: 38px;
+  background: white; box-shadow: 0 35px 75px rgba(0,0,0,.28);
+}
+.setup-phone img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.setup-back { width: 255px; height: 550px; left: 7%; transform: translateY(-47%) rotate(-8deg); opacity: .8; }
+.setup-front { width: 300px; height: 625px; right: 6%; z-index: 2; transform: translateY(-50%) rotate(3deg); }
+.onboarding-copy h2 { margin-bottom: 25px; font-size: clamp(42px, 5vw, 65px); line-height: 1.04; letter-spacing: -.052em; }
+.onboarding-copy p { color: #b9c5dc; font-size: 18px; line-height: 1.65; }
 
 .download-cta { background: linear-gradient(120deg, #164fd5, #0f2d79); color: white; }
 .download-inner { min-height: 330px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
@@ -184,7 +222,11 @@ footer div > a:not(.brand) { display: block; margin: 15px 0; color: #c6d0e2; fon
   .hero { grid-template-columns: 1fr; text-align: center; padding-top: 70px; }
   .hero-copy { display: grid; justify-items: center; }
   .hero-visual { min-height: 620px; }
-  .section-heading, .privacy-layout, .ipad-section { grid-template-columns: 1fr; gap: 45px; }
+  .section-heading, .privacy-layout, .ipad-section, .product-showcase, .onboarding-layout { grid-template-columns: 1fr; gap: 45px; }
+  .showcase-copy { text-align: center; }
+  .screen-gallery { width: min(700px, 100%); margin-inline: auto; }
+  .onboarding-layout { padding-block: 75px; }
+  .onboarding-copy { text-align: center; grid-row: 1; }
   .feature-grid { grid-template-columns: 1fr; }
   .feature-card { min-height: 360px; }
   .download-inner { padding-block: 70px; }
@@ -203,6 +245,9 @@ footer div > a:not(.brand) { display: block; margin: 15px 0; color: #c6d0e2; fon
   .hero-lede { font-size: 17px; }
   .hero-actions { flex-direction: column; gap: 20px; }
   .hero-visual { min-height: 560px; transform: scale(.9); margin-inline: -20px; }
+  .real-phone-main { width: 270px; height: 550px; }
+  .real-phone-side { width: 185px; height: 405px; left: -5%; }
+  .hero-app-icon { width: 84px; height: 84px; right: -3%; }
   .floating-lock { left: -3%; }
   .floating-call { right: -5%; }
   .promise-inner { min-height: 130px; flex-direction: column; justify-content: center; gap: 9px; }
@@ -212,6 +257,12 @@ footer div > a:not(.brand) { display: block; margin: 15px 0; color: #c6d0e2; fon
   .tablet-screen { min-height: 330px; grid-template-columns: 41% 59%; }
   .tablet-sidebar { padding: 18px 9px; }
   .tablet-chat:nth-of-type(n+5) { display: none; }
+  .screen-gallery { min-height: 550px; transform: scale(.88); margin-block: -25px; }
+  .gallery-left { left: -12%; }
+  .gallery-right { right: -12%; }
+  .onboarding-screens { min-height: 560px; transform: scale(.88); margin-block: -35px; }
+  .setup-back { left: -4%; }
+  .setup-front { right: -4%; }
   .download-inner { align-items: flex-start; flex-direction: column; }
   .download-action { text-align: left; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px 28px; }

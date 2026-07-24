@@ -53,32 +53,16 @@ export default function Home() {
           <p className="microcopy">Available on the App Store soon.</p>
         </div>
 
-        <div className="hero-visual" aria-label="Preview of a Waow conversation">
+        <div className="hero-visual real-product-hero" aria-label="Real Waow app screens">
           <div className="orbit orbit-one" />
           <div className="orbit orbit-two" />
-          <div className="phone">
-            <div className="phone-top"><span /><b>Raj</b><span>•••</span></div>
-            <div className="chat-canvas">
-              <div className="chat-date">TODAY</div>
-              <div className="bubble bubble-in">Are we still meeting by the river?</div>
-              <div className="bubble bubble-out">Yes — sunset at 5:45 ✨</div>
-              <div className="photo-message">
-                <div className="sun" />
-                <div className="river" />
-                <span>Found the perfect spot.</span>
-              </div>
-              <div className="composer"><span>Message</span><b>↑</b></div>
-            </div>
+          <div className="real-phone real-phone-main">
+            <img src="/screens/personal-chat.png" alt="Waow personal chat showing messages, calls and shared media" />
           </div>
-          <div className="floating-card floating-lock">
-            <span className="round-icon">⌁</span>
-            <div><b>Chat locked</b><small>Protected with Face ID</small></div>
+          <div className="real-phone real-phone-side">
+            <img src="/screens/chat-list.png" alt="Waow chat list in Lao" />
           </div>
-          <div className="floating-card floating-call">
-            <span className="avatar">R</span>
-            <div><b>Raj is calling</b><small>Waow video</small></div>
-            <span className="call-dot">●</span>
-          </div>
+          <img className="hero-app-icon" src="/waow-app-icon.png" alt="Waow app icon" />
         </div>
       </section>
 
@@ -137,32 +121,39 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section shell ipad-section">
-        <div className="ipad-copy">
-          <span className="eyebrow">Made for the big screen</span>
-          <h2>Your conversations, beautifully at home on iPad.</h2>
+      <section className="section shell product-showcase">
+        <div className="showcase-copy">
+          <span className="eyebrow">The real Waow experience</span>
+          <h2>Designed around real conversations.</h2>
           <p>
-            A spacious layout keeps chats, calls and media close at hand in
-            portrait, landscape and multitasking views.
+            Browse chats, share media, talk in groups and manage the details
+            that make every conversation feel personal.
           </p>
-          <Link className="text-link" href="/features">See the iPad experience <span>→</span></Link>
+          <Link className="text-link" href="/features">Explore every feature <span>→</span></Link>
         </div>
-        <div className="tablet">
-          <div className="tablet-screen">
-            <div className="tablet-sidebar">
-              <div className="tablet-title">Chats <b>＋</b></div>
-              <div className="tablet-search">⌕ Search</div>
-              {["Raj", "Waow Team", "Nok", "Family"].map((name, i) => (
-                <div className={`tablet-chat ${i === 0 ? "active" : ""}`} key={name}>
-                  <span>{name[0]}</span><div><b>{name}</b><small>{i === 0 ? "See you there!" : "New conversation"}</small></div>
-                </div>
-              ))}
-            </div>
-            <div className="tablet-conversation">
-              <div className="tablet-contact"><span>R</span><b>Raj</b><small>online</small></div>
-              <div className="tablet-message">This feels right at home on iPad.</div>
-              <div className="tablet-reply">It really does 💙</div>
-            </div>
+        <div className="screen-gallery">
+          <div className="gallery-phone gallery-left">
+            <img src="/screens/chat-list.png" alt="Waow chats screen" />
+          </div>
+          <div className="gallery-phone gallery-centre">
+            <img src="/screens/group-chat.png" alt="Waow group conversation screen" />
+          </div>
+          <div className="gallery-phone gallery-right">
+            <img src="/screens/contact-info.png" alt="Waow contact information screen" />
+          </div>
+        </div>
+      </section>
+
+      <section className="onboarding-band">
+        <div className="shell onboarding-layout">
+          <div className="onboarding-screens">
+            <div className="setup-phone setup-back"><img src="/screens/login.png" alt="Waow login screen" /></div>
+            <div className="setup-phone setup-front"><img src="/screens/onboarding.png" alt="Waow onboarding screen" /></div>
+          </div>
+          <div className="onboarding-copy">
+            <span className="eyebrow eyebrow-light">Simple from the start</span>
+            <h2>From hello to your first message in a few clear steps.</h2>
+            <p>Sign in with your phone number, verify securely, set up your profile and start talking.</p>
           </div>
         </div>
       </section>
