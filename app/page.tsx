@@ -60,14 +60,10 @@ export default function Home() {
         </div>
 
         <div className="hero-visual real-product-hero" aria-label="Real Waow app screens">
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
           <div className="real-phone real-phone-main">
-            <span className="dynamic-island" aria-hidden="true" />
             <img src="/screens/chat-real.png" alt="Real Waow conversation showing messages and calling controls" />
           </div>
           <div className="real-phone real-phone-side">
-            <span className="dynamic-island" aria-hidden="true" />
             <img src="/screens/chat-list-real.png" alt="Real Waow chat list populated with recent conversations" />
             <img className="chat-row-overlay" src="/screens/single-chat-overlay.png" alt="Andrew unread chat preview" />
           </div>
@@ -212,7 +208,6 @@ export default function Home() {
           <div className="translation-visual" aria-label="Instant translation inside a real Waow conversation">
             <div className="translation-glow" />
             <div className="translation-phone">
-              <span className="dynamic-island" aria-hidden="true" />
               <img src="/screens/translation-real.png" alt="Real Waow conversation translated between Lao and English" />
             </div>
             <img
@@ -239,9 +234,9 @@ export default function Home() {
       <section className="onboarding-band">
         <div className="shell onboarding-layout">
           <div className="onboarding-screens">
-            <div className="setup-phone setup-back"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/login-real.png" alt="Real Waow phone-number login screen" /></div>
-            <div className="setup-phone setup-middle"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/onboarding-stay-connected.png" alt="Real Waow stay-connected onboarding screen" /></div>
-            <div className="setup-phone setup-front"><span className="dynamic-island" aria-hidden="true" /><img src="/screens/onboarding-connection.png" alt="Real Waow connection onboarding screen" /></div>
+            <div className="setup-phone setup-back"><img src="/screens/login-real.png" alt="Real Waow phone-number login screen" /></div>
+            <div className="setup-phone setup-middle"><img src="/screens/onboarding-stay-connected.png" alt="Real Waow stay-connected onboarding screen" /></div>
+            <div className="setup-phone setup-front"><img src="/screens/onboarding-connection.png" alt="Real Waow connection onboarding screen" /></div>
           </div>
           <div className="onboarding-copy">
             <span className="eyebrow eyebrow-light">Simple from the start</span>
