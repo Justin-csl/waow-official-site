@@ -70,9 +70,9 @@ export default function Home() {
 
       <section className="promise-strip">
         <div className="shell promise-inner">
-          <p>Built for connection.</p>
-          <p>Designed for privacy.</p>
-          <p>Made in Laos.</p>
+          <p><span className="promise-icon" aria-hidden="true">🤝</span>Built for connection.</p>
+          <p><span className="promise-icon" aria-hidden="true">🔒</span>Designed for privacy.</p>
+          <p><span className="promise-icon" aria-hidden="true">🇱🇦</span>Made in Laos.</p>
         </div>
       </section>
 

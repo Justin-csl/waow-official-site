@@ -102,8 +102,13 @@ h1, h2, h3, p { margin-top: 0; }
 .hero-landing-art { display: block; width: min(650px, 110%); height: auto; max-height: 650px; object-fit: contain; filter: drop-shadow(0 30px 42px rgba(16,33,72,.18)); }
 
 .promise-strip { border-block: 1px solid var(--line); background: white; }
-.promise-inner { min-height: 90px; display: flex; align-items: center; justify-content: space-around; gap: 20px; }
-.promise-inner p { margin: 0; color: #53627f; font-size: 13px; font-weight: 650; letter-spacing: .03em; }
+.promise-inner { min-height: 110px; display: flex; align-items: center; justify-content: space-around; gap: 20px; }
+.promise-inner p { margin: 0; display: flex; align-items: center; gap: 13px; color: #53627f; font-size: 13px; font-weight: 650; letter-spacing: .03em; }
+.promise-icon {
+  width: 43px; height: 43px; display: grid; place-items: center; flex: 0 0 43px;
+  border: 1px solid #d9e4fa; border-radius: 14px; background: #eef4ff;
+  box-shadow: 0 9px 20px rgba(23,84,232,.1); font-size: 20px; line-height: 1;
+}
 .laos-story {
   position: relative; overflow: hidden; color: white;
   background:
@@ -384,7 +389,7 @@ footer div > a:not(.brand) { display: block; margin: 15px 0; color: #c6d0e2; fon
   .hero-landing-art { width: 112%; max-width: none; }
   .floating-lock { left: -3%; }
   .floating-call { right: -5%; }
-  .promise-inner { min-height: 130px; flex-direction: column; justify-content: center; gap: 9px; }
+  .promise-inner { min-height: 210px; align-items: flex-start; flex-direction: column; justify-content: center; gap: 13px; }
   .laos-story-layout { padding-block: 70px; }
   .laos-art { min-height: 465px; margin-inline: -10px; }
   .laos-sun { inset: 45px 0; }
