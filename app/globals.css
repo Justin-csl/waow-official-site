@@ -122,12 +122,9 @@ h1, h2, h3, p { margin-top: 0; }
     radial-gradient(circle at 78% 76%, rgba(58, 112, 255, .28), transparent 32%),
     linear-gradient(125deg, #081943 0%, #103695 48%, #1754e8 100%);
 }
-.laos-pattern {
-  position: absolute; inset: 0; opacity: .14; pointer-events: none;
-  background-image:
-    radial-gradient(circle at center, transparent 0 19px, #a8c3ff 20px 21px, transparent 22px),
-    linear-gradient(90deg, transparent 49%, #a8c3ff 50%, transparent 51%);
-  background-size: 68px 68px;
+.laos-story::before {
+  content: ""; position: absolute; width: 760px; height: 520px; left: -260px; bottom: -300px;
+  border-radius: 50%; background: rgba(100, 153, 255, .22); filter: blur(90px);
 }
 .laos-story::after {
   content: ""; position: absolute; width: 620px; height: 620px; right: -220px; top: -300px;

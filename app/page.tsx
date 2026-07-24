@@ -75,7 +75,6 @@ export default function Home() {
       </section>
 
       <section className="laos-story">
-        <div className="laos-pattern" aria-hidden="true" />
         <div className="shell laos-story-layout">
           <div className="laos-art" aria-label="Illustrated cultural landmarks and symbols of Laos">
             <div className="laos-sun" />
