@@ -37,9 +37,10 @@ test("server-renders the finished Waow homepage and metadata", async () => {
   assert.match(html, /screens\/chat-list-real\.png/);
   assert.match(html, /screens\/chat-real\.png/);
   assert.match(html, /screens\/translation-real\.png/);
-  assert.match(html, /screens\/translation-overlay\.png/);
+  assert.match(html, /21st42\.png/);
+  assert.match(html, /traslation\.png/);
   assert.match(html, /screens\/login-real\.png/);
-  assert.match(html, /Available on the App Store soon/);
+  assert.match(html, /https:\/\/web\.waow\.app\//);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Starter Project/);
 });
 

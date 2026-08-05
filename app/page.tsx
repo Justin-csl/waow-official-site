@@ -53,20 +53,37 @@ export default function Home() {
             End-to-end encrypted
           </div>
           <div className="hero-actions">
-            <Link className="button button-primary" href="/download">
+            <Link className="button button-primary" href="https://web.waow.app/" target="_blank" rel="noreferrer">
               Download for iOS <span>↗</span>
             </Link>
             <Link className="text-link" href="/features">
               Explore Waow <span>→</span>
             </Link>
           </div>
-          <p className="microcopy">Available on the App Store soon.</p>
+          <p className="microcopy">Download Waow app</p>
         </div>
 
         <div className="hero-visual real-product-hero" aria-label="Waow app showcase">
           <span className="love-orbit love-orbit-one" aria-hidden="true">♥</span>
           <span className="love-orbit love-orbit-two" aria-hidden="true">♥</span>
           <span className="love-orbit love-orbit-three" aria-hidden="true">♥</span>
+          <div className="hero-chat-emoji" aria-hidden="true">
+            <span>🥰</span>
+            <i />
+          </div>
+          <div className="hero-message-card hero-message-card-left" aria-hidden="true">
+            <span className="hero-message-avatar">M</span>
+            <span><b>Miss you already</b><small>See you tonight? 💙</small></span>
+          </div>
+          <div className="hero-message-card hero-message-card-right" aria-hidden="true">
+            <span className="hero-message-avatar hero-message-avatar-pink">N</span>
+            <span><b>Made me smile</b><small>Love you too ❤️</small></span>
+          </div>
+          <div className="hero-notification" aria-hidden="true">
+            <img src="/waow-app-icon.png" alt="" />
+            <span><b>Waow</b><small>Kanya sent you a message</small></span>
+            <time>now</time>
+          </div>
           <img
             className="hero-landing-art"
             src="/new-land.png"
@@ -215,13 +232,15 @@ export default function Home() {
         <div className="shell translation-layout">
           <div className="translation-visual" aria-label="Instant translation inside a real Waow conversation">
             <div className="translation-glow" />
-            <div className="translation-phone">
-              <img src="/screens/translation-real.png" alt="Real Waow conversation translated between Lao and English" />
-            </div>
             <img
-              className="translation-message-overlay"
-              src="/screens/translation-overlay.png"
-              alt="Real Waow message showing English translation, Lao script and Latin transliteration"
+              className="translation-product-art"
+              src="/21st42.png"
+              alt="Waow conversation displayed on a phone"
+            />
+            <img
+              className="translation-card-overlay"
+              src="/traslation.png"
+              alt="Message translated between English and Lao"
             />
           </div>
           <div className="translation-copy">
@@ -266,7 +285,7 @@ export default function Home() {
             <h2>Say hello to Waow.</h2>
           </div>
           <div className="download-action">
-            <Link className="button button-light" href="/download">Get Waow for iOS <span>↗</span></Link>
+            <Link className="button button-light" href="https://web.waow.app/" target="_blank" rel="noreferrer">Get Waow for iOS <span>↗</span></Link>
             <p>iPhone and iPad · Android planned</p>
           </div>
         </div>

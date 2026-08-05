@@ -22,7 +22,7 @@ export function SiteHeader() {
         </nav>
         <div className="header-actions">
           <button className="language" aria-label="Change language">EN <span>⌄</span></button>
-          <Link className="button button-small button-primary" href="/download">Download</Link>
+          <Link className="button button-small button-primary" href="https://web.waow.app/" target="_blank" rel="noreferrer">Download</Link>
         </div>
       </div>
     </header>
@@ -42,7 +42,7 @@ export function SiteFooter() {
           <Link href="/features">Features</Link>
           <Link href="/privacy">Privacy</Link>
           <Link href="/security">Security</Link>
-          <Link href="/download">Download</Link>
+          <Link href="https://web.waow.app/" target="_blank" rel="noreferrer">Download</Link>
         </div>
         <div>
           <h3>Support</h3>
