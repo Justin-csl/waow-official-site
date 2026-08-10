@@ -32,6 +32,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0"
           rel="stylesheet"
         />
+        {/* Lao script for the Help Centre's Lao translation; Geist has no Lao coverage. */}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@400;500;600;700&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>{children}</body>
     </html>

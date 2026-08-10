@@ -18,6 +18,7 @@ export function SiteHeader() {
           <Link href="/features">Features</Link>
           <Link href="/privacy">Privacy</Link>
           <Link href="/security">Security</Link>
+          <Link href="/faq">FAQ</Link>
           <Link href="/help">Help</Link>
         </nav>
         <div className="header-actions">
@@ -46,8 +47,9 @@ export function SiteFooter() {
         </div>
         <div>
           <h3>Support</h3>
+          <Link href="/faq">FAQ</Link>
           <Link href="/help">Help Centre</Link>
-          <Link href="/help#contact">Contact Us</Link>
+          <Link href="/faq#contact">Contact Us</Link>
           <Link href="/help#status">Service Status</Link>
           <Link href="/help#delete">Delete Account</Link>
         </div>
