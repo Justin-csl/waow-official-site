@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { LangEffect, LanguageToggle, useT } from "./i18n/lang";
+import type { SiteKey } from "./i18n/strings";
 
 export function Brand() {
   return (
@@ -10,20 +14,29 @@ export function Brand() {
 }
 
 export function SiteHeader() {
+  const t = useT();
   return (
     <header className="site-header">
+      <LangEffect />
       <div className="shell header-inner">
         <Brand />
         <nav aria-label="Main navigation">
-          <Link href="/features">Features</Link>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/security">Security</Link>
-          <Link href="/faq">FAQ</Link>
-          <Link href="/help">Help</Link>
+          <Link href="/features">{t("nav.features")}</Link>
+          <Link href="/privacy">{t("nav.privacy")}</Link>
+          <Link href="/security">{t("nav.security")}</Link>
+          <Link href="/faq">{t("nav.faq")}</Link>
+          <Link href="/help">{t("nav.help")}</Link>
         </nav>
         <div className="header-actions">
-          <button className="language" aria-label="Change language">EN <span>⌄</span></button>
-          <Link className="button button-small button-primary" href="https://web.waow.app/" target="_blank" rel="noreferrer">Download</Link>
+          <LanguageToggle />
+          <Link
+            className="button button-small button-primary"
+            href="https://web.waow.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("nav.download")}
+          </Link>
         </div>
       </div>
     </header>
@@ -31,39 +44,42 @@ export function SiteHeader() {
 }
 
 export function SiteFooter() {
+  const t = useT();
   return (
     <footer>
       <div className="shell footer-grid">
         <div className="footer-brand">
           <Brand />
-          <p>Private conversations with a little more expression.</p>
+          <p>{t("brand.tagline")}</p>
         </div>
         <div>
-          <h3>Product</h3>
-          <Link href="/features">Features</Link>
-          <Link href="/privacy">Privacy</Link>
-          <Link href="/security">Security</Link>
-          <Link href="https://web.waow.app/" target="_blank" rel="noreferrer">Download</Link>
+          <h3>{t("footer.product")}</h3>
+          <Link href="/features">{t("nav.features")}</Link>
+          <Link href="/privacy">{t("nav.privacy")}</Link>
+          <Link href="/security">{t("nav.security")}</Link>
+          <Link href="https://web.waow.app/" target="_blank" rel="noreferrer">
+            {t("nav.download")}
+          </Link>
         </div>
         <div>
-          <h3>Support</h3>
-          <Link href="/faq">FAQ</Link>
-          <Link href="/help">Help Centre</Link>
-          <Link href="/faq#contact">Contact Us</Link>
-          <Link href="/help#status">Service Status</Link>
-          <Link href="/help#delete">Delete Account</Link>
+          <h3>{t("footer.support")}</h3>
+          <Link href="/faq">{t("nav.faq")}</Link>
+          <Link href="/help">{t("footer.helpCentre")}</Link>
+          <Link href="/faq#contact">{t("footer.contact")}</Link>
+          <Link href="/help#status">{t("footer.status")}</Link>
+          <Link href="/delete-account">{t("footer.deleteAccount")}</Link>
         </div>
         <div>
-          <h3>Company</h3>
-          <Link href="/about">About Waow</Link>
-          <Link href="/privacy">Privacy Policy</Link>
-          <Link href="/about#terms">Terms of Service</Link>
-          <Link href="/security#report">Report a vulnerability</Link>
+          <h3>{t("footer.company")}</h3>
+          <Link href="/about">{t("footer.about")}</Link>
+          <Link href="/legal/privacy">{t("footer.privacyPolicy")}</Link>
+          <Link href="/legal/terms">{t("footer.terms")}</Link>
+          <Link href="/legal/security">{t("footer.reportVuln")}</Link>
         </div>
       </div>
       <div className="shell footer-bottom">
-        <span>© 2026 Waow. All rights reserved.</span>
-        <span>Made with care in Laos.</span>
+        <span>{t("footer.rights")}</span>
+        <span>{t("footer.madeIn")}</span>
       </div>
     </footer>
   );
@@ -74,15 +90,16 @@ export function PageHero({
   title,
   copy,
 }: {
-  eyebrow: string;
-  title: string;
-  copy: string;
+  eyebrow: SiteKey;
+  title: SiteKey;
+  copy: SiteKey;
 }) {
+  const t = useT();
   return (
     <section className="page-hero shell">
-      <span className="eyebrow">{eyebrow}</span>
-      <h1>{title}</h1>
-      <p>{copy}</p>
+      <span className="eyebrow">{t(eyebrow)}</span>
+      <h1>{t(title)}</h1>
+      <p>{t(copy)}</p>
     </section>
   );
 }

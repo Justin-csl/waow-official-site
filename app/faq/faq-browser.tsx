@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import {
   faqCategories,
   popularArticles,
@@ -10,18 +10,8 @@ import {
   type FaqCategory,
   type FaqSection,
 } from "./faq-data";
-import {
-  artKey,
-  blockKey,
-  catKey,
-  FAQ_LANG_STORAGE_KEY,
-  FAQ_LANGS,
-  makeTranslator,
-  secKey,
-  uiStrings,
-  type FaqLang,
-  type UiKey,
-} from "./faq-i18n";
+import { useLang } from "../i18n/lang";
+import { artKey, blockKey, catKey, makeTranslator, secKey, uiStrings, type UiKey } from "./faq-i18n";
 
 type Located = { category: FaqCategory; section: FaqSection; article: FaqArticle };
 
@@ -41,32 +31,6 @@ const popular = popularArticles
     ),
   )
   .filter((item): item is Located => Boolean(item));
-
-/**
- * The chosen language lives in localStorage so it survives navigation. It is read
- * through useSyncExternalStore rather than an effect: the server snapshot is
- * always "en", so the first paint matches the server and React swaps in the
- * stored choice after hydration without a mismatch.
- */
-let langListeners: (() => void)[] = [];
-const langStore = {
-  subscribe(listener: () => void) {
-    langListeners.push(listener);
-    return () => {
-      langListeners = langListeners.filter((item) => item !== listener);
-    };
-  },
-  get(): FaqLang {
-    return window.localStorage.getItem(FAQ_LANG_STORAGE_KEY) === "lo" ? "lo" : "en";
-  },
-  serverGet(): FaqLang {
-    return "en";
-  },
-  set(next: FaqLang) {
-    window.localStorage.setItem(FAQ_LANG_STORAGE_KEY, next);
-    for (const listener of langListeners) listener();
-  },
-};
 
 /** Renders **bold** runs; the data uses it to mark UI labels the reader has to find on screen. */
 function RichText({ text }: { text: string }) {
@@ -130,15 +94,10 @@ export function FaqBrowser() {
   const [openCategory, setOpenCategory] = useState<string | null>(null);
   const [openSection, setOpenSection] = useState<string | null>(null);
   const [query, setQuery] = useState("");
-  const lang = useSyncExternalStore(langStore.subscribe, langStore.get, langStore.serverGet);
+  const lang = useLang();
 
   const t = useMemo(() => makeTranslator(lang), [lang]);
   const ui = useCallback((key: UiKey) => t(key, uiStrings[key]), [t]);
-
-  useEffect(() => {
-    document.documentElement.lang = lang;
-    document.documentElement.classList.toggle("faq-lang-lo", lang === "lo");
-  }, [lang]);
 
   // Deep links: /faq#chats/translation/translate-setup opens that article directly.
   useEffect(() => {
@@ -200,33 +159,6 @@ export function FaqBrowser() {
 
   return (
     <>
-      <div className="faq-bar">
-        <div className="shell faq-bar-inner">
-          <span className="material-symbols-rounded" aria-hidden="true">
-            help
-          </span>
-          <b>{ui("ui.helpCentre")}</b>
-          <span className="faq-bar-sep" aria-hidden="true">
-            /
-          </span>
-          <span>{ui("ui.breadcrumb")}</span>
-          <div className="faq-lang" role="group" aria-label={ui("ui.changeLanguage")}>
-            {FAQ_LANGS.map((option) => (
-              <button
-                type="button"
-                key={option.code}
-                lang={option.code}
-                className={option.code === lang ? "active" : undefined}
-                aria-pressed={option.code === lang}
-                onClick={() => langStore.set(option.code)}
-              >
-                {option.label}
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-
       <div className="faq-layout shell">
         <aside className="faq-sidebar" aria-label={ui("ui.topicsLabel")}>
           {faqCategories.map((category) => {

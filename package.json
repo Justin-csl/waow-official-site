@@ -13,7 +13,8 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
     "faq:i18n": "node scripts/faq-i18n.mjs",
-    "faq:i18n:check": "node scripts/faq-i18n.mjs --check"
+    "faq:i18n:check": "node scripts/faq-i18n.mjs --check",
+    "legal:check": "node scripts/legal-check.mjs"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",

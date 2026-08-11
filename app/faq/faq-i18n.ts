@@ -1,14 +1,7 @@
 import { faqCategories } from "./faq-data";
 import { loStrings } from "./faq-lo";
 
-export type FaqLang = "en" | "lo";
-
-export const FAQ_LANGS: { code: FaqLang; label: string; short: string }[] = [
-  { code: "en", label: "English", short: "EN" },
-  { code: "lo", label: "ລາວ", short: "ລາວ" },
-];
-
-export const FAQ_LANG_STORAGE_KEY = "waow-faq-lang";
+type FaqLang = "en" | "lo";
 
 /**
  * English is the source of truth: every string lives in faq-data.ts and the UI

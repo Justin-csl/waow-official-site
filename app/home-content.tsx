@@ -1,0 +1,291 @@
+"use client";
+
+import Link from "next/link";
+import { SiteFooter, SiteHeader } from "./site-shell";
+import { useT } from "./i18n/lang";
+
+const features = [
+  {
+    tag: "home.more.msg.eyebrow",
+    title: "home.more.msg.title",
+    copy: "home.more.msg.copy",
+    visual: "message",
+    image: "/screens/chat-real.png",
+    imageAlt: "Real Waow conversation screen",
+  },
+  {
+    tag: "home.more.call.eyebrow",
+    title: "home.more.call.title",
+    copy: "home.more.call.copy",
+    visual: "call",
+    image: "/screens/translation-real.png",
+    imageAlt: "Real Waow group conversation with calling controls",
+  },
+  {
+    tag: "home.more.create.eyebrow",
+    title: "home.more.create.title",
+    copy: "home.more.create.copy",
+    visual: "media",
+    image: "/laos/lao-character.png",
+    imageAlt: "Lao character being prepared to share in Waow",
+  },
+] as const;
+
+const trustPoints = [
+  ["feat.encryption.t", "trust.e2ee.c", "encrypted"],
+  ["feat.chatlock.t", "trust.lock.c", "lock"],
+  ["trust.hidden.t", "trust.hidden.c", "visibility_off"],
+  ["trust.previews.t", "trust.previews.c", "notifications_off"],
+] as const;
+
+export function HomeContent() {
+  const t = useT();
+  return (
+    <main>
+      <SiteHeader />
+
+      <section className="hero shell">
+        <div className="hero-copy">
+          <div className="eyebrow">{t("home.eyebrow")}</div>
+          <h1>{t("home.title.pre")} <em>{t("home.title.em")}</em> {t("home.title.post")}</h1>
+          <p className="hero-lede">{t("home.lede")}</p>
+          <div className="hero-trust">
+            <span className="material-symbols-rounded" aria-hidden="true">encrypted</span>
+            {t("home.trust")}
+          </div>
+          <div className="hero-actions">
+            <Link className="button button-primary" href="https://web.waow.app/" target="_blank" rel="noreferrer">
+              {t("home.cta.download")} <span>↗</span>
+            </Link>
+            <Link className="text-link" href="/features">
+              {t("home.cta.explore")} <span>→</span>
+            </Link>
+          </div>
+          <p className="microcopy">{t("home.cta.micro")}</p>
+        </div>
+
+        <div className="hero-visual real-product-hero" aria-label="Waow app showcase">
+          <span className="love-orbit love-orbit-one" aria-hidden="true">♥</span>
+          <span className="love-orbit love-orbit-two" aria-hidden="true">♥</span>
+          <span className="love-orbit love-orbit-three" aria-hidden="true">♥</span>
+          <div className="hero-chat-emoji" aria-hidden="true">
+            <span>🥰</span>
+            <i />
+          </div>
+          <div className="hero-message-card hero-message-card-left" aria-hidden="true">
+            <span className="hero-message-avatar">M</span>
+            <span><b>Miss you already</b><small>See you tonight? 💙</small></span>
+          </div>
+          <div className="hero-message-card hero-message-card-right" aria-hidden="true">
+            <span className="hero-message-avatar hero-message-avatar-pink">N</span>
+            <span><b>Made me smile</b><small>Love you too ❤️</small></span>
+          </div>
+          <div className="hero-notification" aria-hidden="true">
+            <img src="/waow-app-icon.png" alt="" />
+            <span><b>Waow</b><small>Kanya sent you a message</small></span>
+            <time>now</time>
+          </div>
+          <img
+            className="hero-landing-art"
+            src="/new-land.png"
+            alt="Waow app shown across chat list, welcome and Lao cultural screens"
+          />
+        </div>
+      </section>
+
+      <section className="promise-strip">
+        <div className="shell promise-inner">
+          <p><span className="promise-icon material-symbols-rounded" aria-hidden="true">favorite</span>{t("home.promise.love")}</p>
+          <p><span className="promise-icon material-symbols-rounded" aria-hidden="true">encrypted</span>{t("home.promise.encrypted")}</p>
+          <p><span className="promise-icon material-symbols-rounded" aria-hidden="true">location_on</span>{t("home.promise.laos")}</p>
+        </div>
+      </section>
+
+      <section className="laos-story">
+        <div className="shell laos-story-layout">
+          <div className="laos-art" aria-label="Illustrated cultural landmarks and symbols of Laos">
+            <div className="laos-sun" />
+            <img className="laos-map-art" src="/laos/laos-map-culture.png" alt="Map of Laos illustrated with temples, monuments, an elephant, flowers and a tuk-tuk" />
+            <img className="lao-character-art" src="/laos/lao-character.png" alt="Lao character wearing traditional sinh and patterned shoulder cloth" />
+            <div className="laos-brand-chip">
+              <img src="/waow-app-icon.png" alt="" />
+              <span><b>{t("home.laos.badge.t")}</b><small>{t("home.laos.badge.c")}</small></span>
+            </div>
+          </div>
+          <div className="laos-story-copy">
+            <span className="eyebrow eyebrow-laos">{t("home.laos.eyebrow")}</span>
+            <h2>{t("home.laos.title")}</h2>
+            <p>{t("home.laos.copy")}</p>
+            <div className="lao-values">
+              <div><span>ສ</span><b>{t("home.laos.warm.t")}</b><small>{t("home.laos.warm.c")}</small></div>
+              <div><span>ລ</span><b>{t("home.laos.proud.t")}</b><small>{t("home.laos.proud.c")}</small></div>
+              <div><span>ວ</span><b>{t("home.laos.open.t")}</b><small>{t("home.laos.open.c")}</small></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section shell" id="features">
+        <div className="section-heading">
+          <div>
+            <span className="eyebrow">{t("home.more.eyebrow")}</span>
+            <h2>{t("home.more.title")}</h2>
+          </div>
+          <p>{t("home.more.copy")}</p>
+        </div>
+        <div className="feature-grid">
+          {features.map((feature, index) => (
+            <article className={`feature-card feature-${index + 1}`} key={feature.title}>
+              <div className={`feature-visual feature-visual-${feature.visual}`}>
+                <img src={feature.image} alt={feature.imageAlt} />
+                {feature.visual === "message" && (
+                  <div className="feature-visual-badge">
+                    <span className="badge-symbol">♥</span>
+                    <span><b>Reply sent</b><small>Delivered instantly</small></span>
+                  </div>
+                )}
+                {feature.visual === "call" && (
+                  <div className="feature-call-actions" aria-label="Voice and video calling">
+                    <span aria-hidden="true">●</span>
+                    <b>Voice &amp; video</b>
+                  </div>
+                )}
+                {feature.visual === "media" && (
+                  <>
+                    <div className="feature-edit-toolbar" aria-label="Photo editing controls">
+                      <span>↶</span><span>Crop</span><span>Adjust</span><b>Done</b>
+                    </div>
+                    <div className="feature-caption">Add a caption…</div>
+                  </>
+                )}
+              </div>
+              <span>{t(feature.tag)}</span>
+              <h3>{t(feature.title)}</h3>
+              <p>{t(feature.copy)}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="privacy-band">
+        <div className="shell privacy-layout">
+          <div className="privacy-copy">
+            <span className="eyebrow eyebrow-light">{t("home.trust.eyebrow")}</span>
+            <h2>{t("home.trust.title")}</h2>
+            <p>
+              End-to-end encryption protects personal messages and calls, while
+              Face ID chat lock, hidden conversations and discreet previews give
+              you clear control over your private spaces.
+            </p>
+            <Link className="button button-light" href="/privacy">
+              Explore privacy <span>→</span>
+            </Link>
+          </div>
+          <div className="privacy-list">
+            {trustPoints.map(([title, copy, icon], index) => (
+              <div className="privacy-point" key={title}>
+                <div className="privacy-point-icon">
+                  <span className="material-symbols-rounded" aria-hidden="true">{icon}</span>
+                  <small>0{index + 1}</small>
+                </div>
+                <div><h3>{t(title)}</h3><p>{t(copy)}</p></div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="campaign-showcase">
+        <div className="campaign-beam campaign-beam-left" />
+        <div className="campaign-beam campaign-beam-right" />
+        <div className="shell campaign-inner">
+          <div className="campaign-heading">
+            <img src="/waow-app-icon.png" alt="" />
+            <span className="eyebrow eyebrow-light">{t("home.real.eyebrow")}</span>
+            <h2>{t("home.real.title")}</h2>
+            <p>{t("home.real.copy")}</p>
+          </div>
+          <div className="screen-gallery">
+            <div className="gallery-phone gallery-left">
+              <img src="/screens/chat-list-real.png" alt="Real Waow chats screen" />
+            </div>
+            <div className="gallery-phone gallery-centre">
+              <img src="/screens/chat-real.png" alt="Real Waow conversation screen" />
+            </div>
+            <div className="gallery-phone gallery-right">
+              <img src="/screens/translation-real.png" alt="Real Waow instant translation conversation" />
+            </div>
+          </div>
+          <div className="campaign-action">
+            <Link className="button button-light" href="/features">Explore every feature <span>→</span></Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="translation-band">
+        <div className="shell translation-layout">
+          <div className="translation-visual" aria-label="Instant translation inside a real Waow conversation">
+            <div className="translation-glow" />
+            <img
+              className="translation-product-art"
+              src="/21st42.png"
+              alt="Waow conversation displayed on a phone"
+            />
+            <img
+              className="translation-card-overlay"
+              src="/traslation.png"
+              alt="Message translated between English and Lao"
+            />
+          </div>
+          <div className="translation-copy">
+            <span className="eyebrow eyebrow-light">Instant translation</span>
+            <h2>Understand every conversation, instantly.</h2>
+            <p>
+              Translate messages inside the chat while keeping the original
+              meaning close at hand. Move naturally between Lao and English
+              without leaving Waow.
+            </p>
+            <div className="language-pills">
+              <span>ລາວ</span><b>⇄</b><span>English</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="onboarding-band">
+        <div className="shell onboarding-layout">
+          <div className="onboarding-screens">
+            <div className="setup-phone setup-back"><img src="/screens/login-real.png" alt="Real Waow phone-number login screen" /></div>
+            <div className="setup-phone setup-middle"><img src="/screens/onboarding-stay-connected.png" alt="Real Waow stay-connected onboarding screen" /></div>
+            <div className="setup-phone setup-front"><img src="/screens/onboarding-connection.png" alt="Real Waow connection onboarding screen" /></div>
+          </div>
+          <div className="onboarding-copy">
+            <span className="eyebrow eyebrow-light">Simple from the start</span>
+            <h2>From hello to your first message in a few clear steps.</h2>
+            <p>Sign in with your phone number, verify securely, set up your profile and start talking.</p>
+            <div className="onboarding-preview-row" aria-label="Real Waow onboarding screens">
+              <img src="/screens/onboarding-stay-connected.png" alt="Stay connected onboarding preview" />
+              <img src="/screens/onboarding-typing.png" alt="Typing and conversation onboarding preview" />
+              <img src="/screens/onboarding-connection.png" alt="Connection onboarding preview" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="download-cta">
+        <div className="shell download-inner">
+          <div>
+            <span className="eyebrow eyebrow-light">Start your next conversation</span>
+            <h2>Say hello to Waow.</h2>
+          </div>
+          <div className="download-action">
+            <Link className="button button-light" href="https://web.waow.app/" target="_blank" rel="noreferrer">Get Waow for iOS <span>↗</span></Link>
+            <p>iPhone and iPad · Android planned</p>
+          </div>
+        </div>
+      </section>
+
+      <SiteFooter />
+    </main>
+  );
+}
