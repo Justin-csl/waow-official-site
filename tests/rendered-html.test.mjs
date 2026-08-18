@@ -33,7 +33,7 @@ test("server-renders the finished Waow homepage and metadata", async () => {
   assert.match(html, /Keep love moving/);
   assert.match(html, /End-to-end encrypted messaging/);
   assert.match(html, /waow-app-icon\.png/);
-  assert.match(html, /new-land\.png/);
+  assert.match(html, /new-land-green\.png/);
   assert.match(html, /screens\/chat-list-real\.png/);
   assert.match(html, /screens\/chat-real\.png/);
   assert.match(html, /screens\/translation-real\.png/);
