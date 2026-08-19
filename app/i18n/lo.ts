@@ -12,7 +12,7 @@ export const loStrings: Partial<Record<SiteKey, string>> = {
   "nav.features": "ຄຸນສົມບັດ",
   "nav.privacy": "ຄວາມເປັນສ່ວນຕົວ",
   "nav.security": "ຄວາມປອດໄພ",
-  "nav.faq": "ຄຳຖາມທີ່ພົບເລື້ອຍ",
+  "nav.faq": "ຄຳຖາມທີ່ພົບເລື້ອຍໆ",
   "nav.help": "ຊ່ວຍເຫຼືອ",
   "nav.download": "ດາວໂຫຼດ",
   "brand.tagline": "ການສົນທະນາສ່ວນຕົວ ພ້ອມການສະແດງອອກທີ່ຫຼາຍຂຶ້ນອີກໜ້ອຍໜຶ່ງ.",
