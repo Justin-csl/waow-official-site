@@ -87,7 +87,7 @@ export function HomeContent() {
           </div>
           <img
             className="hero-landing-art"
-            src="/new-land-green.png"
+            src="/new-land.png"
             alt="Waow app shown across chat list, welcome and Lao cultural screens"
           />
         </div>
