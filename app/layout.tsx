@@ -9,7 +9,15 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://waow.chat"),
   title: { default: "Waow — Keep love moving", template: "%s · Waow" },
   description: "End-to-end encrypted messaging, expressive media and clear calling—made to keep your favourite people close.",
-  icons: { icon: "/favicon.svg", shortcut: "/favicon.svg" },
+  icons: {
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon-32.png",
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Waow — Keep love moving",
     description: "End-to-end encrypted messaging, expressive media and clear calling—made for the people you love.",
