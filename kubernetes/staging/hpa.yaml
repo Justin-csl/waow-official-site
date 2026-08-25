@@ -1,0 +1,8 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: waow-official
+  namespace: default
+spec:
+  minReplicas: 1
+  maxReplicas: 3

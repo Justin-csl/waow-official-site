@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: waow-official-service
+  namespace: default
+  labels:
+    app: waow-official
+  annotations:
+    cloud.google.com/neg: '{"ingress": true}'
+    cloud.google.com/backend-config: '{"default": "waow-official-backend-config"}'
+spec:
+  type: ClusterIP
+  selector:
+    app: waow-official
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: http

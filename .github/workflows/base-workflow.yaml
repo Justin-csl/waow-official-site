@@ -1,0 +1,80 @@
+name: Deploy
+
+on:
+  workflow_call:
+    inputs:
+      NAME: { required: true, type: string }
+      ENVIRONMENT: { required: true, type: string }
+      SERVER_TYPE: { required: true, type: string }
+      GKE_CLUSTER: { required: true, type: string }
+      GKE_ZONE: { required: true, type: string }
+      PROJECT_ID: { required: true, type: string }
+      PROJECT_NUMBER: { required: true, type: number }
+
+env:
+  REPOSITORY: asia.gcr.io
+  GAR_LOCATION: asia
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.ENVIRONMENT }}
+    concurrency:
+      group: waow-official-${{ inputs.ENVIRONMENT }}
+      cancel-in-progress: true
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.0
+          cache: npm
+
+      - name: Validate application
+        run: |
+          npm ci
+          npm run lint
+          npm test
+
+      - name: Verify deployment secret
+        run: |
+          test -n "${{ secrets.SERVICE_ACCOUNT }}" || (echo "SERVICE_ACCOUNT secret is missing" && exit 1)
+
+      - id: auth
+        name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          token_format: access_token
+          workload_identity_provider: projects/${{ inputs.PROJECT_NUMBER }}/locations/global/workloadIdentityPools/gh-work-pool/providers/gh-work-provider
+          service_account: ${{ secrets.SERVICE_ACCOUNT }}
+
+      - name: Configure Docker
+        run: echo "${{ steps.auth.outputs.access_token }}" | docker login -u oauth2accesstoken --password-stdin "https://${GAR_LOCATION}-docker.pkg.dev"
+
+      - name: Set up GKE credentials
+        uses: google-github-actions/get-gke-credentials@v2
+        with:
+          cluster_name: ${{ inputs.GKE_CLUSTER }}
+          location: ${{ inputs.GKE_ZONE }}
+
+      - name: Build and publish image
+        env:
+          IMAGE: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ inputs.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ inputs.NAME }}:${{ github.sha }}
+        run: |
+          docker build --tag "$IMAGE" .
+          docker push "$IMAGE"
+
+      - name: Deploy
+        env:
+          IMAGE: ${{ env.GAR_LOCATION }}-docker.pkg.dev/${{ inputs.PROJECT_ID }}/${{ env.REPOSITORY }}/${{ inputs.NAME }}:${{ github.sha }}
+        run: |
+          kubectl kustomize "kubernetes/${{ inputs.SERVER_TYPE }}" \
+            | sed "s|LOCATION-docker.pkg.dev/PROJECT_ID/REPOSITORY/IMAGE:TAG|$IMAGE|g" \
+            | kubectl apply -f -
+          kubectl rollout status "deployment/${{ inputs.NAME }}" --timeout=5m

@@ -1,0 +1,13 @@
+node_modules
+dist
+.next
+.wrangler
+.git
+.github
+kubernetes
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+output

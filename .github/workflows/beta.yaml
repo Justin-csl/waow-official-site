@@ -1,0 +1,19 @@
+name: Beta
+
+on:
+  push:
+    branches:
+      - beta
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/base-workflow.yaml
+    with:
+      NAME: waow-official
+      ENVIRONMENT: beta
+      SERVER_TYPE: staging
+      GKE_CLUSTER: waow
+      GKE_ZONE: asia-southeast1-a
+      PROJECT_ID: waow-495309
+      PROJECT_NUMBER: 281510063784
+    secrets: inherit

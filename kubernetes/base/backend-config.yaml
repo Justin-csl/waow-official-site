@@ -1,0 +1,25 @@
+apiVersion: cloud.google.com/v1
+kind: BackendConfig
+metadata:
+  name: waow-official-backend-config
+spec:
+  logging:
+    enable: true
+    sampleRate: 1.0
+  cdn:
+    enabled: true
+    cachePolicy:
+      includeHost: true
+      includeProtocol: true
+    cacheMode: CACHE_ALL_STATIC
+  healthCheck:
+    checkIntervalSec: 3
+    timeoutSec: 2
+    type: HTTP
+    requestPath: /healthz
+    port: 8080
+  sessionAffinity:
+    affinityType: GENERATED_COOKIE
+    affinityCookieTtlSec: 60
+  connectionDraining:
+    drainingTimeoutSec: 60
