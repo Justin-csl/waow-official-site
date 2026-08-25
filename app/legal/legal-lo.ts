@@ -95,8 +95,8 @@ export const legalLo: Record<string, string> = {
   "legal.privacy.20": "ຂໍ້ຕົກລົງຮ່ວມມືຂອງ Waow ກັບສູນອິນເຕີເນັດແຫ່ງຊາດ ພາຍໃຕ້ກະຊວງເຕັກໂນໂລຊີ ແລະ ການສື່ສານ ຄຸ້ມຄອງການພັດທະນາ ແລະ ການຄຸ້ມຄອງແພລດຟອມ ແລະ ລະບົບນິເວດດິຈິຕອນຂອງລາວ. ມັນບໍ່ໄດ້ໃຫ້ຝ່າຍໃດເຂົ້າເຖິງຂໍ້ມູນຜູ້ໃຊ້ໄດ້ຢ່າງເປີດກວ້າງ ແລະ ບໍ່ໄດ້ຖອນສິດຂອງທ່ານພາຍໃຕ້ກົດໝາຍລາວ.",
   // en: Where your information is stored
   "legal.privacy.21": "ຂໍ້ມູນຂອງທ່ານຖືກຈັດເກັບຢູ່ໃສ",
-  // en: Waow's servers are operated for us by TODO(hosting provider), with data stored in TODO(country/region). Some information is necessarily handled outside Laos by the international services Waow depends on — Apple and Google for push notifications and app distribution, our SMS provider for verification codes, and our translation and AI providers. Where information leaves Laos, we transfer it under the conditions required by the Law on Electronic Data Protection of the Lao PDR.
-  "legal.privacy.22": "ເຊີບເວີຂອງ Waow ດຳເນີນງານໃຫ້ພວກເຮົາໂດຍ TODO(hosting provider) ໂດຍຂໍ້ມູນຖືກຈັດເກັບຢູ່ TODO(country/region). ຂໍ້ມູນບາງສ່ວນຈຳເປັນຕ້ອງຖືກຈັດການຢູ່ນອກລາວ ໂດຍບໍລິການສາກົນທີ່ Waow ອາໄສ — Apple ແລະ Google ສຳລັບການແຈ້ງເຕືອນ ແລະ ການແຈກຢາຍແອັບ, ຜູ້ໃຫ້ບໍລິການ SMS ຂອງພວກເຮົາສຳລັບລະຫັດຢືນຢັນ ແລະ ຜູ້ໃຫ້ບໍລິການແປ ແລະ AI ຂອງພວກເຮົາ. ບ່ອນທີ່ຂໍ້ມູນອອກຈາກລາວ ພວກເຮົາໂອນມັນພາຍໃຕ້ເງື່ອນໄຂທີ່ກົດໝາຍວ່າດ້ວຍການປົກປ້ອງຂໍ້ມູນເອເລັກໂຕຣນິກຂອງ ສປປ ລາວ ກຳນົດ.",
+  // en: Some information is necessarily handled outside Laos by the international services Waow depends on — Apple and Google for push notifications and app distribution, our SMS provider for verification codes, and our translation and AI providers. Where information leaves Laos, we transfer it under the conditions required by the Law on Electronic Data Protection of the Lao PDR.
+  "legal.privacy.22": "ຂໍ້ມູນບາງສ່ວນຈຳເປັນຕ້ອງຖືກຈັດການຢູ່ນອກລາວ ໂດຍບໍລິການສາກົນທີ່ Waow ອາໄສ — Apple ແລະ Google ສຳລັບການແຈ້ງເຕືອນ ແລະ ການແຈກຢາຍແອັບ, ຜູ້ໃຫ້ບໍລິການ SMS ຂອງພວກເຮົາສຳລັບລະຫັດຢືນຢັນ ແລະ ຜູ້ໃຫ້ບໍລິການແປ ແລະ AI ຂອງພວກເຮົາ. ບ່ອນທີ່ຂໍ້ມູນອອກຈາກລາວ ພວກເຮົາໂອນມັນພາຍໃຕ້ເງື່ອນໄຂທີ່ກົດໝາຍວ່າດ້ວຍການປົກປ້ອງຂໍ້ມູນເອເລັກໂຕຣນິກຂອງ ສປປ ລາວ ກຳນົດ.",
   // en: Waow's long-term direction is to move core platform infrastructure into Laos. We will update this page when that happens rather than describe it in advance.
   "legal.privacy.23": "ທິດທາງໄລຍະຍາວຂອງ Waow ແມ່ນການຍ້າຍພື້ນຖານໂຄງລ່າງຫຼັກຂອງແພລດຟອມເຂົ້າມາໃນລາວ. ພວກເຮົາຈະອັບເດດໜ້ານີ້ເມື່ອສິ່ງນັ້ນເກີດຂຶ້ນ ແທນທີ່ຈະອະທິບາຍລ່ວງໜ້າ.",
   // en: How long we keep information
@@ -113,34 +113,30 @@ export const legalLo: Record<string, string> = {
   "legal.privacy.25.r1a": "ຂໍ້ຄວາມທີ່ລໍຖ້າສົ່ງ",
   // en: Until delivered, and no longer than 30 days if the recipient never comes online.
   "legal.privacy.25.r1b": "ຈົນກວ່າຈະສົ່ງເຖິງ ແລະ ບໍ່ເກີນ 30 ວັນ ຖ້າຜູ້ຮັບບໍ່ເຄີຍອອນລາຍ.",
-  // en: Messages and media stored on our servers
-  "legal.privacy.25.r2a": "ຂໍ້ຄວາມ ແລະ ສື່ທີ່ຈັດເກັບຢູ່ໃນເຊີບເວີຂອງພວກເຮົາ",
-  // en: TODO(confirmed storage model)
-  "legal.privacy.25.r2b": "TODO(confirmed storage model)",
   // en: Verification code (OTP) records
-  "legal.privacy.25.r3a": "ບັນທຶກລະຫັດຢືນຢັນ (OTP)",
+  "legal.privacy.25.r2a": "ບັນທຶກລະຫັດຢືນຢັນ (OTP)",
   // en: 90 days, to protect accounts and prevent fraud.
-  "legal.privacy.25.r3b": "90 ວັນ ເພື່ອປົກປ້ອງບັນຊີ ແລະ ປ້ອງກັນການສໍ້ໂກງ.",
+  "legal.privacy.25.r2b": "90 ວັນ ເພື່ອປົກປ້ອງບັນຊີ ແລະ ປ້ອງກັນການສໍ້ໂກງ.",
   // en: Call records (who, when, how long)
-  "legal.privacy.25.r4a": "ບັນທຶກການໂທ (ໃຜ, ເມື່ອໃດ, ດົນປານໃດ)",
+  "legal.privacy.25.r3a": "ບັນທຶກການໂທ (ໃຜ, ເມື່ອໃດ, ດົນປານໃດ)",
   // en: 12 months. We do not keep call content.
-  "legal.privacy.25.r4b": "12 ເດືອນ. ພວກເຮົາບໍ່ເກັບເນື້ອຫາການໂທ.",
+  "legal.privacy.25.r3b": "12 ເດືອນ. ພວກເຮົາບໍ່ເກັບເນື້ອຫາການໂທ.",
   // en: Crash and diagnostic data
-  "legal.privacy.25.r5a": "ຂໍ້ມູນການລົ້ມ ແລະ ວິນິດໄສ",
+  "legal.privacy.25.r4a": "ຂໍ້ມູນການລົ້ມ ແລະ ວິນິດໄສ",
   // en: 90 days.
-  "legal.privacy.25.r5b": "90 ວັນ.",
+  "legal.privacy.25.r4b": "90 ວັນ.",
   // en: Support conversations
-  "legal.privacy.25.r6a": "ການສົນທະນາກັບຝ່າຍຊ່ວຍເຫຼືອ",
+  "legal.privacy.25.r5a": "ການສົນທະນາກັບຝ່າຍຊ່ວຍເຫຼືອ",
   // en: 24 months.
-  "legal.privacy.25.r6b": "24 ເດືອນ.",
+  "legal.privacy.25.r5b": "24 ເດືອນ.",
   // en: Reports, appeals and enforcement records
-  "legal.privacy.25.r7a": "ລາຍງານ, ການອຸທອນ ແລະ ບັນທຶກການບັງຄັບໃຊ້",
+  "legal.privacy.25.r6a": "ລາຍງານ, ການອຸທອນ ແລະ ບັນທຶກການບັງຄັບໃຊ້",
   // en: As long as needed to keep people safe and meet legal obligations, including after an account is deleted.
-  "legal.privacy.25.r7b": "ດົນເທົ່າທີ່ຈຳເປັນເພື່ອຮັກສາຄວາມປອດໄພຂອງຜູ້ຄົນ ແລະ ປະຕິບັດຕາມພັນທະທາງກົດໝາຍ ລວມທັງຫຼັງຈາກບັນຊີຖືກລຶບແລ້ວ.",
+  "legal.privacy.25.r6b": "ດົນເທົ່າທີ່ຈຳເປັນເພື່ອຮັກສາຄວາມປອດໄພຂອງຜູ້ຄົນ ແລະ ປະຕິບັດຕາມພັນທະທາງກົດໝາຍ ລວມທັງຫຼັງຈາກບັນຊີຖືກລຶບແລ້ວ.",
   // en: Backups
-  "legal.privacy.25.r8a": "ໄຟລ໌ສຳຮອງ",
+  "legal.privacy.25.r7a": "ໄຟລ໌ສຳຮອງ",
   // en: Deleted through the normal backup rotation within 35 days of account deletion.
-  "legal.privacy.25.r8b": "ຖືກລຶບຜ່ານການໝູນວຽນສຳຮອງປົກກະຕິ ພາຍໃນ 35 ວັນນັບຈາກການລຶບບັນຊີ.",
+  "legal.privacy.25.r7b": "ຖືກລຶບຜ່ານການໝູນວຽນສຳຮອງປົກກະຕິ ພາຍໃນ 35 ວັນນັບຈາກການລຶບບັນຊີ.",
   // en: Your rights and choices
   "legal.privacy.26": "ສິດ ແລະ ທາງເລືອກຂອງທ່ານ",
   // en: See and change your profile at any time in the app.
@@ -329,8 +325,8 @@ export const legalLo: Record<string, string> = {
   "legal.child-safety.2.6": "ການປ້ອງກັນ. ພວກເຮົາເຮັດວຽກເພື່ອກວດຫາ ແລະ ຢຸດຢັ້ງຮູບແບບພຶດຕິກຳທີ່ກ່ຽວຂ້ອງກັບການລໍ້ລວງ ແລະ ການເຜີຍແຜ່ CSAM ພ້ອມທັງທົບທວນມາດຕະການຂອງພວກເຮົາເມື່ອການບໍລິການເຕີບໂຕຂຶ້ນ.",
   // en: Child safety contact
   "legal.child-safety.3": "ຜູ້ຕິດຕໍ່ດ້ານຄວາມປອດໄພຂອງເດັກ",
-  // en: Designated point of contact: TODO(child safety contact name), TODO(child safety contact role), Dynamic Solution Sole Co., Ltd. — safety@waow.app, monitored, and able to discuss our CSAE prevention practices with app stores, authorities and the public.
-  "legal.child-safety.4": "ຈຸດຕິດຕໍ່ທີ່ກຳນົດໄວ້: TODO(child safety contact name), TODO(child safety contact role), Dynamic Solution Sole Co., Ltd. — safety@waow.app ເຊິ່ງມີການຕິດຕາມ ແລະ ສາມາດປຶກສາຫາລືກ່ຽວກັບແນວທາງປ້ອງກັນ CSAE ຂອງພວກເຮົາກັບຮ້ານແອັບ, ອົງການລັດ ແລະ ສາທາລະນະຊົນ.",
+  // en: Designated point of contact: Dynamic Solution Sole Co., Ltd. — safety@waow.app, monitored, and able to discuss our CSAE prevention practices with app stores, authorities and the public.
+  "legal.child-safety.4": "ຈຸດຕິດຕໍ່ທີ່ກຳນົດໄວ້: Dynamic Solution Sole Co., Ltd. — safety@waow.app ເຊິ່ງມີການຕິດຕາມ ແລະ ສາມາດປຶກສາຫາລືກ່ຽວກັບແນວທາງປ້ອງກັນ CSAE ຂອງພວກເຮົາກັບຮ້ານແອັບ, ອົງການລັດ ແລະ ສາທາລະນະຊົນ.",
 
   // ── official-accounts ──
   // en: Official Account Policy
@@ -391,12 +387,12 @@ export const legalLo: Record<string, string> = {
   "legal.ai-translation.2": "ການແປ ແລະ ຜູ້ຊ່ວຍ AI ຈະເຮັດວຽກສະເພາະເມື່ອທ່ານໃຊ້ພວກມັນເທົ່ານັ້ນ. Waow ບໍ່ສົ່ງການສົນທະນາຂອງທ່ານໄປຫາຜູ້ໃຫ້ບໍລິການແປ ຫຼື AI ຢູ່ເບື້ອງຫຼັງ. ເມື່ອທ່ານແປຂໍ້ຄວາມໃດໜຶ່ງ ຂໍ້ຄວາມນັ້ນຈຶ່ງຖືກສົ່ງໄປແປ. ເມື່ອທ່ານຖາມຜູ້ຊ່ວຍ AI ສິ່ງທີ່ທ່ານພິມຈຶ່ງຖືກສົ່ງໄປເພື່ອຕອບ. ບໍ່ມີສິ່ງອື່ນຖືກສົ່ງ.",
   // en: Where your text goes
   "legal.ai-translation.3": "ຂໍ້ຄວາມຂອງທ່ານໄປໃສ",
-  // en: Translation and AI responses are produced by TODO(provider category) acting for Waow. Processing takes place in TODO(processing country/region). These providers may use your text only to produce the result you asked for.
-  "legal.ai-translation.4": "ການແປ ແລະ ຄຳຕອບຂອງ AI ຖືກສ້າງຂຶ້ນໂດຍ TODO(provider category) ທີ່ດຳເນີນການແທນ Waow. ການປະມວນຜົນເກີດຂຶ້ນຢູ່ TODO(processing country/region). ຜູ້ໃຫ້ບໍລິການເຫຼົ່ານີ້ອາດໃຊ້ຂໍ້ຄວາມຂອງທ່ານພຽງເພື່ອສ້າງຜົນລັບທີ່ທ່ານຮ້ອງຂໍເທົ່ານັ້ນ.",
+  // en: Translation and AI responses are produced by providers acting for Waow. Processing takes place in Vientiane, Laos. These providers may use your text only to produce the result you asked for.
+  "legal.ai-translation.4": "ການແປ ແລະ ຄຳຕອບຂອງ AI ຖືກສ້າງຂຶ້ນໂດຍຜູ້ໃຫ້ບໍລິການທີ່ດຳເນີນການແທນ Waow. ການປະມວນຜົນເກີດຂຶ້ນຢູ່ນະຄອນຫຼວງວຽງຈັນ, ສປປ ລາວ. ຜູ້ໃຫ້ບໍລິການເຫຼົ່ານີ້ອາດໃຊ້ຂໍ້ຄວາມຂອງທ່ານພຽງເພື່ອສ້າງຜົນລັບທີ່ທ່ານຮ້ອງຂໍເທົ່ານັ້ນ.",
   // en: What we keep
   "legal.ai-translation.5": "ສິ່ງທີ່ພວກເຮົາເກັບໄວ້",
-  // en: AI assistant conversations are kept for TODO(AI history retention period) so that you can see your history, and are then deleted. You can delete your AI conversation history at any time from within the assistant. Translated text is not stored beyond the moment it takes to return the translation.
-  "legal.ai-translation.6": "ການສົນທະນາກັບຜູ້ຊ່ວຍ AI ຖືກເກັບໄວ້ເປັນເວລາ TODO(AI history retention period) ເພື່ອໃຫ້ທ່ານເບິ່ງປະຫວັດໄດ້ ຈາກນັ້ນຈຶ່ງຖືກລຶບ. ທ່ານສາມາດລຶບປະຫວັດການສົນທະນາ AI ຂອງທ່ານໄດ້ທຸກເວລາຈາກພາຍໃນຜູ້ຊ່ວຍ. ຂໍ້ຄວາມທີ່ແປແລ້ວຈະບໍ່ຖືກເກັບໄວ້ເກີນຊ່ວງເວລາທີ່ໃຊ້ໃນການສົ່ງຄຳແປກັບຄືນ.",
+  // en: AI assistant conversations are kept so that you can see your history, and are then deleted. You can delete your AI conversation history at any time from within the assistant. Translated text is not stored beyond the moment it takes to return the translation.
+  "legal.ai-translation.6": "ການສົນທະນາກັບຜູ້ຊ່ວຍ AI ຖືກເກັບໄວ້ເພື່ອໃຫ້ທ່ານເບິ່ງປະຫວັດໄດ້ ຈາກນັ້ນຈຶ່ງຖືກລຶບ. ທ່ານສາມາດລຶບປະຫວັດການສົນທະນາ AI ຂອງທ່ານໄດ້ທຸກເວລາຈາກພາຍໃນຜູ້ຊ່ວຍ. ຂໍ້ຄວາມທີ່ແປແລ້ວຈະບໍ່ຖືກເກັບໄວ້ເກີນຊ່ວງເວລາທີ່ໃຊ້ໃນການສົ່ງຄຳແປກັບຄືນ.",
   // en: Training
   "legal.ai-translation.7": "ການຝຶກໂມເດວ",
   // en: Your private chats are never used to train AI models. Your AI assistant conversations are not used to train models unless you give separate, clear consent.
@@ -454,14 +450,6 @@ export const legalLo: Record<string, string> = {
   // en: Dynamic Solution Sole Co., Ltd. has a memorandum of cooperation with the National Internet Center under the Ministry of Technology and Communications, concerning the study, development and management of the Waow platform and Laos's digital ecosystem. It is a framework for technical cooperation and future service integration. It is not a standing authorisation to access user information, and it does not exempt any request from the process on this page. Requests should be sent to legal@waow.app.
   "legal.law-enforcement.4": "Dynamic Solution Sole Co., Ltd. ມີບົດບັນທຶກຄວາມຮ່ວມມືກັບສູນອິນເຕີເນັດແຫ່ງຊາດ ພາຍໃຕ້ກະຊວງເຕັກໂນໂລຊີ ແລະ ການສື່ສານ ກ່ຽວກັບການສຶກສາ, ການພັດທະນາ ແລະ ການຄຸ້ມຄອງແພລດຟອມ Waow ແລະ ລະບົບນິເວດດິຈິຕອນຂອງລາວ. ມັນເປັນກອບສຳລັບຄວາມຮ່ວມມືທາງເຕັກນິກ ແລະ ການເຊື່ອມໂຍງບໍລິການໃນອະນາຄົດ. ມັນບໍ່ແມ່ນການອະນຸຍາດຖາວອນໃນການເຂົ້າເຖິງຂໍ້ມູນຜູ້ໃຊ້ ແລະ ບໍ່ໄດ້ຍົກເວັ້ນການຮ້ອງຂໍໃດຈາກຂັ້ນຕອນໃນໜ້ານີ້. ການຮ້ອງຂໍຄວນສົ່ງໄປທີ່ legal@waow.app.",
 
-  // ── licences ──
-  // en: Open Source Licences
-  "legal.licences.title": "ໃບອະນຸຍາດໂອເພນຊອດ",
-  // en: Waow is built with open source software. We are grateful to the people who wrote it. The components we use, and the full text of their licences, are listed below.
-  "legal.licences.0": "Waow ຖືກສ້າງຂຶ້ນດ້ວຍຊອບແວໂອເພນຊອດ. ພວກເຮົາຂອບໃຈຜູ້ທີ່ຂຽນມັນ. ອົງປະກອບທີ່ພວກເຮົາໃຊ້ ແລະ ຂໍ້ຄວາມເຕັມຂອງໃບອະນຸຍາດ ແມ່ນລາຍການຢູ່ດ້ານລຸ່ມ.",
-  // en: TODO(open source component and licence list)
-  "legal.licences.1": "TODO(open source component and licence list)",
-
   // ── website-privacy ──
   // en: Website Privacy Notice
   "legal.website-privacy.title": "ແຈ້ງການຄວາມເປັນສ່ວນຕົວຂອງເວັບໄຊ",
@@ -471,10 +459,8 @@ export const legalLo: Record<string, string> = {
   "legal.website-privacy.1.0": "ຜູ້ໃຫ້ບໍລິການໂຮສເວັບໄຊຂອງພວກເຮົາບັນທຶກຂໍ້ມູນທາງເຕັກນິກມາດຕະຖານກ່ຽວກັບການເຂົ້າຊົມ — ທີ່ຢູ່ IP, ປະເພດບຣາວເຊີ, ໜ້າທີ່ຮ້ອງຂໍ ແລະ ເວລາຂອງການຮ້ອງຂໍ — ເພື່ອຮັກສາໃຫ້ເວັບໄຊໃຊ້ງານໄດ້ ແລະ ປອດໄພ.",
   // en: If you register for early access, we store the details you submit so we can contact you about availability, and for no other purpose. You may ask us to delete them at any time at privacy@waow.app.
   "legal.website-privacy.1.1": "ຖ້າທ່ານລົງທະບຽນເພື່ອເຂົ້າເຖິງລ່ວງໜ້າ ພວກເຮົາຈະເກັບຂໍ້ມູນທີ່ທ່ານສົ່ງມາ ເພື່ອຕິດຕໍ່ທ່ານກ່ຽວກັບຄວາມພ້ອມໃຊ້ງານ ແລະ ບໍ່ໄດ້ໃຊ້ເພື່ອຈຸດປະສົງອື່ນ. ທ່ານສາມາດຂໍໃຫ້ພວກເຮົາລຶບມັນໄດ້ທຸກເວລາທີ່ privacy@waow.app.",
-  // en: TODO(cookies and analytics disclosure)
-  "legal.website-privacy.1.2": "TODO(cookies and analytics disclosure)",
   // en: We do not sell website visitor information and do not use it for advertising.
-  "legal.website-privacy.1.3": "ພວກເຮົາບໍ່ຂາຍຂໍ້ມູນຜູ້ເຂົ້າຊົມເວັບໄຊ ແລະ ບໍ່ໃຊ້ມັນເພື່ອການໂຄສະນາ.",
+  "legal.website-privacy.1.2": "ພວກເຮົາບໍ່ຂາຍຂໍ້ມູນຜູ້ເຂົ້າຊົມເວັບໄຊ ແລະ ບໍ່ໃຊ້ມັນເພື່ອການໂຄສະນາ.",
 
   // ── delete-account ──
   // en: Delete Your Account
@@ -495,22 +481,20 @@ export const legalLo: Record<string, string> = {
   "legal.delete-account.4.1": "ພວກເຮົາຈະສົ່ງລະຫັດຢືນຢັນທາງ SMS ເພື່ອໃຫ້ແນ່ໃຈວ່າຄຳຮ້ອງຂໍມາຈາກທ່ານ.",
   // en: Enter the code to confirm. Your account is closed straight away.
   "legal.delete-account.4.2": "ປ້ອນລະຫັດເພື່ອຢືນຢັນ. ບັນຊີຂອງທ່ານຈະຖືກປິດທັນທີ.",
-  // en: TODO(self-service deletion form — needs send-code and confirm-delete API endpoints)
-  "legal.delete-account.5": "TODO(self-service deletion form — needs send-code and confirm-delete API endpoints)",
   // en: If you cannot receive the code — for example the number is no longer yours — write to privacy@waow.app and we will verify your identity another way and process the request within 7 days.
-  "legal.delete-account.6": "ຖ້າທ່ານບໍ່ສາມາດຮັບລະຫັດໄດ້ — ຕົວຢ່າງ ເບີນັ້ນບໍ່ແມ່ນຂອງທ່ານແລ້ວ — ກະລຸນາຂຽນຫາ privacy@waow.app ແລ້ວພວກເຮົາຈະຢືນຢັນຕົວຕົນຂອງທ່ານດ້ວຍວິທີອື່ນ ແລະ ດຳເນີນການຕາມຄຳຮ້ອງພາຍໃນ 7 ວັນ.",
+  "legal.delete-account.5": "ຖ້າທ່ານບໍ່ສາມາດຮັບລະຫັດໄດ້ — ຕົວຢ່າງ ເບີນັ້ນບໍ່ແມ່ນຂອງທ່ານແລ້ວ — ກະລຸນາຂຽນຫາ privacy@waow.app ແລ້ວພວກເຮົາຈະຢືນຢັນຕົວຕົນຂອງທ່ານດ້ວຍວິທີອື່ນ ແລະ ດຳເນີນການຕາມຄຳຮ້ອງພາຍໃນ 7 ວັນ.",
   // en: What happens next
-  "legal.delete-account.7": "ສິ່ງທີ່ຈະເກີດຂຶ້ນຕໍ່ໄປ",
+  "legal.delete-account.6": "ສິ່ງທີ່ຈະເກີດຂຶ້ນຕໍ່ໄປ",
   // en: Your profile, name, photo and status are removed.
-  "legal.delete-account.8.0": "ໂປຣໄຟລ໌, ຊື່, ຮູບ ແລະ ສະຖານະຂອງທ່ານຈະຖືກລຶບອອກ.",
+  "legal.delete-account.7.0": "ໂປຣໄຟລ໌, ຊື່, ຮູບ ແລະ ສະຖານະຂອງທ່ານຈະຖືກລຶບອອກ.",
   // en: You are removed from all your groups.
-  "legal.delete-account.8.1": "ທ່ານຈະຖືກລຶບອອກຈາກທຸກກຸ່ມຂອງທ່ານ.",
+  "legal.delete-account.7.1": "ທ່ານຈະຖືກລຶບອອກຈາກທຸກກຸ່ມຂອງທ່ານ.",
   // en: The data we hold about you is deleted on the schedule in our Privacy Policy, and disappears from backups within 35 days.
-  "legal.delete-account.8.2": "ຂໍ້ມູນທີ່ພວກເຮົາເກັບກ່ຽວກັບທ່ານຈະຖືກລຶບຕາມກຳນົດເວລາໃນນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ ແລະ ຈະຫາຍໄປຈາກໄຟລ໌ສຳຮອງພາຍໃນ 35 ວັນ.",
+  "legal.delete-account.7.2": "ຂໍ້ມູນທີ່ພວກເຮົາເກັບກ່ຽວກັບທ່ານຈະຖືກລຶບຕາມກຳນົດເວລາໃນນະໂຍບາຍຄວາມເປັນສ່ວນຕົວ ແລະ ຈະຫາຍໄປຈາກໄຟລ໌ສຳຮອງພາຍໃນ 35 ວັນ.",
   // en: Messages you already sent stay on the devices of the people who received them. We cannot remove those copies.
-  "legal.delete-account.8.3": "ຂໍ້ຄວາມທີ່ທ່ານສົ່ງໄປແລ້ວຈະຍັງຄົງຢູ່ໃນອຸປະກອນຂອງຜູ້ທີ່ໄດ້ຮັບ. ພວກເຮົາບໍ່ສາມາດລຶບສຳເນົາເຫຼົ່ານັ້ນໄດ້.",
+  "legal.delete-account.7.3": "ຂໍ້ຄວາມທີ່ທ່ານສົ່ງໄປແລ້ວຈະຍັງຄົງຢູ່ໃນອຸປະກອນຂອງຜູ້ທີ່ໄດ້ຮັບ. ພວກເຮົາບໍ່ສາມາດລຶບສຳເນົາເຫຼົ່ານັ້ນໄດ້.",
   // en: We keep a limited record where safety, fraud prevention or the law requires it.
-  "legal.delete-account.8.4": "ພວກເຮົາເກັບບັນທຶກໄວ້ຈຳກັດ ໃນກໍລະນີທີ່ຄວາມປອດໄພ, ການປ້ອງກັນການສໍ້ໂກງ ຫຼື ກົດໝາຍກຳນົດ.",
+  "legal.delete-account.7.4": "ພວກເຮົາເກັບບັນທຶກໄວ້ຈຳກັດ ໃນກໍລະນີທີ່ຄວາມປອດໄພ, ການປ້ອງກັນການສໍ້ໂກງ ຫຼື ກົດໝາຍກຳນົດ.",
   // en: Questions: privacy@waow.app.
-  "legal.delete-account.9": "ຄຳຖາມ: privacy@waow.app.",
+  "legal.delete-account.8": "ຄຳຖາມ: privacy@waow.app.",
 };

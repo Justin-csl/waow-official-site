@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { LangEffect, LanguageToggle, useT } from "./i18n/lang";
 import type { SiteKey } from "./i18n/strings";
 
@@ -15,28 +16,37 @@ export function Brand() {
 
 export function SiteHeader() {
   const t = useT();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
   return (
-    <header className="site-header">
+    <header className={`site-header${menuOpen ? " menu-open" : ""}`}>
       <LangEffect />
       <div className="shell header-inner">
         <Brand />
-        <nav aria-label="Main navigation">
-          <Link href="/features">{t("nav.features")}</Link>
-          <Link href="/privacy">{t("nav.privacy")}</Link>
-          <Link href="/security">{t("nav.security")}</Link>
-          <Link href="/faq">{t("nav.faq")}</Link>
-          <Link href="/help">{t("nav.help")}</Link>
+        <nav aria-label="Main navigation" id="primary-nav">
+          <Link href="/features" onClick={closeMenu}>{t("nav.features")}</Link>
+          <Link href="/privacy" onClick={closeMenu}>{t("nav.privacy")}</Link>
+          <Link href="/security" onClick={closeMenu}>{t("nav.security")}</Link>
+          <Link href="/faq" onClick={closeMenu}>{t("nav.faq")}</Link>
+          <Link href="/help" onClick={closeMenu}>{t("nav.help")}</Link>
+          <div className="nav-mobile-extra">
+            <LanguageToggle />
+          </div>
         </nav>
         <div className="header-actions">
           <LanguageToggle />
-          <Link
-            className="button button-small button-primary"
-            href="https://web.waow.app/"
-            target="_blank"
-            rel="noreferrer"
+          <button
+            type="button"
+            className="nav-toggle"
+            aria-expanded={menuOpen}
+            aria-controls="primary-nav"
+            aria-label={menuOpen ? t("nav.closeMenu") : t("nav.openMenu")}
+            onClick={() => setMenuOpen((open) => !open)}
           >
-            {t("nav.download")}
-          </Link>
+            <span />
+            <span />
+            <span />
+          </button>
         </div>
       </div>
     </header>

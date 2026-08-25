@@ -15,6 +15,8 @@ export const loStrings: Partial<Record<SiteKey, string>> = {
   "nav.faq": "ຄຳຖາມທີ່ພົບເລື້ອຍໆ",
   "nav.help": "ຊ່ວຍເຫຼືອ",
   "nav.download": "ດາວໂຫຼດ",
+  "nav.openMenu": "ເປີດເມນູ",
+  "nav.closeMenu": "ປິດເມນູ",
   "brand.tagline": "ການສົນທະນາສ່ວນຕົວ ພ້ອມການສະແດງອອກທີ່ຫຼາຍຂຶ້ນອີກໜ້ອຍໜຶ່ງ.",
   "footer.product": "ຜະລິດຕະພັນ",
   "footer.support": "ການຊ່ວຍເຫຼືອ",
@@ -145,7 +147,6 @@ export const loStrings: Partial<Record<SiteKey, string>> = {
   "sec.disclosure.c": "ນັກຄົ້ນຄວ້າດ້ານຄວາມປອດໄພຄວນລາຍງານຊ່ອງໂຫວ່ເປັນການສ່ວນຕົວ. ທີ່ຢູ່ສຳລັບການເປີດເຜີຍ ແລະ ນະໂຍບາຍການຕອບສະໜອງຈະຖືກເຜີຍແຜ່ກ່ອນເປີດຕົວ.",
 
   // Help
-  "help.search": "ຄົ້ນຫາການຊ່ວຍເຫຼືອ Waow",
   "help.cat.start.t": "ການເລີ່ມຕົ້ນ",
   "help.cat.start.c": "ການຕັ້ງບັນຊີ, OTP, ໂປຣໄຟລ໌ ແລະ ການສົນທະນາຄັ້ງທຳອິດຂອງທ່ານ.",
   "help.cat.messages.t": "ຂໍ້ຄວາມ ແລະ ກຸ່ມ",
@@ -164,6 +165,14 @@ export const loStrings: Partial<Record<SiteKey, string>> = {
   "help.cat.account.c": "ປ່ຽນເບີໂທ, ຮ້ອງຂໍຂໍ້ມູນ ຫຼື ລຶບບັນຊີ Waow ຂອງທ່ານ.",
   "help.more.t": "ຍັງຕ້ອງການຄວາມຊ່ວຍເຫຼືອບໍ?",
   "help.more.c": "ການຊ່ວຍເຫຼືອລູກຄ້າ, ຄວາມເປັນສ່ວນຕົວ, ກົດໝາຍ ແລະ ຄວາມປອດໄພ ຈະໃຊ້ຊ່ອງທາງຕິດຕໍ່ແຍກຕ່າງຫາກ. ການສົ່ງຄຳຮ້ອງຈະບໍ່ລວມເນື້ອຫາຂໍ້ຄວາມ, ກະແຈເຂົ້າລະຫັດ ຫຼື ລາຍຊື່ຕິດຕໍ່ສ່ວນຕົວໂດຍອັດຕະໂນມັດ.",
+  "help.form.name": "ຊື່ເຕັມ",
+  "help.form.namePlaceholder": "ຊື່ຂອງທ່ານ",
+  "help.form.email": "ທີ່ຢູ່ອີເມວ",
+  "help.form.emailPlaceholder": "you@example.com",
+  "help.form.description": "ລາຍລະອຽດ",
+  "help.form.descriptionPlaceholder": "ບອກພວກເຮົາວ່າມີບັນຫາຫຍັງເກີດຂຶ້ນ.",
+  "help.form.submit": "ສົ່ງຂໍ້ຄວາມ",
+  "help.form.hint": "ນີ້ຈະເປີດແອັບອີເມວຂອງທ່ານ ພ້ອມຂໍ້ຄວາມທີ່ຈ່າຫນ້າໄປຫາ help@waow.app.",
   "help.status.t": "ສະຖານະການບໍລິການ",
   "help.status.c": "ໜ້າສະຖານະສາທາລະນະຈະລາຍງານຄວາມພ້ອມໃຊ້ງານຂອງການຢືນຢັນຕົວຕົນ, ການສົ່ງຂໍ້ຄວາມ, ສື່, ການໂທ, ການແຈ້ງເຕືອນ ແລະ ອຸປະກອນທີ່ເຊື່ອມຕໍ່ ກ່ອນການເປີດຕົວສາທາລະນະ.",
 

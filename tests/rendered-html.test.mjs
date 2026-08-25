@@ -84,7 +84,6 @@ test("renders every legal document", async () => {
     ["/legal/ai-translation", /Translation and the AI assistant run only when you use them/],
     ["/legal/security", /tell us privately at security@waow\.app/],
     ["/legal/law-enforcement", /memorandum of cooperation with the National Internet Center/],
-    ["/legal/licences", /Waow is built with open source software/],
     ["/legal/website-privacy", /This notice covers waow\.app itself/],
     ["/delete-account", /Deletion is permanent and cannot be undone/],
   ];

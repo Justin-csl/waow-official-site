@@ -12,6 +12,8 @@ export const siteStrings = {
   "nav.faq": "FAQ",
   "nav.help": "Help",
   "nav.download": "Download",
+  "nav.openMenu": "Open menu",
+  "nav.closeMenu": "Close menu",
   "brand.tagline": "Private conversations with a little more expression.",
   "footer.product": "Product",
   "footer.support": "Support",
@@ -144,7 +146,6 @@ export const siteStrings = {
   "sec.disclosure.c": "Security researchers should report vulnerabilities privately. A dedicated disclosure address and response policy will be published before launch.",
 
   // Help categories
-  "help.search": "Search Waow Help",
   "help.cat.start.t": "Getting started",
   "help.cat.start.c": "Account setup, OTP, profiles and your first conversation.",
   "help.cat.messages.t": "Messages & groups",
@@ -163,6 +164,14 @@ export const siteStrings = {
   "help.cat.account.c": "Change your number, request information or delete your Waow account.",
   "help.more.t": "Still need help?",
   "help.more.c": "Customer support, privacy, legal and security enquiries will use separate contact channels. Support submissions will never automatically include message content, encryption keys or private contacts.",
+  "help.form.name": "Full name",
+  "help.form.namePlaceholder": "Your name",
+  "help.form.email": "Email address",
+  "help.form.emailPlaceholder": "you@example.com",
+  "help.form.description": "Description",
+  "help.form.descriptionPlaceholder": "Tell us what's going on.",
+  "help.form.submit": "Send message",
+  "help.form.hint": "This opens your email app with a message addressed to help@waow.app.",
   "help.status.t": "Service status",
   "help.status.c": "A public status page will report availability for authentication, messaging, media, calls, push notifications and linked devices before the public launch.",
 

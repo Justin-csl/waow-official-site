@@ -119,7 +119,7 @@ const privacy: LegalBlock[] = [
   { type: "h2", text: "Where your information is stored" },
   {
     type: "p",
-    text: "Waow's servers are operated for us by TODO(hosting provider), with data stored in TODO(country/region). Some information is necessarily handled outside Laos by the international services Waow depends on — Apple and Google for push notifications and app distribution, our SMS provider for verification codes, and our translation and AI providers. Where information leaves Laos, we transfer it under the conditions required by the Law on Electronic Data Protection of the Lao PDR.",
+    text: "Some information is necessarily handled outside Laos by the international services Waow depends on — Apple and Google for push notifications and app distribution, our SMS provider for verification codes, and our translation and AI providers. Where information leaves Laos, we transfer it under the conditions required by the Law on Electronic Data Protection of the Lao PDR.",
   },
   {
     type: "p",
@@ -133,7 +133,6 @@ const privacy: LegalBlock[] = [
     rows: [
       ["Your account and profile", "For as long as your account is active. Deleted when you delete your account."],
       ["Messages waiting to be delivered", "Until delivered, and no longer than 30 days if the recipient never comes online."],
-      ["Messages and media stored on our servers", "TODO(confirmed storage model)"],
       ["Verification code (OTP) records", "90 days, to protect accounts and prevent fraud."],
       ["Call records (who, when, how long)", "12 months. We do not keep call content."],
       ["Crash and diagnostic data", "90 days."],
@@ -368,7 +367,7 @@ const childSafety: LegalBlock[] = [
   { type: "h2", text: "Child safety contact" },
   {
     type: "p",
-    text: "Designated point of contact: TODO(child safety contact name), TODO(child safety contact role), Dynamic Solution Sole Co., Ltd. — safety@waow.app, monitored, and able to discuss our CSAE prevention practices with app stores, authorities and the public.",
+    text: "Designated point of contact: Dynamic Solution Sole Co., Ltd. — safety@waow.app, monitored, and able to discuss our CSAE prevention practices with app stores, authorities and the public.",
   },
 ];
 
@@ -437,12 +436,12 @@ const aiTranslation: LegalBlock[] = [
   { type: "h2", text: "Where your text goes" },
   {
     type: "p",
-    text: "Translation and AI responses are produced by TODO(provider category) acting for Waow. Processing takes place in TODO(processing country/region). These providers may use your text only to produce the result you asked for.",
+    text: "Translation and AI responses are produced by providers acting for Waow. Processing takes place in Vientiane, Laos. These providers may use your text only to produce the result you asked for.",
   },
   { type: "h2", text: "What we keep" },
   {
     type: "p",
-    text: "AI assistant conversations are kept for TODO(AI history retention period) so that you can see your history, and are then deleted. You can delete your AI conversation history at any time from within the assistant. Translated text is not stored beyond the moment it takes to return the translation.",
+    text: "AI assistant conversations are kept so that you can see your history, and are then deleted. You can delete your AI conversation history at any time from within the assistant. Translated text is not stored beyond the moment it takes to return the translation.",
   },
   { type: "h2", text: "Training" },
   {
@@ -507,14 +506,6 @@ const lawEnforcement: LegalBlock[] = [
   },
 ];
 
-const licences: LegalBlock[] = [
-  {
-    type: "p",
-    text: "Waow is built with open source software. We are grateful to the people who wrote it. The components we use, and the full text of their licences, are listed below.",
-  },
-  { type: "p", text: "TODO(open source component and licence list)" },
-];
-
 const websitePrivacy: LegalBlock[] = [
   {
     type: "p",
@@ -525,7 +516,6 @@ const websitePrivacy: LegalBlock[] = [
     items: [
       "Our website host records standard technical information about visits — IP address, browser type, pages requested and time of request — to keep the site available and secure.",
       "If you register for early access, we store the details you submit so we can contact you about availability, and for no other purpose. You may ask us to delete them at any time at privacy@waow.app.",
-      "TODO(cookies and analytics disclosure)",
       "We do not sell website visitor information and do not use it for advertising.",
     ],
   },
@@ -553,7 +543,6 @@ const deleteAccount: LegalBlock[] = [
       "Enter the code to confirm. Your account is closed straight away.",
     ],
   },
-  { type: "p", text: "TODO(self-service deletion form — needs send-code and confirm-delete API endpoints)" },
   {
     type: "p",
     text: "If you cannot receive the code — for example the number is no longer yours — write to privacy@waow.app and we will verify your identity another way and process the request within 7 days.",
@@ -577,15 +566,12 @@ export const legalDocs: LegalDoc[] = [
     slug: "privacy",
     title: "Privacy Policy",
     path: "/legal/privacy",
-    effective: "TODO(effective date)",
-    updated: "TODO(last updated date)",
     body: privacy,
   },
   {
     slug: "terms",
     title: "Terms of Service",
     path: "/legal/terms",
-    effective: "TODO(effective date)",
     body: terms,
   },
   {
@@ -614,7 +600,6 @@ export const legalDocs: LegalDoc[] = [
     path: "/legal/law-enforcement",
     body: lawEnforcement,
   },
-  { slug: "licences", title: "Open Source Licences", path: "/legal/licences", body: licences },
   { slug: "website-privacy", title: "Website Privacy Notice", path: "/legal/website-privacy", body: websitePrivacy },
   { slug: "delete-account", title: "Delete Your Account", path: "/delete-account", body: deleteAccount },
 ];

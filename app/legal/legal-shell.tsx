@@ -3,10 +3,15 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { useDocT, useT } from "../i18n/lang";
+import { linkifyEmails } from "../linkify-email";
 import { legalLo } from "./legal-lo";
 import { legalDocs, TODO_PATTERN, type LegalBlock, type LegalDoc } from "./legal-data";
 
-/** Renders TODO(...) markers as visible chips so unfinished text cannot pass as final. */
+/**
+ * Renders TODO(...) markers as visible chips so unfinished text cannot pass as
+ * final, and turns any bare email address in the rest of the text into a
+ * clickable mailto: link.
+ */
 function Text({ text }: { text: string }) {
   const nodes: ReactNode[] = [];
   let cursor = 0;
@@ -14,7 +19,7 @@ function Text({ text }: { text: string }) {
   // would emit the captured inner text as an extra fragment.
   for (const match of text.matchAll(new RegExp(TODO_PATTERN.source, "g"))) {
     const at = match.index ?? 0;
-    if (at > cursor) nodes.push(text.slice(cursor, at));
+    if (at > cursor) nodes.push(...linkifyEmails(text.slice(cursor, at), at));
     nodes.push(
       <mark className="legal-todo" key={at} title="This value still has to be supplied">
         NEEDS INPUT: {match[1]}
@@ -22,7 +27,7 @@ function Text({ text }: { text: string }) {
     );
     cursor = at + match[0].length;
   }
-  if (cursor < text.length) nodes.push(text.slice(cursor));
+  if (cursor < text.length) nodes.push(...linkifyEmails(text.slice(cursor), cursor));
   return <>{nodes}</>;
 }
 

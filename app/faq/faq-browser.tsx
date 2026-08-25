@@ -11,6 +11,7 @@ import {
   type FaqSection,
 } from "./faq-data";
 import { useLang } from "../i18n/lang";
+import { linkifyEmails } from "../linkify-email";
 import { artKey, blockKey, catKey, makeTranslator, secKey, uiStrings, type UiKey } from "./faq-i18n";
 
 type Located = { category: FaqCategory; section: FaqSection; article: FaqArticle };
@@ -32,7 +33,10 @@ const popular = popularArticles
   )
   .filter((item): item is Located => Boolean(item));
 
-/** Renders **bold** runs; the data uses it to mark UI labels the reader has to find on screen. */
+/**
+ * Renders **bold** runs (the data uses it to mark UI labels the reader has to
+ * find on screen) and turns any bare email address into a clickable mailto: link.
+ */
 function RichText({ text }: { text: string }) {
   return (
     <>
@@ -40,7 +44,7 @@ function RichText({ text }: { text: string }) {
         part.startsWith("**") && part.endsWith("**") ? (
           <b key={index}>{part.slice(2, -2)}</b>
         ) : (
-          <span key={index}>{part}</span>
+          <span key={index}>{linkifyEmails(part, index)}</span>
         ),
       )}
     </>
