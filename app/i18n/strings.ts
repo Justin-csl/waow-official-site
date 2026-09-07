@@ -77,10 +77,10 @@ export const siteStrings = {
   // Page heroes
   "features.eyebrow": "Product",
   "features.title": "Everything you need to keep the conversation moving.",
-  "features.copy": "Waow brings messaging, expressive media, calls and privacy controls together in one calm experience.",
+  "features.copy": "Waow brings messaging, expressive media, calls and device-protected chats together in one calm experience.",
   "security.eyebrow": "Security",
   "security.title": "Security is a practice, not a slogan.",
-  "security.copy": "Waow combines native device protection, secure account controls and transparent release verification.",
+  "security.copy": "Waow combines encrypted messaging, native device protection and linked-device controls.",
   "help.eyebrow": "Help Centre",
   "help.title": "How can we help?",
   "help.copy": "Clear guidance for getting started, staying private and solving common problems.",
@@ -97,12 +97,10 @@ export const siteStrings = {
   "dl.qr.label": "QR code placeholder for the future App Store listing",
   "dl.avail.t": "Official availability",
   "dl.avail.c": "Use the official Waow app page for current availability, supported iOS versions and installation details.",
-  "dl.other.t": "Other platforms",
-  "dl.other.c": "Android, desktop and web are planned experiences. They will not be presented as available before they are stable and officially released.",
 
   // Features cards
   "feat.encryption.t": "End-to-end encryption",
-  "feat.encryption.c": "Personal messages and calls are protected so they stay between you and the people you choose.",
+  "feat.encryption.c": "Personal and group messages, including media, are end-to-end encrypted. Calls are encrypted in transit.",
   "feat.messaging.t": "Messaging",
   "feat.messaging.c": "Reply, edit, react and share without losing the natural rhythm of a conversation.",
   "feat.groups.t": "Groups",
@@ -125,10 +123,8 @@ export const siteStrings = {
   "feat.hidden.c": "A separate secret code conceals the locked-chat folder, and entering it in search reveals the protected area.",
   "feat.previews.t": "Discreet previews",
   "feat.previews.c": "Locked-chat notifications avoid revealing the sender, group, message text or media on your lock screen.",
-  "feat.controls.t": "Privacy controls",
-  "feat.controls.c": "Choose who sees your profile, last seen and read receipts, and manage group permissions, blocked contacts and unknown callers.",
 
-  "trust.e2ee.c": "Personal messages and calls stay between you and the people you choose.",
+  "trust.e2ee.c": "Personal and group messages, including media, are end-to-end encrypted. Calls are encrypted in transit.",
   "trust.lock.c": "Protect selected conversations with Face ID.",
   "trust.hidden.t": "Hidden chats",
   "trust.hidden.c": "Keep your locked-chat folder out of the normal inbox.",
@@ -141,9 +137,9 @@ export const siteStrings = {
   "sec.devices.t": "Device controls",
   "sec.devices.c": "Linked devices are designed to be visible, reviewable and removable from the primary account.",
   "sec.keys.t": "Protected keys",
-  "sec.keys.c": "Security-sensitive account and device material belongs in iOS Keychain or equivalent protected platform storage.",
+  "sec.keys.c": "Security-sensitive account and device material is kept in iOS Keychain or protected on the device.",
   "sec.disclosure.t": "Responsible disclosure",
-  "sec.disclosure.c": "Security researchers should report vulnerabilities privately. A dedicated disclosure address and response policy will be published before launch.",
+  "sec.disclosure.c": "Security researchers can report vulnerabilities privately to security@waow.app under our published disclosure policy.",
 
   // Help categories
   "help.cat.start.t": "Getting started",
@@ -153,7 +149,7 @@ export const siteStrings = {
   "help.cat.calls.t": "Calls",
   "help.cat.calls.c": "Voice and video calling, permissions, audio routes and troubleshooting.",
   "help.cat.privacy.t": "Privacy & chat lock",
-  "help.cat.privacy.c": "Face ID, locked conversations, secret codes and privacy controls.",
+  "help.cat.privacy.c": "Face ID, locked conversations, secret codes, blocking and reporting.",
   "help.cat.media.t": "Photos, video & files",
   "help.cat.media.c": "Camera access, editing, quality, uploads and storage.",
   "help.cat.devices.t": "Linked devices",
@@ -161,7 +157,7 @@ export const siteStrings = {
   "help.cat.notifs.t": "Notifications",
   "help.cat.notifs.c": "Message previews, push permissions, sounds and badge settings.",
   "help.cat.account.t": "Account",
-  "help.cat.account.c": "Change your number, request information or delete your Waow account.",
+  "help.cat.account.c": "Update your profile, deactivate your account or request permanent erasure.",
   "help.more.t": "Still need help?",
   "help.more.c": "Customer support, privacy, legal and security enquiries will use separate contact channels. Support submissions will never automatically include message content, encryption keys or private contacts.",
   "help.form.name": "Full name",
@@ -172,8 +168,8 @@ export const siteStrings = {
   "help.form.descriptionPlaceholder": "Tell us what's going on.",
   "help.form.submit": "Send message",
   "help.form.hint": "This opens your email app with a message addressed to help@waow.app.",
-  "help.status.t": "Service status",
-  "help.status.c": "A public status page will report availability for authentication, messaging, media, calls, push notifications and linked devices before the public launch.",
+  "help.status.t": "Service issues",
+  "help.status.c": "If Waow is unavailable or a feature is not working, contact support@waow.app with your app version, device model and a description of the problem.",
 
   // About
   "about.direction.t": "Our direction",
@@ -183,7 +179,7 @@ export const siteStrings = {
   "about.legal.t": "Legal information",
   "about.legal.a": "Our",
   "about.legal.b": "and",
-  "about.legal.c": "are published in the legal centre. Community Guidelines, child safety standards, account-deletion instructions and third-party licences are being finalised and will be published there as they are approved.",
+  "about.legal.c": "are published in the legal centre together with our Community Guidelines, child safety standards, translation notice and account-deactivation instructions.",
 
   // Legal shell
   "legal.docs": "Legal documents",

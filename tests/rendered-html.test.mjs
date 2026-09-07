@@ -64,8 +64,8 @@ test("server-renders every official public route", async () => {
 });
 
 test("keeps the links the shipped app uses working", async () => {
-  // The released iOS app's Help screen links to waow.app/privacy and
-  // waow.app/terms, so neither may 404.
+  // Keep the legacy short routes working alongside the /legal URLs used by
+  // the released iOS app on waow.la.
   for (const [from, to] of [
     ["/privacy", /\/legal\/privacy$/],
     ["/terms", /\/legal\/terms$/],
@@ -80,12 +80,11 @@ test("renders every legal document", async () => {
   const docs = [
     ["/legal/community-guidelines", /Child sexual abuse or exploitation in any form/],
     ["/legal/child-safety", /Waow prohibits child sexual abuse and exploitation/],
-    ["/legal/official-accounts", /An official account lets an organisation reach people on Waow/],
-    ["/legal/ai-translation", /Translation and the AI assistant run only when you use them/],
+    ["/legal/ai-translation", /Translation runs only when you select a message and request it/],
     ["/legal/security", /tell us privately at security@waow\.app/],
     ["/legal/law-enforcement", /memorandum of cooperation with the National Internet Center/],
-    ["/legal/website-privacy", /This notice covers waow\.app itself/],
-    ["/delete-account", /Deletion is permanent and cannot be undone/],
+    ["/legal/website-privacy", /This notice covers waow\.la itself/],
+    ["/delete-account", /provides a seven-day recovery window/],
   ];
 
   for (const [pathname, content] of docs) {
@@ -95,10 +94,17 @@ test("renders every legal document", async () => {
   }
 });
 
-test("moves the privacy feature content to /features rather than dropping it", async () => {
+test("publishes only privacy features supported by the current app", async () => {
   const html = await (await render("/features")).text();
-  for (const card of ["Chat lock", "Hidden chat folder", "Discreet previews", "Privacy controls"]) {
+  for (const card of ["Chat lock", "Hidden chat folder", "Discreet previews"]) {
     assert.match(html, new RegExp(card), card);
+  }
+  assert.doesNotMatch(html, /Choose who sees your profile/);
+});
+
+test("does not publish removed legal routes", async () => {
+  for (const pathname of ["/legal/official-accounts", "/legal/licences"]) {
+    assert.equal((await render(pathname)).status, 404, pathname);
   }
 });
 

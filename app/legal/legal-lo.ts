@@ -12,7 +12,7 @@
  * empty falls back to English. Regenerate the key list with:
  *   node --experimental-strip-types scripts/legal-i18n.mjs --dump
  */
-export const legalLo: Record<string, string> = {
+const legacyLegalLo: Record<string, string> = {
 
   // ── privacy ──
   // en: Privacy Policy
@@ -21,42 +21,29 @@ export const legalLo: Record<string, string> = {
   "legal.privacy.0": "ພວກເຮົາແມ່ນໃຜ",
   // en: Waow is a communication service operated by Dynamic Solution Sole Co., Ltd. ("Waow"), a company registered in the Lao People's Democratic Republic, with its registered office at Dongsanghin Village, Xaythany District, Vientiane Capital, Lao PDR.
   "legal.privacy.1": "Waow ເປັນບໍລິການສື່ສານທີ່ດຳເນີນງານໂດຍ Dynamic Solution Sole Co., Ltd. (\"Waow\") ເຊິ່ງເປັນບໍລິສັດທີ່ຈົດທະບຽນຢູ່ ສາທາລະນະລັດ ປະຊາທິປະໄຕ ປະຊາຊົນລາວ ໂດຍມີສຳນັກງານຈົດທະບຽນຢູ່ ບ້ານດົງສັງຫິນ, ເມືອງໄຊທານີ, ນະຄອນຫຼວງວຽງຈັນ, ສປປ ລາວ.",
-  // en: This policy explains what information Waow collects, why, who it is shared with, and the choices you have. It covers the Waow mobile apps, the Waow web experience, official accounts and our support services. For any question about your information, write to privacy@waow.app.
-  "legal.privacy.2": "ນະໂຍບາຍນີ້ອະທິບາຍວ່າ Waow ເກັບຂໍ້ມູນຫຍັງ, ເພື່ອຫຍັງ, ແບ່ງປັນກັບໃຜ ແລະ ທ່ານມີທາງເລືອກຫຍັງແດ່. ມັນຄຸ້ມຄອງແອັບມືຖື Waow, ປະສົບການເວັບຂອງ Waow, ບັນຊີທາງການ ແລະ ບໍລິການຊ່ວຍເຫຼືອຂອງພວກເຮົາ. ສຳລັບຄຳຖາມໃດໆກ່ຽວກັບຂໍ້ມູນຂອງທ່ານ ກະລຸນາຂຽນຫາ privacy@waow.app.",
+  "legal.privacy.2": "ນະໂຍບາຍນີ້ອະທິບາຍວ່າ Waow ເກັບຂໍ້ມູນຫຍັງ, ເພື່ອຫຍັງ, ແບ່ງປັນກັບໃຜ ແລະ ທ່ານມີທາງເລືອກຫຍັງແດ່. ນະໂຍບາຍນີ້ຄຸ້ມຄອງແອັບມືຖື Waow, ເວັບໄຊນີ້ ແລະ ບໍລິການຊ່ວຍເຫຼືອ. ສຳລັບຄຳຖາມກ່ຽວກັບຂໍ້ມູນຂອງທ່ານ ກະລຸນາຂຽນຫາ privacy@waow.app.",
   // en: Information we collect
   "legal.privacy.3": "ຂໍ້ມູນທີ່ພວກເຮົາເກັບ",
   // en: Information you give us
   "legal.privacy.4": "ຂໍ້ມູນທີ່ທ່ານໃຫ້ພວກເຮົາ",
   // en: Your phone number. Required to create an account. We send a one-time code by SMS to confirm the number belongs to you.
   "legal.privacy.5.0": "ເບີໂທລະສັບຂອງທ່ານ. ຈຳເປັນສຳລັບການສ້າງບັນຊີ. ພວກເຮົາສົ່ງລະຫັດຄັ້ງດຽວທາງ SMS ເພື່ອຢືນຢັນວ່າເບີນັ້ນເປັນຂອງທ່ານ.",
-  // en: Your profile. A name, and optionally a photo and status message. Other people see these according to your privacy settings.
-  "legal.privacy.5.1": "ໂປຣໄຟລ໌ຂອງທ່ານ. ຊື່ ແລະ ຮູບກັບຂໍ້ຄວາມສະຖານະ (ບໍ່ບັງຄັບ). ຄົນອື່ນເຫັນສິ່ງເຫຼົ່ານີ້ຕາມການຕັ້ງຄ່າຄວາມເປັນສ່ວນຕົວຂອງທ່ານ.",
-  // en: Your messages and media. Text, photos, videos, voice notes, documents, reactions and other content you send. We deliver this content to the people and groups you choose.
-  "legal.privacy.5.2": "ຂໍ້ຄວາມ ແລະ ສື່ຂອງທ່ານ. ຂໍ້ຄວາມ, ຮູບ, ວິດີໂອ, ຂໍ້ຄວາມສຽງ, ເອກະສານ, ຄວາມຮູ້ສຶກ ແລະ ເນື້ອຫາອື່ນທີ່ທ່ານສົ່ງ. ພວກເຮົາສົ່ງເນື້ອຫານີ້ໄປຫາຄົນ ແລະ ກຸ່ມທີ່ທ່ານເລືອກ.",
+  "legal.privacy.5.1": "ໂປຣໄຟລ໌ຂອງທ່ານ. Waow ເກັບຊື່ ແລະ ເບີໂທຂອງທ່ານ ພ້ອມທັງຮູບໂປຣໄຟລ໌ ແລະ ປະຫວັດຫຍໍ້ ຫຼື ຂໍ້ຄວາມສະຖານະ ຖ້າທ່ານເພີ່ມສິ່ງເຫຼົ່ານັ້ນ. ຜູ້ທີ່ທ່ານສື່ສານດ້ວຍອາດເຫັນລາຍລະອຽດໂປຣໄຟລ໌ເຫຼົ່ານີ້.",
+  // en: Your messages and media. Most chat data is stored locally on your device. Encrypted copies are also stored on Waow's ejabberd server so Waow can deliver and synchronize the text, photos, videos, voice notes, documents, reactions and other content you send to the people and groups you choose.
+  "legal.privacy.5.2": "ຂໍ້ຄວາມ ແລະ ສື່ຂອງທ່ານ. ຂໍ້ມູນແຊັດສ່ວນໃຫຍ່ຖືກເກັບໄວ້ໃນອຸປະກອນຂອງທ່ານ. ສຳເນົາທີ່ຖືກເຂົ້າລະຫັດຈະຖືກເກັບໄວ້ໃນເຊີບເວີ ຂອງ Waow ເພື່ອໃຫ້ Waow ສາມາດສົ່ງ ແລະ ຊິງຂໍ້ຄວາມ, ຮູບ, ວິດີໂອ, ຂໍ້ຄວາມສຽງ, ເອກະສານ, ຄວາມຮູ້ສຶກ ແລະ ເນື້ອຫາອື່ນທີ່ທ່ານສົ່ງໄປຫາຄົນ ແລະ ກຸ່ມທີ່ທ່ານເລືອກ.",
   // en: Your contacts, if you allow it. Waow checks the phone numbers in your address book so it can show you which of your contacts already use Waow. We use these numbers only for that purpose. If you do not grant permission you can still use Waow and add people by phone number manually.
   "legal.privacy.5.3": "ລາຍຊື່ຕິດຕໍ່ຂອງທ່ານ ຖ້າທ່ານອະນຸຍາດ. Waow ກວດເບີໂທໃນສະໝຸດລາຍຊື່ຂອງທ່ານ ເພື່ອສະແດງໃຫ້ເຫັນວ່າຜູ້ຕິດຕໍ່ຄົນໃດໃຊ້ Waow ຢູ່ແລ້ວ. ພວກເຮົາໃຊ້ເບີເຫຼົ່ານີ້ເພື່ອຈຸດປະສົງນັ້ນເທົ່ານັ້ນ. ຖ້າທ່ານບໍ່ໃຫ້ສິດ ທ່ານກໍຍັງໃຊ້ Waow ໄດ້ ແລະ ເພີ່ມຄົນດ້ວຍເບີໂທດ້ວຍຕົນເອງ.",
-  // en: Content you make public. Anything you post through an official account, and any comment or reaction you leave on public content.
-  "legal.privacy.5.4": "ເນື້ອຫາທີ່ທ່ານເຮັດໃຫ້ເປັນສາທາລະນະ. ສິ່ງໃດກໍຕາມທີ່ທ່ານໂພສຜ່ານບັນຊີທາງການ ແລະ ຄຳເຫັນ ຫຼື ຄວາມຮູ້ສຶກທີ່ທ່ານໃສ່ໃນເນື້ອຫາສາທາລະນະ.",
   // en: Reports, appeals and support messages you send us.
   "legal.privacy.5.5": "ລາຍງານ, ການອຸທອນ ແລະ ຂໍ້ຄວາມຂໍຄວາມຊ່ວຍເຫຼືອທີ່ທ່ານສົ່ງມາຫາພວກເຮົາ.",
   // en: Information we collect automatically
   "legal.privacy.6": "ຂໍ້ມູນທີ່ພວກເຮົາເກັບອັດຕະໂນມັດ",
-  // en: Account activity: when your account was created, when you were last online, and which features you use.
-  "legal.privacy.7.0": "ການເຄື່ອນໄຫວຂອງບັນຊີ: ບັນຊີຂອງທ່ານຖືກສ້າງເມື່ອໃດ, ທ່ານອອນລາຍລ່າສຸດເມື່ອໃດ ແລະ ທ່ານໃຊ້ຄຸນສົມບັດໃດແດ່.",
-  // en: Device and connection information: device model, operating system and app version, language, time zone, IP address, and mobile network.
-  "legal.privacy.7.1": "ຂໍ້ມູນອຸປະກອນ ແລະ ການເຊື່ອມຕໍ່: ລຸ້ນອຸປະກອນ, ລະບົບປະຕິບັດການ ແລະ ລຸ້ນແອັບ, ພາສາ, ເຂດເວລາ, ທີ່ຢູ່ IP ແລະ ເຄືອຂ່າຍມືຖື.",
-  // en: Call information: who took part in a call, when it started, and how long it lasted, along with the technical signalling needed to connect it. We do not record the content of your calls.
-  "legal.privacy.7.2": "ຂໍ້ມູນການໂທ: ໃຜເຂົ້າຮ່ວມການໂທ, ເລີ່ມເມື່ອໃດ ແລະ ດົນປານໃດ ພ້ອມກັບສັນຍານທາງເຕັກນິກທີ່ຈຳເປັນໃນການເຊື່ອມຕໍ່ສາຍ. ພວກເຮົາບໍ່ບັນທຶກເນື້ອຫາການໂທຂອງທ່ານ.",
-  // en: Diagnostic and crash information, so we can find and fix faults.
-  "legal.privacy.7.3": "ຂໍ້ມູນວິນິດໄສ ແລະ ການລົ້ມຂອງແອັບ ເພື່ອໃຫ້ພວກເຮົາຫາ ແລະ ແກ້ໄຂຂໍ້ຜິດພາດໄດ້.",
-  // en: A push notification token, so Apple or Google can deliver notifications to your device.
-  "legal.privacy.7.4": "ໂທເຄັນການແຈ້ງເຕືອນ ເພື່ອໃຫ້ Apple ຫຼື Google ສົ່ງການແຈ້ງເຕືອນໄປຫາອຸປະກອນຂອງທ່ານໄດ້.",
+  "legal.privacy.7.0": "ການເຄື່ອນໄຫວຂອງບັນຊີ: ບັນຊີຂອງທ່ານຖືກສ້າງເມື່ອໃດ ແລະ ທ່ານອອນລາຍລ່າສຸດເມື່ອໃດ.",
+  "legal.privacy.7.1": "ຂໍ້ມູນອຸປະກອນ ແລະ ການເຊື່ອມຕໍ່ທີ່ຈຳເປັນຕໍ່ການເຂົ້າລະບົບ, ຄວາມປອດໄພຂອງອຸປະກອນທີ່ເຊື່ອມໂຍງ ແລະ ການໃຫ້ບໍລິການ, ລວມທັງຊື່ ແລະ ຕົວລະບຸອຸປະກອນ, ລຸ້ນແອັບ, IP, ກະແຈເຂົ້າລະຫັດສາທາລະນະ ແລະ ຂໍ້ມູນເຊດຊັນ.",
+  "legal.privacy.7.2": "ໂທເຄັນການແຈ້ງເຕືອນ ເພື່ອໃຫ້ Apple ຫຼື Google ສົ່ງການແຈ້ງເຕືອນໄປຫາອຸປະກອນຂອງທ່ານໄດ້.",
   // en: Information you choose to share
   "legal.privacy.8": "ຂໍ້ມູນທີ່ທ່ານເລືອກແບ່ງປັນ",
-  // en: Location, only when you choose to share it in a conversation. Live location sharing stops automatically at the end of the period you select, and you can stop it at any time.
-  "legal.privacy.9.0": "ສະຖານທີ່ ສະເພາະເມື່ອທ່ານເລືອກແບ່ງປັນມັນໃນການສົນທະນາ. ການແບ່ງປັນສະຖານທີ່ແບບສົດຈະຢຸດອັດຕະໂນມັດເມື່ອສິ້ນສຸດໄລຍະເວລາທີ່ທ່ານເລືອກ ແລະ ທ່ານສາມາດຢຸດມັນໄດ້ທຸກເວລາ.",
-  // en: Text you send to translation or to the AI assistant. Your conversations are not sent to a translation or AI provider automatically — this happens only when you use the feature on content you have selected.
-  "legal.privacy.9.1": "ຂໍ້ຄວາມທີ່ທ່ານສົ່ງໄປແປ ຫຼື ໄປຫາຜູ້ຊ່ວຍ AI. ການສົນທະນາຂອງທ່ານຈະບໍ່ຖືກສົ່ງໄປຫາຜູ້ໃຫ້ບໍລິການແປ ຫຼື AI ໂດຍອັດຕະໂນມັດ — ສິ່ງນີ້ເກີດຂຶ້ນສະເພາະເມື່ອທ່ານໃຊ້ຄຸນສົມບັດນັ້ນກັບເນື້ອຫາທີ່ທ່ານເລືອກເທົ່ານັ້ນ.",
+  "legal.privacy.9.0": "ສະຖານທີ່ ສະເພາະເມື່ອທ່ານເປີດຕົວເລືອກສະຖານທີ່ ຫຼື ເລືອກແບ່ງປັນສະຖານທີ່ໃນການສົນທະນາ. ການແບ່ງປັນສະຖານທີ່ແບບສົດຈະຢຸດຕາມໄລຍະເວລາທີ່ທ່ານເລືອກ ແລະ ທ່ານສາມາດຢຸດມັນໄດ້ທຸກເວລາ.",
+  "legal.privacy.9.1": "ຂໍ້ຄວາມທີ່ທ່ານເລືອກແປ. Waow ບໍ່ສົ່ງຂໍ້ຄວາມອື່ນໄປຫາບໍລິການແປພາສາ.",
   // en: How we use information
   "legal.privacy.10": "ພວກເຮົາໃຊ້ຂໍ້ມູນແນວໃດ",
   // en: To run the service: create your account, deliver your messages, connect your calls, sync your linked devices, and show you which contacts use Waow.
@@ -73,8 +60,7 @@ export const legalLo: Record<string, string> = {
   "legal.privacy.12": "ພວກເຮົາບໍ່ຂາຍຂໍ້ມູນສ່ວນຕົວຂອງທ່ານ. ພວກເຮົາບໍ່ໃຊ້ເນື້ອຫາການສົນທະນາສ່ວນຕົວຂອງທ່ານເພື່ອກຳນົດເປົ້າໝາຍການໂຄສະນາ.",
   // en: Message and call security
   "legal.privacy.13": "ຄວາມປອດໄພຂອງຂໍ້ຄວາມ ແລະ ການໂທ",
-  // en: Waow protects your communications with encryption while they travel between your device and our servers, and while they are stored on our servers. Access to systems holding user data is restricted to a small number of authorised staff and is logged.
-  "legal.privacy.14": "Waow ປົກປ້ອງການສື່ສານຂອງທ່ານດ້ວຍການເຂົ້າລະຫັດ ໃນຂະນະທີ່ມັນເດີນທາງລະຫວ່າງອຸປະກອນຂອງທ່ານກັບເຊີບເວີຂອງພວກເຮົາ ແລະ ໃນຂະນະທີ່ມັນຖືກຈັດເກັບຢູ່ໃນເຊີບເວີຂອງພວກເຮົາ. ການເຂົ້າເຖິງລະບົບທີ່ເກັບຂໍ້ມູນຜູ້ໃຊ້ຖືກຈຳກັດໄວ້ສະເພາະພະນັກງານທີ່ໄດ້ຮັບອະນຸຍາດຈຳນວນໜ້ອຍ ແລະ ມີການບັນທຶກໄວ້.",
+  "legal.privacy.14": "Waow ເຂົ້າລະຫັດຂໍ້ຄວາມສ່ວນຕົວ ແລະ ຂໍ້ຄວາມກຸ່ມແບບຕົ້ນທາງຫາປາຍທາງ ລວມທັງສື່ໃນຂໍ້ຄວາມ. ການໂທສຽງ ແລະ ວິດີໂອຖືກເຂົ້າລະຫັດໃນລະຫວ່າງການສົ່ງ. Waow ບໍ່ບັນທຶກສຽງ ຫຼື ວິດີໂອຂອງການໂທ.",
   // en: Inside the app you can open the encryption information screen for any conversation and compare a security code with the other person to confirm you are talking to who you expect.
   "legal.privacy.15": "ພາຍໃນແອັບ ທ່ານສາມາດເປີດໜ້າຂໍ້ມູນການເຂົ້າລະຫັດຂອງການສົນທະນາໃດກໍໄດ້ ແລະ ປຽບທຽບລະຫັດຄວາມປອດໄພກັບອີກຝ່າຍ ເພື່ອຢືນຢັນວ່າທ່ານກຳລັງສົນທະນາກັບຄົນທີ່ທ່ານຄາດຫວັງ.",
   // en: Waow also offers protections you control: app lock using your device's Face ID or fingerprint, locked conversations that require biometric approval to open, hidden chat folders, discreet notification previews, and screenshot protection on profile screens.
@@ -83,10 +69,8 @@ export const legalLo: Record<string, string> = {
   "legal.privacy.17": "ການລັອກແອັບໃຊ້ລະບົບຊີວະມິຕິຂອງອຸປະກອນທ່ານເອງ. Waow ບໍ່ເຄີຍໄດ້ຮັບ ຫຼື ຈັດເກັບຂໍ້ມູນລາຍນິ້ວມື ຫຼື ໃບໜ້າຂອງທ່ານ — ອຸປະກອນຂອງທ່ານພຽງແຕ່ບອກແອັບວ່າການກວດສອບສຳເລັດ ຫຼື ບໍ່.",
   // en: Who we share information with
   "legal.privacy.18": "ພວກເຮົາແບ່ງປັນຂໍ້ມູນກັບໃຜ",
-  // en: The people you choose. Your messages go to your chosen recipients. Your profile details are visible according to your privacy settings.
-  "legal.privacy.19.0": "ຄົນທີ່ທ່ານເລືອກ. ຂໍ້ຄວາມຂອງທ່ານໄປຫາຜູ້ຮັບທີ່ທ່ານເລືອກ. ລາຍລະອຽດໂປຣໄຟລ໌ຂອງທ່ານເບິ່ງເຫັນໄດ້ຕາມການຕັ້ງຄ່າຄວາມເປັນສ່ວນຕົວຂອງທ່ານ.",
-  // en: Companies that provide services to us, and only for that purpose: cloud hosting and infrastructure, SMS delivery for verification codes, push notification delivery (Apple and Google), translation and AI processing, and crash and performance reporting.
-  "legal.privacy.19.1": "ບໍລິສັດທີ່ໃຫ້ບໍລິການແກ່ພວກເຮົາ ແລະ ເພື່ອຈຸດປະສົງນັ້ນເທົ່ານັ້ນ: ການໂຮສຄລາວ ແລະ ພື້ນຖານໂຄງລ່າງ, ການສົ່ງ SMS ສຳລັບລະຫັດຢືນຢັນ, ການສົ່ງການແຈ້ງເຕືອນ (Apple ແລະ Google), ການປະມວນຜົນການແປ ແລະ AI ພ້ອມທັງການລາຍງານການລົ້ມ ແລະ ປະສິດທິພາບ.",
+  "legal.privacy.19.0": "ຄົນທີ່ທ່ານເລືອກ. ຂໍ້ຄວາມຂອງທ່ານໄປຫາຜູ້ຮັບທີ່ທ່ານເລືອກ ເຊິ່ງອາດເຫັນລາຍລະອຽດໂປຣໄຟລ໌ຂອງທ່ານນຳ.",
+  "legal.privacy.19.1": "ບໍລິສັດທີ່ໃຫ້ບໍລິການແກ່ພວກເຮົາ ແລະ ເພື່ອຈຸດປະສົງນັ້ນເທົ່ານັ້ນ: Google Cloud ສຳລັບການໂຮສ ແລະ ຈັດເກັບ, ຜູ້ໃຫ້ບໍລິການ SMS ສຳລັບລະຫັດຢືນຢັນ, Apple ແລະ Google ສຳລັບການແຈ້ງເຕືອນ ແລະ ແຈກຢາຍແອັບ, ບໍລິການແຜນທີ່ເມື່ອທ່ານໃຊ້ຕົວເລືອກສະຖານທີ່ ແລະ ບໍລິການແປເມື່ອທ່ານແປຂໍ້ຄວາມທີ່ເລືອກ.",
   // en: Authorities, where we are required to act by a valid legal request under Lao law, or where there is an urgent risk of serious harm to a person. Our Law Enforcement Request Policy explains how we handle these.
   "legal.privacy.19.2": "ອົງການລັດ ໃນກໍລະນີທີ່ພວກເຮົາຕ້ອງດຳເນີນການຕາມການຮ້ອງຂໍທາງກົດໝາຍທີ່ຖືກຕ້ອງພາຍໃຕ້ກົດໝາຍລາວ ຫຼື ບ່ອນທີ່ມີຄວາມສ່ຽງຮີບດ່ວນຕໍ່ອັນຕະລາຍຮ້າຍແຮງຕໍ່ບຸກຄົນ. ນະໂຍບາຍການຮ້ອງຂໍຈາກເຈົ້າໜ້າທີ່ຂອງພວກເຮົາອະທິບາຍວິທີທີ່ພວກເຮົາຈັດການເລື່ອງເຫຼົ່ານີ້.",
   // en: A successor company, if Waow is transferred as part of a lawful business transaction. The protections in this policy continue to apply.
@@ -95,56 +79,18 @@ export const legalLo: Record<string, string> = {
   "legal.privacy.20": "ຂໍ້ຕົກລົງຮ່ວມມືຂອງ Waow ກັບສູນອິນເຕີເນັດແຫ່ງຊາດ ພາຍໃຕ້ກະຊວງເຕັກໂນໂລຊີ ແລະ ການສື່ສານ ຄຸ້ມຄອງການພັດທະນາ ແລະ ການຄຸ້ມຄອງແພລດຟອມ ແລະ ລະບົບນິເວດດິຈິຕອນຂອງລາວ. ມັນບໍ່ໄດ້ໃຫ້ຝ່າຍໃດເຂົ້າເຖິງຂໍ້ມູນຜູ້ໃຊ້ໄດ້ຢ່າງເປີດກວ້າງ ແລະ ບໍ່ໄດ້ຖອນສິດຂອງທ່ານພາຍໃຕ້ກົດໝາຍລາວ.",
   // en: Where your information is stored
   "legal.privacy.21": "ຂໍ້ມູນຂອງທ່ານຖືກຈັດເກັບຢູ່ໃສ",
-  // en: Some information is necessarily handled outside Laos by the international services Waow depends on — Apple and Google for push notifications and app distribution, our SMS provider for verification codes, and our translation and AI providers. Where information leaves Laos, we transfer it under the conditions required by the Law on Electronic Data Protection of the Lao PDR.
-  "legal.privacy.22": "ຂໍ້ມູນບາງສ່ວນຈຳເປັນຕ້ອງຖືກຈັດການຢູ່ນອກລາວ ໂດຍບໍລິການສາກົນທີ່ Waow ອາໄສ — Apple ແລະ Google ສຳລັບການແຈ້ງເຕືອນ ແລະ ການແຈກຢາຍແອັບ, ຜູ້ໃຫ້ບໍລິການ SMS ຂອງພວກເຮົາສຳລັບລະຫັດຢືນຢັນ ແລະ ຜູ້ໃຫ້ບໍລິການແປ ແລະ AI ຂອງພວກເຮົາ. ບ່ອນທີ່ຂໍ້ມູນອອກຈາກລາວ ພວກເຮົາໂອນມັນພາຍໃຕ້ເງື່ອນໄຂທີ່ກົດໝາຍວ່າດ້ວຍການປົກປ້ອງຂໍ້ມູນເອເລັກໂຕຣນິກຂອງ ສປປ ລາວ ກຳນົດ.",
+  "legal.privacy.22": "ເຊີບເວີຫຼັກ ແລະ ບ່ອນເກັບຂໍ້ຄວາມທີ່ເຂົ້າລະຫັດຂອງ Waow ຖືກໂຮສເທິງ Google Cloud, ໂດຍຫຼັກຢູ່ສິງກະໂປ. ຂໍ້ມູນບາງສ່ວນຖືກຈັດການໃນປະເທດອື່ນໂດຍບໍລິການທີ່ Waow ອາໄສ, ລວມທັງ Apple ແລະ Google, ຜູ້ໃຫ້ບໍລິການ SMS, ບໍລິການແຜນທີ່ ແລະ ບໍລິການແປພາສາ.",
   // en: Waow's long-term direction is to move core platform infrastructure into Laos. We will update this page when that happens rather than describe it in advance.
   "legal.privacy.23": "ທິດທາງໄລຍະຍາວຂອງ Waow ແມ່ນການຍ້າຍພື້ນຖານໂຄງລ່າງຫຼັກຂອງແພລດຟອມເຂົ້າມາໃນລາວ. ພວກເຮົາຈະອັບເດດໜ້ານີ້ເມື່ອສິ່ງນັ້ນເກີດຂຶ້ນ ແທນທີ່ຈະອະທິບາຍລ່ວງໜ້າ.",
   // en: How long we keep information
   "legal.privacy.24": "ພວກເຮົາເກັບຂໍ້ມູນໄວ້ດົນປານໃດ",
-  // en: Information
-  "legal.privacy.25.h0": "ຂໍ້ມູນ",
-  // en: How long we keep it
-  "legal.privacy.25.h1": "ພວກເຮົາເກັບໄວ້ດົນປານໃດ",
-  // en: Your account and profile
-  "legal.privacy.25.r0a": "ບັນຊີ ແລະ ໂປຣໄຟລ໌ຂອງທ່ານ",
-  // en: For as long as your account is active. Deleted when you delete your account.
-  "legal.privacy.25.r0b": "ຕາບໃດທີ່ບັນຊີຂອງທ່ານຍັງໃຊ້ງານຢູ່. ຖືກລຶບເມື່ອທ່ານລຶບບັນຊີ.",
-  // en: Messages waiting to be delivered
-  "legal.privacy.25.r1a": "ຂໍ້ຄວາມທີ່ລໍຖ້າສົ່ງ",
-  // en: Until delivered, and no longer than 30 days if the recipient never comes online.
-  "legal.privacy.25.r1b": "ຈົນກວ່າຈະສົ່ງເຖິງ ແລະ ບໍ່ເກີນ 30 ວັນ ຖ້າຜູ້ຮັບບໍ່ເຄີຍອອນລາຍ.",
-  // en: Verification code (OTP) records
-  "legal.privacy.25.r2a": "ບັນທຶກລະຫັດຢືນຢັນ (OTP)",
-  // en: 90 days, to protect accounts and prevent fraud.
-  "legal.privacy.25.r2b": "90 ວັນ ເພື່ອປົກປ້ອງບັນຊີ ແລະ ປ້ອງກັນການສໍ້ໂກງ.",
-  // en: Call records (who, when, how long)
-  "legal.privacy.25.r3a": "ບັນທຶກການໂທ (ໃຜ, ເມື່ອໃດ, ດົນປານໃດ)",
-  // en: 12 months. We do not keep call content.
-  "legal.privacy.25.r3b": "12 ເດືອນ. ພວກເຮົາບໍ່ເກັບເນື້ອຫາການໂທ.",
-  // en: Crash and diagnostic data
-  "legal.privacy.25.r4a": "ຂໍ້ມູນການລົ້ມ ແລະ ວິນິດໄສ",
-  // en: 90 days.
-  "legal.privacy.25.r4b": "90 ວັນ.",
-  // en: Support conversations
-  "legal.privacy.25.r5a": "ການສົນທະນາກັບຝ່າຍຊ່ວຍເຫຼືອ",
-  // en: 24 months.
-  "legal.privacy.25.r5b": "24 ເດືອນ.",
-  // en: Reports, appeals and enforcement records
-  "legal.privacy.25.r6a": "ລາຍງານ, ການອຸທອນ ແລະ ບັນທຶກການບັງຄັບໃຊ້",
-  // en: As long as needed to keep people safe and meet legal obligations, including after an account is deleted.
-  "legal.privacy.25.r6b": "ດົນເທົ່າທີ່ຈຳເປັນເພື່ອຮັກສາຄວາມປອດໄພຂອງຜູ້ຄົນ ແລະ ປະຕິບັດຕາມພັນທະທາງກົດໝາຍ ລວມທັງຫຼັງຈາກບັນຊີຖືກລຶບແລ້ວ.",
-  // en: Backups
-  "legal.privacy.25.r7a": "ໄຟລ໌ສຳຮອງ",
-  // en: Deleted through the normal backup rotation within 35 days of account deletion.
-  "legal.privacy.25.r7b": "ຖືກລຶບຜ່ານການໝູນວຽນສຳຮອງປົກກະຕິ ພາຍໃນ 35 ວັນນັບຈາກການລຶບບັນຊີ.",
+  "legal.privacy.25": "ພວກເຮົາເກັບຂໍ້ມູນບັນຊີ, ອຸປະກອນ ແລະ ຂໍ້ຄວາມທີ່ເຂົ້າລະຫັດໄວ້ສະເພາະເທົ່າທີ່ຈຳເປັນຕໍ່ການໃຫ້ບໍລິການ, ປົກປ້ອງລະບົບ ແລະ ປະຕິບັດຕາມກົດໝາຍ. ເບີໂທທີ່ສົ່ງເພື່ອຄົ້ນຫາຜູ້ຕິດຕໍ່ໃຊ້ສຳລັບການຈັບຄູ່ ແລະ ບໍ່ຖືກເພີ່ມເປັນສະໝຸດລາຍຊື່ຂອງ Waow. ບັນທຶກດ້ານການຊ່ວຍເຫຼືອ ແລະ ຄວາມປອດໄພອາດຖືກເກັບດົນກວ່າເມື່ອຈຳເປັນ.",
   // en: Your rights and choices
   "legal.privacy.26": "ສິດ ແລະ ທາງເລືອກຂອງທ່ານ",
   // en: See and change your profile at any time in the app.
   "legal.privacy.27.0": "ເບິ່ງ ແລະ ປ່ຽນໂປຣໄຟລ໌ຂອງທ່ານໄດ້ທຸກເວລາໃນແອັບ.",
-  // en: Control who can see your photo, status, last seen and read receipts, and who can add you to groups.
-  "legal.privacy.27.1": "ຄວບຄຸມວ່າໃຜເຫັນຮູບ, ສະຖານະ, ເວລາອອນລາຍລ່າສຸດ ແລະ ໃບຮັບການອ່ານຂອງທ່ານ ແລະ ໃຜສາມາດເພີ່ມທ່ານເຂົ້າກຸ່ມໄດ້.",
-  // en: Block anyone, and report any message, user, group or official account.
-  "legal.privacy.27.2": "ບລັອກຜູ້ໃດກໍໄດ້ ແລະ ລາຍງານຂໍ້ຄວາມ, ຜູ້ໃຊ້, ກຸ່ມ ຫຼື ບັນຊີທາງການໃດກໍໄດ້.",
+  "legal.privacy.27.1": "ຈັດການຄ່າຄວາມເປັນສ່ວນຕົວທີ່ບັນທຶກໄວ້ໃນອຸປະກອນ ແລະ ຕົວຢ່າງການແຈ້ງເຕືອນໃນແອັບ.",
+  "legal.privacy.27.2": "ບລັອກຜູ້ໃຊ້, ລາຍງານຂໍ້ຄວາມ ຫຼື ຕິດຕໍ່ຝ່າຍຊ່ວຍເຫຼືອກ່ຽວກັບຜູ້ໃຊ້ ຫຼື ກຸ່ມ.",
   // en: Withdraw permission for contacts, camera, microphone, location or notifications in your device settings at any time.
   "legal.privacy.27.3": "ຖອນສິດການເຂົ້າເຖິງລາຍຊື່ຕິດຕໍ່, ກ້ອງ, ໄມໂຄຣໂຟນ, ສະຖານທີ່ ຫຼື ການແຈ້ງເຕືອນ ໃນການຕັ້ງຄ່າອຸປະກອນຂອງທ່ານໄດ້ທຸກເວລາ.",
   // en: Ask us to correct information about you, or ask for a copy of it, by writing to privacy@waow.app.
@@ -153,13 +99,9 @@ export const legalLo: Record<string, string> = {
   "legal.privacy.27.5": "ລຶບບັນຊີຂອງທ່ານໄດ້ທຸກເວລາ.",
   // en: Deleting your account
   "legal.privacy.28": "ການລຶບບັນຊີຂອງທ່ານ",
-  // en: In the app: Settings → Account → Delete Account. From a browser, without installing the app: waow.app/delete-account.
-  "legal.privacy.29": "ໃນແອັບ: ການຕັ້ງຄ່າ → ບັນຊີ → ລຶບບັນຊີ. ຈາກບຣາວເຊີ ໂດຍບໍ່ຕ້ອງຕິດຕັ້ງແອັບ: waow.app/delete-account.",
-  // en: When you delete your account, your profile is removed, you are removed from your groups, and the data we hold about you is deleted on the schedule above. Messages you already sent remain on the devices of the people who received them, because those copies belong to them. We keep a limited record where we must, for safety, fraud prevention or legal reasons.
-  "legal.privacy.30": "ເມື່ອທ່ານລຶບບັນຊີ ໂປຣໄຟລ໌ຂອງທ່ານຈະຖືກລຶບອອກ, ທ່ານຈະຖືກລຶບອອກຈາກກຸ່ມຂອງທ່ານ ແລະ ຂໍ້ມູນທີ່ພວກເຮົາເກັບກ່ຽວກັບທ່ານຈະຖືກລຶບຕາມກຳນົດເວລາຂ້າງເທິງ. ຂໍ້ຄວາມທີ່ທ່ານສົ່ງໄປແລ້ວຈະຍັງຄົງຢູ່ໃນອຸປະກອນຂອງຜູ້ທີ່ໄດ້ຮັບ ເພາະສຳເນົາເຫຼົ່ານັ້ນເປັນຂອງເຂົາ. ພວກເຮົາເກັບບັນທຶກໄວ້ຈຳກັດເມື່ອຈຳເປັນ ເພື່ອຄວາມປອດໄພ, ການປ້ອງກັນການສໍ້ໂກງ ຫຼື ເຫດຜົນທາງກົດໝາຍ.",
-  // en: Age
-  "legal.privacy.31": "ອາຍຸ",
-  // en: Waow is for people aged 16 and over. If you are under 18, you confirm that a parent or legal guardian permits you to use Waow. If we learn that an account belongs to someone under 16, we close it. If you believe someone under 16 is using Waow, tell us at safety@waow.app.
+  // en: In the app: Settings → Account → Delete Account
+  "legal.privacy.29": "ໃນແອັບ: ການຕັ້ງຄ່າ → ບັນຊີ → ລຶບບັນຊີ.",
+  "legal.privacy.30": "ເມື່ອທ່ານລຶບບັນຊີໃນແອັບ Waow ຈະປິດການໃຊ້ງານບັນຊີທັນທີ ແລະ ຍົກເລີກເຊດຊັນອຸປະກອນທີ່ເຊື່ອມໂຍງ. ບັນຊີສາມາດກູ້ຄືນໄດ້ພາຍໃນ 7 ວັນໂດຍຢືນຢັນເບີໂທ. ຂໍ້ຄວາມທີ່ສົ່ງແລ້ວອາດຍັງຢູ່ໃນອຸປະກອນຂອງຜູ້ຮັບ. ສຳລັບການຂໍລຶບຖາວອນ ຫຼື ຄຳຖາມກ່ຽວກັບຂໍ້ມູນທີ່ຍັງເຫຼືອ ກະລຸນາຂຽນຫາ privacy@waow.app.",
   "legal.privacy.32": "Waow ແມ່ນສຳລັບຜູ້ທີ່ມີອາຍຸ 16 ປີຂຶ້ນໄປ. ຖ້າທ່ານມີອາຍຸຕ່ຳກວ່າ 18 ປີ ທ່ານຢືນຢັນວ່າພໍ່ແມ່ ຫຼື ຜູ້ປົກຄອງຕາມກົດໝາຍອະນຸຍາດໃຫ້ທ່ານໃຊ້ Waow. ຖ້າພວກເຮົາຮູ້ວ່າບັນຊີໃດເປັນຂອງຜູ້ທີ່ມີອາຍຸຕ່ຳກວ່າ 16 ປີ ພວກເຮົາຈະປິດມັນ. ຖ້າທ່ານເຊື່ອວ່າມີຜູ້ທີ່ມີອາຍຸຕ່ຳກວ່າ 16 ປີໃຊ້ Waow ກະລຸນາແຈ້ງພວກເຮົາທີ່ safety@waow.app.",
   // en: Changes to this policy
   "legal.privacy.33": "ການປ່ຽນແປງນະໂຍບາຍນີ້",
@@ -454,7 +396,7 @@ export const legalLo: Record<string, string> = {
   // en: Website Privacy Notice
   "legal.website-privacy.title": "ແຈ້ງການຄວາມເປັນສ່ວນຕົວຂອງເວັບໄຊ",
   // en: This notice covers waow.app itself. Our Privacy Policy covers the Waow app.
-  "legal.website-privacy.0": "ແຈ້ງການນີ້ຄຸ້ມຄອງ waow.app ເອງ. ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງພວກເຮົາຄຸ້ມຄອງແອັບ Waow.",
+  "legal.website-privacy.0": "ແຈ້ງການນີ້ຄຸ້ມຄອງ waow.la ເອງ. ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງພວກເຮົາຄຸ້ມຄອງແອັບ Waow.",
   // en: Our website host records standard technical information about visits — IP address, browser type, pages requested and time of request — to keep the site available and secure.
   "legal.website-privacy.1.0": "ຜູ້ໃຫ້ບໍລິການໂຮສເວັບໄຊຂອງພວກເຮົາບັນທຶກຂໍ້ມູນທາງເຕັກນິກມາດຕະຖານກ່ຽວກັບການເຂົ້າຊົມ — ທີ່ຢູ່ IP, ປະເພດບຣາວເຊີ, ໜ້າທີ່ຮ້ອງຂໍ ແລະ ເວລາຂອງການຮ້ອງຂໍ — ເພື່ອຮັກສາໃຫ້ເວັບໄຊໃຊ້ງານໄດ້ ແລະ ປອດໄພ.",
   // en: If you register for early access, we store the details you submit so we can contact you about availability, and for no other purpose. You may ask us to delete them at any time at privacy@waow.app.
@@ -497,4 +439,44 @@ export const legalLo: Record<string, string> = {
   "legal.delete-account.7.4": "ພວກເຮົາເກັບບັນທຶກໄວ້ຈຳກັດ ໃນກໍລະນີທີ່ຄວາມປອດໄພ, ການປ້ອງກັນການສໍ້ໂກງ ຫຼື ກົດໝາຍກຳນົດ.",
   // en: Questions: privacy@waow.app.
   "legal.delete-account.8": "ຄຳຖາມ: privacy@waow.app.",
+};
+
+// The English legal copy is the source of truth. Do not let an older Lao
+// translation describe a feature or workflow that the current app does not
+// provide; missing keys intentionally fall back to the current English text.
+const staleExactKeys = new Set([
+  "legal.terms.11",
+  "legal.terms.12",
+  "legal.terms.13",
+  "legal.terms.14",
+  "legal.terms.15",
+  "legal.terms.16",
+  "legal.terms.24",
+  "legal.community-guidelines.0",
+  "legal.community-guidelines.2.4",
+  "legal.community-guidelines.4.2",
+  "legal.community-guidelines.4.5",
+  "legal.community-guidelines.6.1",
+  "legal.child-safety.0",
+  "legal.child-safety.2.2",
+  "legal.child-safety.4",
+  "legal.website-privacy.1.1",
+  "legal.website-privacy.1.2",
+]);
+
+const stalePrefixes = [
+  "legal.official-accounts.",
+  "legal.licences.",
+  "legal.ai-translation.",
+  "legal.delete-account.",
+];
+
+export const legalLo: Record<string, string> = {
+  ...Object.fromEntries(
+    Object.entries(legacyLegalLo).filter(
+      ([key]) => !staleExactKeys.has(key) && !stalePrefixes.some((prefix) => key.startsWith(prefix)),
+    ),
+  ),
+  "legal.ai-translation.title": "ແຈ້ງການກ່ຽວກັບການແປພາສາ",
+  "legal.delete-account.title": "ປິດການໃຊ້ງານ ຫຼື ຂໍລຶບບັນຊີ",
 };

@@ -173,7 +173,7 @@ export function HomeContent() {
             <span className="eyebrow eyebrow-light">{t("home.trust.eyebrow")}</span>
             <h2>{t("home.trust.title")}</h2>
             <p>
-              End-to-end encryption protects personal messages and calls, while
+              End-to-end encryption protects personal and group messages, while calls are encrypted in transit.
               Face ID chat lock, hidden conversations and discreet previews give
               you clear control over your private spaces.
             </p>
@@ -280,7 +280,7 @@ export function HomeContent() {
           </div>
           <div className="download-action">
             <Link className="button button-light" href="https://web.waow.app/" target="_blank" rel="noreferrer">Get Waow for iOS <span>↗</span></Link>
-            <p>iPhone and iPad · Android planned</p>
+            <p>Available for iPhone and iPad</p>
           </div>
         </div>
       </section>

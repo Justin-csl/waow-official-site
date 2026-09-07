@@ -50,7 +50,7 @@ export const faqCategories: FaqCategory[] = [
               {
                 type: "steps",
                 items: [
-                  "Install **Waow** from the App Store or Google Play and open it.",
+                  "Install **Waow** from the App Store and open it.",
                   "Choose your country, enter your phone number and tap **Next**.",
                   "Enter the six-digit code we send you by SMS.",
                   "Enter the name you want people to see, add a profile photo, and tap **Done**.",
@@ -59,11 +59,11 @@ export const faqCategories: FaqCategory[] = [
               { type: "h", text: "Allow contacts and notifications" },
               {
                 type: "p",
-                text: "Waow asks for permission to read your address book so it can show you which of your contacts already use Waow, and for permission to send notifications so you know when a message arrives. You can change both later in your phone's settings.",
+                text: "Waow asks for Contacts permission only when you tap the add-contact button. If you allow it, Waow sends the phone numbers in your address book to its server for matching so it can show which contacts already use Waow. Contact names stay on your device, and the numbers are used only for matching. Notifications are requested separately when needed. Both permissions remain optional and can be changed later in your device settings.",
               },
               {
                 type: "note",
-                text: "Note: Use the number you can receive SMS on right now. If you are moving to a new number, register the old one first and then use Change number so your chats move with you.",
+                text: "Note: Use a number that can receive SMS now. Never share a Waow verification code with anyone.",
               },
             ],
           },
@@ -113,7 +113,7 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "note",
-                text: "Note: Who can see your photo and About depends on your privacy settings. See How to choose who can see your last seen, photo and About.",
+                text: "Note: People you communicate with may see your name, profile photo and About.",
               },
             ],
           },
@@ -130,7 +130,7 @@ export const faqCategories: FaqCategory[] = [
             body: [
               {
                 type: "p",
-                text: "Waow matches your phone's address book against people who already have an account, so anyone you have saved appears automatically once they join.",
+                text: "If you grant Contacts permission, Waow sends the phone numbers in your address book to its server only to match them against existing Waow accounts. Contact names stay on your device. You can decline permission and add people manually by phone number.",
               },
               { type: "h", text: "Add someone by number" },
               {
@@ -202,7 +202,6 @@ export const faqCategories: FaqCategory[] = [
                 items: [
                   "**iPhone** — iOS, with the full feature set.",
                   "**iPad** — a two-column layout with your chat list beside the open conversation.",
-                  "**Android** — phones and tablets.",
                 ],
               },
               {
@@ -482,9 +481,9 @@ export const faqCategories: FaqCategory[] = [
               {
                 type: "steps",
                 items: [
-                  "Open **Settings** → **Chats** → **Chat Translation**.",
+                  "Open **Settings** → **Chat Translation**.",
                   "Tap **Translate to** and choose the language you read in.",
-                  "Turn on **Auto-translate** if you want incoming messages translated without asking.",
+                  "Keep **Auto-translate** on to make the manual Translate action available in chats.",
                 ],
               },
               {
@@ -493,7 +492,7 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "note",
-                text: "Note: Turning **Auto-translate** off also hides the Translate option in chats. Leave it on if you want to translate messages one at a time.",
+                text: "Note: Despite its current label, this switch does not translate incoming messages automatically; it shows or hides the manual Translate action.",
               },
             ],
           },
@@ -505,7 +504,7 @@ export const faqCategories: FaqCategory[] = [
                 type: "steps",
                 items: [
                   "Tap and hold the message.",
-                  "Tap **More** → **Translate**.",
+                  "Tap **Translate**.",
                   "The translation appears under the message once it is ready.",
                 ],
               },
@@ -515,7 +514,7 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "p",
-                text: "This works in one-to-one chats and in groups. Any **@mentions** in the message are kept as they are rather than being translated.",
+                text: "This works in one-to-one chats and in groups.",
               },
             ],
           },
@@ -530,7 +529,7 @@ export const faqCategories: FaqCategory[] = [
               {
                 type: "steps",
                 items: [
-                  "Open **Settings** → **Chats** → **Chat Translation**.",
+                  "Open **Settings** → **Chat Translation**.",
                   "Turn on **Transliteration**.",
                 ],
               },
@@ -546,11 +545,11 @@ export const faqCategories: FaqCategory[] = [
             body: [
               {
                 type: "p",
-                text: "Waow translates between more than a hundred languages. Lao and English are both supported, and Lao is the default target language.",
+                text: "Waow supports the languages listed in its translation settings. Lao and English are included, and Lao is the default target language.",
               },
               {
                 type: "p",
-                text: "The full list is in **Settings** → **Chats** → **Chat Translation** → **Translate to**, and includes the languages most used across South East Asia — Burmese, Khmer, Thai, Vietnamese, Chinese, Malay, Indonesian, Filipino and Hmong among them.",
+                text: "Open **Settings** → **Chat Translation** → **Translate to** to see the current list, including Myanmar, Khmer, Thai, Vietnamese, Chinese, Malay, Indonesian, Filipino and Hmong.",
               },
             ],
           },
@@ -568,11 +567,11 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "p",
-                text: "Messages you never translate are not sent anywhere. Turning **Auto-translate** off means nothing is translated unless you ask for it message by message.",
+                text: "Messages you do not translate are not sent to the translation service. Translation happens only when you select a message and request it.",
               },
               {
                 type: "note",
-                text: "Note: If a conversation is sensitive enough that it should never leave your device, leave Auto-translate off and don't translate it.",
+                text: "Note: If a message is sensitive enough that it should not be sent to the translation service, do not translate it.",
               },
             ],
           },
@@ -588,7 +587,7 @@ export const faqCategories: FaqCategory[] = [
               { type: "h", text: "I can't see the Translate option" },
               {
                 type: "p",
-                text: "Open **Settings** → **Chats** → **Chat Translation** and check that **Auto-translate** is on. With it off, the Translate option is hidden everywhere.",
+                text: "Open **Settings** → **Chat Translation** and check that **Auto-translate** is on. With it off, the manual Translate action is hidden.",
               },
               { type: "h", text: "The wording is off" },
               {
@@ -611,19 +610,19 @@ export const faqCategories: FaqCategory[] = [
               { type: "h", text: "Change the theme" },
               {
                 type: "steps",
-                items: ["Open **Settings** → **Appearance**.", "Choose the theme you want."],
+                items: ["Open **Settings** → **Chats** → **App appearance**.", "Choose System Default, Light or Dark."],
               },
               {
                 type: "p",
-                text: "The Love theme adds a warmer palette and playful floating emoji effects to your conversations.",
+                text: "This changes the app's overall light or dark appearance.",
               },
               { type: "h", text: "Change your chat wallpaper" },
               {
                 type: "steps",
                 items: [
-                  "Open **Settings** → **Chats** → **Wallpaper**.",
-                  "Choose a picture from the gallery or your own library.",
-                  "Check the preview and tap **Set wallpaper**.",
+                  "Open **Settings** → **Chats** → **Theme & wallpaper**.",
+                  "Choose a chat theme or upload a wallpaper from your photo library.",
+                  "Check the preview and save your choice.",
                 ],
               },
             ],
@@ -660,7 +659,7 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "note",
-                text: "Note: The first time you call, your phone asks for microphone and camera permission. Waow cannot place a call until you allow it.",
+                text: "Note: Your device asks for microphone permission when it is needed and camera permission when you start or enable video.",
               },
             ],
           },
@@ -671,8 +670,8 @@ export const faqCategories: FaqCategory[] = [
               {
                 type: "steps",
                 items: [
-                  "Open a group chat and tap the call icon, or start a normal call first.",
-                  "Tap **Add participant** to bring more people in.",
+                  "Open the group chat.",
+                  "Tap the call icon and start the group call.",
                 ],
               },
               {
@@ -739,11 +738,11 @@ export const faqCategories: FaqCategory[] = [
             body: [
               {
                 type: "p",
-                text: "Yes. Voice and video calls are end-to-end encrypted between the people on the call, one-to-one and in groups.",
+                text: "Voice and video calls are encrypted while in transit, for both one-to-one and group calls.",
               },
               {
                 type: "p",
-                text: "Waow does not record your calls and cannot listen to them. Only the call's start time, duration and participants are needed to connect it.",
+                text: "Waow does not record the audio or video content of your calls.",
               },
             ],
           },
@@ -935,7 +934,7 @@ export const faqCategories: FaqCategory[] = [
     id: "privacy",
     icon: "lock",
     title: "Privacy, Safety and Security",
-    blurb: "Encryption, App Lock, locked chats, privacy settings, blocking and reporting.",
+    blurb: "Encryption, App Lock, locked chats, blocking and reporting.",
     sections: [
       {
         id: "encryption",
@@ -952,7 +951,7 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "p",
-                text: "This covers one-to-one chats, groups, photos and videos, voice messages, and voice and video calls.",
+                text: "This covers one-to-one chats, groups, photos and videos, and voice messages. Voice and video calls are encrypted while in transit.",
               },
               {
                 type: "note",
@@ -1046,36 +1045,6 @@ export const faqCategories: FaqCategory[] = [
         ],
       },
       {
-        id: "privacy-settings",
-        icon: "visibility",
-        title: "Privacy Settings",
-        articles: [
-          {
-            id: "audience",
-            title: "How to choose who can see your last seen, photo and About",
-            body: [
-              {
-                type: "steps",
-                items: [
-                  "Open **Settings** → **Privacy**.",
-                  "Tap **Last seen**, **Profile photo** or **About**.",
-                  "Choose **Everyone**, **My Contacts**, or **My Contacts Except…** and pick who to exclude.",
-                ],
-              },
-              {
-                type: "p",
-                text: "Profile photo and About can also be set to **Same as Last seen**, so one change covers all three.",
-              },
-              { type: "h", text: "Read receipts" },
-              {
-                type: "p",
-                text: "Read receipts are a single switch in the same screen. If you turn them off, you stop sending blue ticks and you stop seeing them from other people.",
-              },
-            ],
-          },
-        ],
-      },
-      {
         id: "safety",
         icon: "shield",
         title: "Safety",
@@ -1094,7 +1063,7 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "p",
-                text: "Blocking stops their messages and calls reaching you, and they are not told that you blocked them. Reporting sends the most recent messages from that chat to us so we can review the account.",
+                text: "Blocking stops their messages and calls reaching you, and they are not told that you blocked them. Reporting a message sends that selected message, the identifiers needed to investigate it and the reason you choose. A general contact report opens an email so you can decide what to send.",
               },
               { type: "h", text: "Unblock someone" },
               {
@@ -1103,33 +1072,6 @@ export const faqCategories: FaqCategory[] = [
                   "Open **Settings** → **Privacy** → **Blocked**.",
                   "Tap the contact and tap **Unblock**.",
                 ],
-              },
-            ],
-          },
-          {
-            id: "two-step",
-            title: "About two-step verification",
-            body: [
-              {
-                type: "p",
-                text: "Two-step verification adds a six-digit PIN that is needed whenever your phone number is registered on a device. Even someone who intercepts an SMS code cannot take over your number without it.",
-              },
-              {
-                type: "steps",
-                items: [
-                  "Open **Settings** → **Account** → **Security**.",
-                  "Tap **Set up two-step verification**.",
-                  "Enter a six-digit PIN and confirm it.",
-                ],
-              },
-              { type: "h", text: "Use a passkey instead" },
-              {
-                type: "p",
-                text: "On supported phones you can create a passkey in the same screen, so registration is confirmed with Face ID or Touch ID rather than a code.",
-              },
-              {
-                type: "note",
-                text: "Note: Choose a PIN you will remember. It is not a password you can reset — there is no way to look it up later.",
               },
             ],
           },
@@ -1154,7 +1096,7 @@ export const faqCategories: FaqCategory[] = [
             body: [
               {
                 type: "p",
-                text: "Waow asks for notification permission the first time you open it. If you said no, you can change it in your phone's settings.",
+                text: "Waow asks for notification permission when notifications are needed. If you said no, you can change it in your device settings.",
               },
               {
                 type: "steps",
@@ -1202,12 +1144,12 @@ export const faqCategories: FaqCategory[] = [
                 type: "steps",
                 items: [
                   "Tap and hold the conversation in your chat list.",
-                  "Tap **Mute** and choose how long for.",
+                  "Tap **Mute**.",
                 ],
               },
               {
                 type: "p",
-                text: "Muted chats still receive messages, they just don't make a sound or raise a banner. **Settings** → **Notifications** → **Muted chats** lists everything you have silenced, with an **Unmute all** option.",
+                text: "Muted chats still receive messages, but they do not make a sound or raise a banner. Use the same chat action to unmute one chat, or open **Settings** → **Notifications** → **Unmute all** to clear every mute.",
               },
             ],
           },
@@ -1230,16 +1172,6 @@ export const faqCategories: FaqCategory[] = [
                   "Check that Focus or Do Not Disturb is not filtering them out.",
                   "Turn off battery-saving modes that stop background activity.",
                 ],
-              },
-            ],
-          },
-          {
-            id: "preview-privacy",
-            title: "If messages are encrypted, how can a notification show the text?",
-            body: [
-              {
-                type: "p",
-                text: "The notification arrives as ciphertext and is unlocked on your phone, by your phone, just before it is shown. The push service only ever carries the encrypted version.",
               },
             ],
           },
@@ -1304,7 +1236,7 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "note",
-                text: "Note: If you see a device you don't recognise, unlink it and then set up two-step verification.",
+                text: "Note: If you see a device you do not recognise, unlink it immediately and contact support@waow.app if you think your account was accessed.",
               },
             ],
           },
@@ -1325,74 +1257,9 @@ export const faqCategories: FaqCategory[] = [
   {
     id: "account",
     icon: "account_circle",
-    title: "Account and Bans",
-    blurb: "Changing your number, multiple accounts, deletion and banned accounts.",
+    title: "Account and Reports",
+    blurb: "Profile changes, account deactivation, permanent-erasure requests and support.",
     sections: [
-      {
-        id: "manage-account",
-        icon: "manage_accounts",
-        title: "Manage Your Account",
-        articles: [
-          {
-            id: "change-number",
-            title: "How to change your phone number",
-            body: [
-              {
-                type: "steps",
-                items: [
-                  "Open **Settings** → **Account** → **Change number**.",
-                  "Enter your old number and your new number.",
-                  "Confirm the new number with the code we send you.",
-                ],
-              },
-              {
-                type: "p",
-                text: "Your chats, groups and settings move with you.",
-              },
-              {
-                type: "note",
-                text: "Note: Do this before you cancel the old SIM — you need to be able to receive the verification code.",
-              },
-            ],
-          },
-          {
-            id: "multi-account",
-            title: "How to use two accounts on one phone",
-            body: [
-              {
-                type: "steps",
-                items: [
-                  "Open **Settings** → **Account** → **Switch account**.",
-                  "Tap **Add account** and register the second number.",
-                  "Use the same screen to move between accounts.",
-                ],
-              },
-              {
-                type: "p",
-                text: "Each account keeps its own chats, contacts and settings. You do not have to sign out of the first one.",
-              },
-            ],
-          },
-          {
-            id: "request-info",
-            title: "How to request your account information",
-            body: [
-              {
-                type: "steps",
-                items: [
-                  "Open **Settings** → **Account** → **Request account info**.",
-                  "Tap **Request report**.",
-                  "Come back in a few days to download it.",
-                ],
-              },
-              {
-                type: "note",
-                text: "Note: Because your messages are end-to-end encrypted, the report cannot include their contents. Use Export chat if you want a copy of a conversation.",
-              },
-            ],
-          },
-        ],
-      },
       {
         id: "delete-account",
         icon: "person_remove",
@@ -1412,11 +1279,11 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "p",
-                text: "Deleting removes your account, your profile, your group memberships and your message history from our servers.",
+                text: "This deactivates the account immediately and revokes its linked-device sessions. You can recover it for seven days by verifying the same phone number.",
               },
               {
                 type: "note",
-                text: "Note: This cannot be undone, and messages other people already received stay on their devices. Export anything you want to keep first.",
+                text: "Note: Messages other people already received stay on their devices. Contact privacy@waow.app to request permanent erasure or ask what information remains after deactivation.",
               },
             ],
           },
@@ -1427,25 +1294,6 @@ export const faqCategories: FaqCategory[] = [
         icon: "block",
         title: "Bans and Reports",
         articles: [
-          {
-            id: "banned",
-            title: "About banned accounts",
-            body: [
-              {
-                type: "p",
-                text: "Accounts are restricted for sending bulk or automated messages, impersonating other people, or behaviour reported repeatedly by other users.",
-              },
-              { type: "h", text: "Temporarily banned" },
-              {
-                type: "p",
-                text: "A temporary ban usually means unofficial software was detected. Uninstall it, install the official Waow app and wait for the countdown to finish.",
-              },
-              {
-                type: "p",
-                text: "If you believe the decision was wrong, contact support@waow.app and ask for a review.",
-              },
-            ],
-          },
           {
             id: "report-problem",
             title: "How to report a problem",
@@ -1459,7 +1307,7 @@ export const faqCategories: FaqCategory[] = [
               },
               {
                 type: "note",
-                text: "Note: The report includes diagnostic details about your app and device — never your messages, your media or your encryption keys.",
+                text: "Note: Include your app version, device model and steps that reproduce the problem. Never email verification codes, passwords, encryption keys or private message content.",
               },
             ],
           },
@@ -1476,7 +1324,6 @@ export const popularArticles: { categoryId: string; sectionId: string; articleId
   { categoryId: "chats", sectionId: "message-status", articleId: "ticks" },
   { categoryId: "privacy", sectionId: "app-chat-lock", articleId: "app-lock" },
   { categoryId: "media", sectionId: "backup-restore", articleId: "backup" },
-  { categoryId: "privacy", sectionId: "safety", articleId: "two-step" },
   { categoryId: "chats", sectionId: "individual-group", articleId: "disappearing" },
   { categoryId: "chats", sectionId: "translation", articleId: "translate-setup" },
   { categoryId: "media", sectionId: "storage", articleId: "manage-storage" },

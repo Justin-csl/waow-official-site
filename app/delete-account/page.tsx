@@ -8,7 +8,7 @@ const doc = getDoc("delete-account")!;
 export const metadata: Metadata = {
   title: "Delete Your Account",
   description:
-    "Delete your Waow account from the app or from this page without installing it, and what happens to your data afterwards.",
+    "Deactivate your Waow account in the app or contact Waow for a permanent erasure request.",
   alternates: { canonical: "/delete-account" },
 };
 

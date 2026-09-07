@@ -29,16 +29,11 @@ export function DownloadPageContent() {
             ))}
           </div>
         </div>
-        <div className="shell content-grid">
+        <div className="shell content-grid single-card-grid">
           <article className="content-card">
             <span className="number">IOS</span>
             <h2>{t("dl.avail.t")}</h2>
             <p>{t("dl.avail.c")}</p>
-          </article>
-          <article className="content-card">
-            <span className="number">NEXT</span>
-            <h2>{t("dl.other.t")}</h2>
-            <p>{t("dl.other.c")}</p>
           </article>
         </div>
       </section>

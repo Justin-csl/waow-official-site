@@ -19,7 +19,6 @@ const items: [SiteKey, SiteKey, string][] = [
   ["feat.chatlock.t", "feat.chatlock.c", "lock"],
   ["feat.hidden.t", "feat.hidden.c", "folder_off"],
   ["feat.previews.t", "feat.previews.c", "notifications_off"],
-  ["feat.controls.t", "feat.controls.c", "visibility"],
 ];
 
 export function FeaturesPageContent() {

@@ -8,7 +8,7 @@ const doc = getDoc("website-privacy")!;
 export const metadata: Metadata = {
   title: "Website Privacy Notice",
   description:
-    "What waow.app records about visits to the website itself, separate from the Waow app.",
+    "What waow.la records about visits to the website itself, separate from the Waow app.",
   alternates: { canonical: "/legal/website-privacy" },
 };
 

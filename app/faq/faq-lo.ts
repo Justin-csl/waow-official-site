@@ -10,7 +10,7 @@
  * mark the UI labels a reader has to find on screen and are rendered bold.
  * Leave arrows (→) and separators (›) as they are.
  *
- * 411 keys, 411 translated.
+ * 370 keys, 312 translated.
  * Regenerate after editing faq-data.ts with: npm run faq:i18n
  */
 export const loStrings: Record<string, string> = {
@@ -76,8 +76,8 @@ export const loStrings: Record<string, string> = {
   "body.get-started.account-setup.create-account.0": "ເບີໂລະສັບຂອງທ່ານຈະເປັນສິ່ງທີ່ລະບຸຕົວຕົນຂອງທ່ານໃນການໃຊ້ງານ Waow. ບໍ່ມີຊື່ຜູ້ໃຊ້ ຫຼື ລະຫັດຜ່ານແຍກຕ່າງຫາກໃຫ້ຈື່ ດັ່ງນັ້ນການຕັ້ງຄ່າໃຊ້ເວລາພຽງ 1 ນາທີ.",
   // en: Register your number
   "body.get-started.account-setup.create-account.1": "ລົງທະບຽນເບີໂທຂອງທ່ານ",
-  // en: Install **Waow** from the App Store or Google Play and open it.
-  "body.get-started.account-setup.create-account.2.0": "ຕິດຕັ້ງ **Waow** ຈາກ App Store ຫຼື Google Play ແລ້ວເປີດມັນ.",
+  // en: Install **Waow** from the App Store and open it.
+  "body.get-started.account-setup.create-account.2.0": "",
   // en: Choose your country, enter your phone number and tap **Next**.
   "body.get-started.account-setup.create-account.2.1": "ເລືອກປະເທດຂອງທ່ານ, ປ້ອນເບີໂທລະສັບ ແລ້ວແຕະ **ຕໍ່ໄປ**.",
   // en: Enter the six-digit code we send you by SMS.
@@ -86,10 +86,10 @@ export const loStrings: Record<string, string> = {
   "body.get-started.account-setup.create-account.2.3": "ປ້ອນຊື່ທີ່ທ່ານຢາກໃຫ້ຄົນອື່ນເຫັນ, ເພີ່ມຮູບໂປຣໄຟລ໌ ແລ້ວແຕະ **ສຳເລັດ**.",
   // en: Allow contacts and notifications
   "body.get-started.account-setup.create-account.3": "ອະນຸຍາດການເຂົ້າເຖິງລາຍຊື່ຕິດຕໍ່ ແລະ ການແຈ້ງເຕືອນ",
-  // en: Waow asks for permission to read your address book so it can show you which of your contacts already use Waow, and for permission to send notifications so you know when a message arrives. You can change both later in your phone's settings.
-  "body.get-started.account-setup.create-account.4": "Waow ຈະຂໍສິດອ່ານສະໝຸດລາຍຊື່ຕິດຕໍ່ຂອງທ່ານ ເພື່ອສະແດງໃຫ້ເຫັນວ່າຜູ້ຕິດຕໍ່ຄົນໃດໃຊ້ Waow ຢູ່ແລ້ວ ແລະ ຂໍສິດສົ່ງການແຈ້ງເຕືອນ ເພື່ອໃຫ້ທ່ານຮູ້ເມື່ອມີຂໍ້ຄວາມມາຮອດ. ທ່ານສາມາດປ່ຽນທັງສອງຢ່າງໄດ້ພາຍຫຼັງໃນການຕັ້ງຄ່າຂອງໂທລະສັບ.",
-  // en: Note: Use the number you can receive SMS on right now. If you are moving to a new number, register the old one first and then use Change number so your chats move with you.
-  "body.get-started.account-setup.create-account.5": "ໝາຍເຫດ: ໃຊ້ເບີທີ່ທ່ານສາມາດຮັບ SMS ໄດ້ໃນຕອນນີ້. ຖ້າທ່ານກຳລັງຍ້າຍໄປໃຊ້ເບີໃໝ່ ໃຫ້ລົງທະບຽນເບີເກົ່າກ່ອນ ແລ້ວຈຶ່ງໃຊ້ ປ່ຽນເບີໂທ ເພື່ອໃຫ້ການສົນທະນາຂອງທ່ານຍ້າຍໄປນຳ.",
+  // en: Waow asks for Contacts permission only when you tap the add-contact button. If you allow it, Waow sends the phone numbers in your address book to its server for matching so it can show which contacts already use Waow. Contact names stay on your device, and the numbers are used only for matching. Notifications are requested separately when needed. Both permissions remain optional and can be changed later in your device settings.
+  "body.get-started.account-setup.create-account.4": "",
+  // en: Note: Use a number that can receive SMS now. Never share a Waow verification code with anyone.
+  "body.get-started.account-setup.create-account.5": "",
 
   // ── Get Started › Account Setup › I didn't receive my verification code ──
   // en: I didn't receive my verification code
@@ -122,8 +122,9 @@ export const loStrings: Record<string, string> = {
   "body.get-started.account-setup.profile.0.2": "ແຕະ “ຊື່” ຫຼື “ກ່ຽວກັບ” ເພື່ອແກ້ໄຂຂໍ້ຄວາມທີ່ຈະສະແດງໃນໂປຣໄຟລ໌",
   // en: Profile photos are cropped square before they are uploaded, so you choose exactly which part of the picture people see.
   "body.get-started.account-setup.profile.1": "ຮູບໂປຣໄຟລ໌ຈະຖືກຕັດເປັນຮູບສີ່ຫຼ່ຽມກ່ອນອັບໂຫຼດ, ເພື່ອໃຫ້ທ່ານເລືອກໄດ້ວ່າຈະສະແດງສ່ວນໃດຂອງຮູບໃນໂປຣໄຟລ໌.",
-  // en: Note: Who can see your photo and About depends on your privacy settings. See How to choose who can see your last seen, photo and About.
-  "body.get-started.account-setup.profile.2": "ໝາຍເຫດ: ຜູ້ທີ່ສາມາດເຫັນຮູບຂອງທ່ານ ແລະ ຂໍ້ມູນກ່ຽວກັບຕົວທ່ານ ຂຶ້ນກັບການຕັ້ງຄ່າຄວາມເປັນສ່ວນຕົວ. ສາມາດເບິ່ງການຕັ້ງຄ່າຄວາມເປັນສ່ວນຕົວໄດ້ທີ່ \"ວິທີເລືອກວ່າໃຜສາມາດເຫັນເວລາອອນລາຍລ່າສຸດ, ຮູບ ແລະ ຂໍ້ມູນ ຂອງທ່ານໄດ້\"",
+  // STALE: the English below changed after this was translated — please review.
+  // en: Note: People you communicate with may see your name, profile photo and About.
+  "body.get-started.account-setup.profile.2": "",
 
   // ── Get Started › Adding Contacts ──
   // en: Adding Contacts
@@ -132,8 +133,8 @@ export const loStrings: Record<string, string> = {
   // ── Get Started › Adding Contacts › How to add a contact ──
   // en: How to add a contact
   "art.get-started.adding-contacts.add-contact.title": "ວິທີເພີ່ມລາຍຊື່ຕິດຕໍ່",
-  // en: Waow matches your phone's address book against people who already have an account, so anyone you have saved appears automatically once they join.
-  "body.get-started.adding-contacts.add-contact.0": "Waow ຈະກວດສອບລາຍຊື່ໃນໂທລະສັບຂອງທ່ານວ່າໃຜມີບັນຊີ Waow ແລ້ວ. ດັ່ງນັ້ນ, ຄົນທີ່ທ່ານບັນທຶກເບີໄວ້ຈະປາກົດອັດຕະໂນມັດເມື່ອພວກເຂົາເຂົ້າໃຊ້ງານ Waow.",
+  // en: If you grant Contacts permission, Waow sends the phone numbers in your address book to its server only to match them against existing Waow accounts. Contact names stay on your device. You can decline permission and add people manually by phone number.
+  "body.get-started.adding-contacts.add-contact.0": "",
   // en: Add someone by number
   "body.get-started.adding-contacts.add-contact.1": "ເພີ່ມຜູ້ຕິດຕໍ່ດ້ວຍເບີໂທ",
   // en: Tap the new chat button on the **Chats** tab.
@@ -188,8 +189,6 @@ export const loStrings: Record<string, string> = {
   "body.get-started.about-waow.devices-supported.0.0": "iPhone — ຮອງຮັບທຸກຟັງຊັນໃນ IOS",
   // en: **iPad** — a two-column layout with your chat list beside the open conversation.
   "body.get-started.about-waow.devices-supported.0.1": "**iPad** — ຮູບແບບສອງຖັນ ໂດຍມີລາຍການສົນທະນາຢູ່ຂ້າງການສົນທະນາທີ່ເປີດຢູ່.",
-  // en: **Android** — phones and tablets.
-  "body.get-started.about-waow.devices-supported.0.2": "**Android** — ໂທລະສັບ ແລະ ແທັບເລັດ.",
   // en: You can also link extra devices to the same account. See Linked Devices.
   "body.get-started.about-waow.devices-supported.1": "ທ່ານຍັງສາມາດເຊື່ອມອຸປະກອນເພີ່ມເຕີມເຂົ້າກັບບັນຊີດຽວກັນໄດ້. ເບິ່ງເພີ່ມເຕີມໄດ້ທີ່ \"ອຸປະກອນທີ່ເຊື່ອມຕໍ່\"",
 
@@ -383,79 +382,79 @@ export const loStrings: Record<string, string> = {
   // en: How to set up chat translation
   "art.chats.translation.translate-setup.title": "ວິທີຕັ້ງຄ່າການແປການສົນທະນາ",
   // en: Chat translation lets you read a message in your own language without leaving the conversation. You choose the language once and it applies everywhere.
-  "body.chats.translation.translate-setup.0": "ການແປການສົນທະນາຊ່ວຍໃຫ້ທ່ານອ່ານຂໍ້ຄວາມເປັນພາສາຂອງທ່ານເອງໂດຍບໍ່ຕ້ອງອອກຈາກການສົນທະນາ. ທ່ານເລືອກພາສາເທື່ອດຽວ ແລ້ວມັນຈະຖືກນຳໃຊ້ໃນທຸກບ່ອນ.",
-  // en: Open **Settings** → **Chats** → **Chat Translation**.
-  "body.chats.translation.translate-setup.1.0": "ເປີດ ການຕັ້ງຄ່າ → ສົນທະນາ → ການແປການສົນທະນາ",
+  "body.chats.translation.translate-setup.0": "",
+  // en: Open **Settings** → **Chat Translation**.
+  "body.chats.translation.translate-setup.1.0": "",
   // en: Tap **Translate to** and choose the language you read in.
-  "body.chats.translation.translate-setup.1.1": "ແຕະ **ແປເປັນ** ແລ້ວເລືອກພາສາທີ່ທ່ານອ່ານ.",
-  // en: Turn on **Auto-translate** if you want incoming messages translated without asking.
-  "body.chats.translation.translate-setup.1.2": "ເປີດ **ແປອັດຕະໂນມັດ** ຖ້າທ່ານຢາກໃຫ້ຂໍ້ຄວາມທີ່ເຂົ້າມາຖືກແປໂດຍບໍ່ຕ້ອງຖາມ.",
+  "body.chats.translation.translate-setup.1.1": "",
+  // en: Keep **Auto-translate** on to make the manual Translate action available in chats.
+  "body.chats.translation.translate-setup.1.2": "",
   // en: Translations appear underneath the original message, never in place of it, so you can always see exactly what was sent.
-  "body.chats.translation.translate-setup.2": "ຄຳແປຈະສະແດງຢູ່ລຸ່ມຂໍ້ຄວາມເດີມ ໂດຍຈະບໍ່ແທນທີ່ຂໍ້ຄວາມເດີມ, ເຮັດໃຫ້ທ່ານຍັງສາມາດເຫັນຂໍ້ຄວາມຕົ້ນສະບັບໄດ້ສະເໝີ.",
-  // en: Note: Turning **Auto-translate** off also hides the Translate option in chats. Leave it on if you want to translate messages one at a time.
-  "body.chats.translation.translate-setup.3": "ໝາຍເຫດ: ຖ້າປິດ “ແປອັດຕະໂນມັດ”, ຕົວເລືອກ “ແປ” ໃນການສົນທະນາກໍຈະຖືກເຊື່ອງໄປນຳ. ໃຫ້ເປີດໄວ້ ຖ້າຕ້ອງການແປຂໍ້ຄວາມເທື່ອລະຂໍ້ຄວາມ",
+  "body.chats.translation.translate-setup.2": "",
+  // en: Note: Despite its current label, this switch does not translate incoming messages automatically; it shows or hides the manual Translate action.
+  "body.chats.translation.translate-setup.3": "",
 
   // ── Chats › Translation › How to translate a single message ──
   // en: How to translate a single message
   "art.chats.translation.translate-message.title": "ວິທີແປຂໍ້ຄວາມເທື່ອລະຂໍ້ຄວາມ",
   // en: Tap and hold the message.
-  "body.chats.translation.translate-message.0.0": "ແຕະຂໍ້ຄວາມຄ້າງໄວ້.",
-  // en: Tap **More** → **Translate**.
-  "body.chats.translation.translate-message.0.1": "ແຕະ **ເພີ່ມເຕີມ** → **ແປ**.",
+  "body.chats.translation.translate-message.0.0": "",
+  // en: Tap **Translate**.
+  "body.chats.translation.translate-message.0.1": "",
   // en: The translation appears under the message once it is ready.
-  "body.chats.translation.translate-message.0.2": "ຄຳແປຈະປາກົດຢູ່ລຸ່ມຂໍ້ຄວາມເມື່ອພ້ອມແລ້ວ.",
+  "body.chats.translation.translate-message.0.2": "",
   // en: To hide a translation again, tap the close button next to it. The original message is never changed.
-  "body.chats.translation.translate-message.1": "ຖ້າຕ້ອງການເຊື່ອງຄຳແປ, ໃຫ້ແຕະປຸ່ມປິດຂ້າງຄຳແປ. ຂໍ້ຄວາມເດີມຈະບໍ່ຖືກປ່ຽນ.",
-  // en: This works in one-to-one chats and in groups. Any **@mentions** in the message are kept as they are rather than being translated.
-  "body.chats.translation.translate-message.2": "ສາມາດໃຊ້ຟັງຊັນນີ້ໄດ້ທັງໃນແຊັດສ່ວນຕົວ ແລະ ແຊັດກຸ່ມ. ສ່ວນ @mention ໃນຂໍ້ຄວາມຈະຍັງຄົງຢູ່ຄືເດີມ ແລະ ຈະບໍ່ຖືກແປ.",
+  "body.chats.translation.translate-message.1": "",
+  // en: This works in one-to-one chats and in groups.
+  "body.chats.translation.translate-message.2": "",
 
   // ── Chats › Translation › How to show pronunciation with a translation ──
   // en: How to show pronunciation with a translation
   "art.chats.translation.transliteration.title": "ວິທີສະແດງຄຳອ່ານພ້ອມກັບຄຳແປ",
   // en: Transliteration writes the translated text out in the Latin alphabet, so you can sound out a language whose script you don't read.
-  "body.chats.translation.transliteration.0": "ການຖອດຂໍ້ຄວາມຈະສະແດງຄຳແປເປັນອັກສອນລາຕິນ, ເພື່ອໃຫ້ທ່ານສາມາດອ່ານອອກສຽງພາສາທີ່ໃຊ້ອັກສອນທີ່ທ່ານອ່ານບໍ່ໄດ້.",
-  // en: Open **Settings** → **Chats** → **Chat Translation**.
-  "body.chats.translation.transliteration.1.0": "ເປີດ ການຕັ້ງຄ່າ → ສົນທະນາ → ການແປການສົນທະນາ",
+  "body.chats.translation.transliteration.0": "",
+  // en: Open **Settings** → **Chat Translation**.
+  "body.chats.translation.transliteration.1.0": "",
   // en: Turn on **Transliteration**.
-  "body.chats.translation.transliteration.1.1": "ເປີດ ການຖອດຂໍ້ຄວາມ.",
+  "body.chats.translation.transliteration.1.1": "",
   // en: The pronunciation is shown as a second line below the translation. Turning it off leaves the translation itself unchanged.
-  "body.chats.translation.transliteration.2": "ຄຳອ່ານຈະສະແດງຢູ່ເປັນແຖວທີສອງລຸ່ມຄຳແປ. ຖ້າປິດຟັງຊັນນີ້,ຈະບໍ່ປ່ຽນແປງຄຳແປ",
+  "body.chats.translation.transliteration.2": "",
 
   // ── Chats › Translation › Which languages Waow can translate ──
   // en: Which languages Waow can translate
   "art.chats.translation.translate-languages.title": "Waow ແປພາສາໃດໄດ້ແດ່",
-  // en: Waow translates between more than a hundred languages. Lao and English are both supported, and Lao is the default target language.
-  "body.chats.translation.translate-languages.0": "Waow ຮອງຮັບການແປຫຼາຍກວ່າ 100 ພາສາ, ລວມທັງພາສາລາວ ແລະ ພາສາອັງກິດ. ໂດຍພາສາລາວຈະຖືກຕັ້ງເປັນພາສາແປເລີ່ມຕົ້ນ",
-  // en: The full list is in **Settings** → **Chats** → **Chat Translation** → **Translate to**, and includes the languages most used across South East Asia — Burmese, Khmer, Thai, Vietnamese, Chinese, Malay, Indonesian, Filipino and Hmong among them.
-  "body.chats.translation.translate-languages.1": "ລາຍການເຕັມຢູ່ໃນ ການຕັ້ງຄ່າ → ສົນທະນາ → ການແປການສົນທະນາ → ແປເປັນ ເຊິ່ງລວມພາສາທີ່ໃຊ້ຫຼາຍທີ່ສຸດໃນອາຊີຕາເວັນອອກສຽງໃຕ້ — ພະມ້າ, ຂະແໝ້ນ, ໄທ, ຫວຽດນາມ, ຈີນ, ມາເລ, ອິນໂດເນເຊຍ, ຟິລິປິນ ແລະ ມົ້ງ ເປັນຕົ້ນ.",
+  // en: Waow supports the languages listed in its translation settings. Lao and English are included, and Lao is the default target language.
+  "body.chats.translation.translate-languages.0": "",
+  // en: Open **Settings** → **Chat Translation** → **Translate to** to see the current list, including Myanmar, Khmer, Thai, Vietnamese, Chinese, Malay, Indonesian, Filipino and Hmong.
+  "body.chats.translation.translate-languages.1": "",
 
   // ── Chats › Translation › Does translation affect end-to-end encryption? ──
   // en: Does translation affect end-to-end encryption?
   "art.chats.translation.translate-privacy.title": "ການແປມີຜົນຕໍ່ການເຂົ້າລະຫັດແບບຕົ້ນທາງເຖິງປາຍທາງບໍ?",
   // en: Yes, in one specific way, and it is worth understanding before you turn translation on.
-  "body.chats.translation.translate-privacy.0": "ແມ່ນ. ມີຈຸດໜຶ່ງທີ່ຄວນເຂົ້າໃຈກ່ອນເປີດໃຊ້ການແປ.",
+  "body.chats.translation.translate-privacy.0": "",
   // en: Messages reach you end-to-end encrypted as normal, and are decrypted on your device. When a message is translated, that decrypted text is sent to Waow's translation service, translated there, and the result is sent back to your device. So the text of a message you translate is handled by our service rather than staying only on your phone.
-  "body.chats.translation.translate-privacy.1": "ຕາມປົກກະຕິ, ຂໍ້ຄວາມຈະຖືກເຂົ້າລະຫັດແບບຕົ້ນທາງຫາປາຍທາງ ແລະ ຖອດລະຫັດຢູ່ໃນອຸປະກອນຂອງທ່ານ. ແຕ່ເມື່ອທ່ານແປຂໍ້ຄວາມ, ຂໍ້ຄວາມທີ່ຖອດລະຫັດແລ້ວຈະຖືກສົ່ງໄປຍັງບໍລິການແປພາສາຂອງ Waow ເພື່ອແປ ແລະ ຜົນການແປຈະຖືກສົ່ງກັບຄືນມາຫາອຸປະກອນຂອງທ່ານ. ດັ່ງນັ້ນ, ຂໍ້ຄວາມທີ່ທ່ານເລືອກແປຈະຖືກປະມວນຜົນໂດຍບໍລິການຂອງ Waow ແລະ ບໍ່ໄດ້ຢູ່ພຽງແຕ່ໃນອຸປະກອນຂອງທ່ານ.",
-  // en: Messages you never translate are not sent anywhere. Turning **Auto-translate** off means nothing is translated unless you ask for it message by message.
-  "body.chats.translation.translate-privacy.2": "ຂໍ້ຄວາມທີ່ທ່ານບໍ່ໄດ້ເລືອກແປ ຈະບໍ່ຖືກສົ່ງໄປໃສ. ຖ້າປິດ “ແປອັດຕະໂນມັດ”, ຈະບໍ່ມີຂໍ້ຄວາມໃດຖືກແປ ນອກຈາກທ່ານຈະເລືອກແປເອງເທື່ອລະຂໍ້ຄວາມ.",
-  // en: Note: If a conversation is sensitive enough that it should never leave your device, leave Auto-translate off and don't translate it.
-  "body.chats.translation.translate-privacy.3": "ໝາຍເຫດ: ຖ້າການສົນທະນາທີ່ມີຂໍ້ມູນລັບຫຼືອ່ອນໄຫວຫຼາຍ ບໍ່ຄວນຖືກສົ່ງອອກຈາກອຸປະກອນຂອງທ່ານ, ດັ່ງນັ້ນໃຫ້ປິດ “ແປອັດຕະໂນມັດ” ແລະ ຢ່າເລືອກແປຂໍ້ຄວາມໃນການສົນທະນານັ້ນໆ.",
+  "body.chats.translation.translate-privacy.1": "",
+  // en: Messages you do not translate are not sent to the translation service. Translation happens only when you select a message and request it.
+  "body.chats.translation.translate-privacy.2": "",
+  // en: Note: If a message is sensitive enough that it should not be sent to the translation service, do not translate it.
+  "body.chats.translation.translate-privacy.3": "",
 
   // ── Chats › Translation › A translation is missing or looks wrong ──
   // en: A translation is missing or looks wrong
   "art.chats.translation.translate-problems.title": "ບໍ່ພົບຄຳແປ ຫຼື ຄຳແປບໍ່ຖືກຕ້ອງ",
   // en: The translation says it failed
-  "body.chats.translation.translate-problems.0": "ການແປລົ້ມເຫຼວ",
+  "body.chats.translation.translate-problems.0": "",
   // en: Translation needs a working connection to Waow. Check that you are online and try again — the message itself is unaffected.
-  "body.chats.translation.translate-problems.1": "ການແປຕ້ອງການການເຊື່ອມຕໍ່ກັບ Waow. ກວດສອບວ່າທ່ານມີອິນເຕີເນັດທີ່ໃຊ້ງານໄດ້ ແລ້ວລອງໃໝ່",
+  "body.chats.translation.translate-problems.1": "",
   // en: I can't see the Translate option
-  "body.chats.translation.translate-problems.2": "ຂ້ອຍບໍ່ເຫັນຕົວເລືອກ “ການແປ”",
-  // en: Open **Settings** → **Chats** → **Chat Translation** and check that **Auto-translate** is on. With it off, the Translate option is hidden everywhere.
-  "body.chats.translation.translate-problems.3": "ເປີດ ການຕັ້ງຄ່າ → ສົນທະນາ → ການແປການສົນທະນາ ແລ້ວກວດວ່າ ແປອັດຕະໂນມັດ ເປີດຢູ່. ຖ້າປິດໄວ້, ຕົວເລືອກ “ແປ” ຈະບໍ່ສະແດງໃນການສົນທະນາໃດໆ",
+  "body.chats.translation.translate-problems.2": "",
+  // en: Open **Settings** → **Chat Translation** and check that **Auto-translate** is on. With it off, the manual Translate action is hidden.
+  "body.chats.translation.translate-problems.3": "",
   // en: The wording is off
-  "body.chats.translation.translate-problems.4": "ຄຳແປບໍ່ຖືກຕ້ອງ",
+  "body.chats.translation.translate-problems.4": "",
   // en: Translations are produced automatically, so slang, jokes and regional expressions often come through literally. The original message is always shown above the translation — read that if something seems strange.
-  "body.chats.translation.translate-problems.5": "ຄຳແປຖືກສ້າງຂຶ້ນອັດຕະໂນມັດ, ດັ່ງນັ້ນຄຳສະແລງ, ຄຳເວົ້າຕະຫຼົກ ແລະ ສຳນວນທ້ອງຖິ່ນ ອາດຖືກແປອອກມາແບບກົງຕົວ. ຂໍ້ຄວາມເດີມຈະສະແດງຢູ່ເທິງຄຳແປສະເໝີ — ຖ້າອ່ານແລ້ວຮູ້ສຶກແປກໆ, ໃຫ້ເບິ່ງຂໍ້ຄວາມເດີມເພື່ອເຮັດໃຫ້ເຂົ້າໃຈຂຶ້ນຕື່ມ",
+  "body.chats.translation.translate-problems.5": "",
 
   // ── Chats › Appearance ──
   // en: Appearance
@@ -465,21 +464,21 @@ export const loStrings: Record<string, string> = {
   // en: How to change your theme and wallpaper
   "art.chats.appearance.themes.title": "ວິທີປ່ຽນຮູບແບບການສະແດງຜົນ ແລະ ພາບພື້ນຫຼັງ",
   // en: Change the theme
-  "body.chats.appearance.themes.0": "ປ່ຽນຮູບແບບການສະແດງຜົນ",
-  // en: Open **Settings** → **Appearance**.
-  "body.chats.appearance.themes.1.0": "ເປີດ ການຕັ້ງຄ່າ → ຮູບແບບການສະແດງຜົນ.",
-  // en: Choose the theme you want.
-  "body.chats.appearance.themes.1.1": "ເລືອກຮູບແບບສີທີ່ທ່ານຕ້ອງການ.",
-  // en: The Love theme adds a warmer palette and playful floating emoji effects to your conversations.
-  "body.chats.appearance.themes.2": "ຮູບແບບສີ Love ຈະເພີ່ມໂທນສີທີ່ອົບອຸ່ນຂຶ້ນ ແລະ ເອັບເຟັກອີໂມຈິທີ່ລອຍໄປມາໃນການສົນທະນາຂອງທ່ານ.",
+  "body.chats.appearance.themes.0": "",
+  // en: Open **Settings** → **Chats** → **App appearance**.
+  "body.chats.appearance.themes.1.0": "",
+  // en: Choose System Default, Light or Dark.
+  "body.chats.appearance.themes.1.1": "",
+  // en: This changes the app's overall light or dark appearance.
+  "body.chats.appearance.themes.2": "",
   // en: Change your chat wallpaper
-  "body.chats.appearance.themes.3": "ປ່ຽນພາບພື້ນຫຼັງການສົນທະນາ",
-  // en: Open **Settings** → **Chats** → **Wallpaper**.
-  "body.chats.appearance.themes.4.0": "ເປີດ **ການຕັ້ງຄ່າ** → **ສົນທະນາ** → **ພາບພື້ນຫຼັງ**.",
-  // en: Choose a picture from the gallery or your own library.
-  "body.chats.appearance.themes.4.1": "ເລືອກຮູບຈາກຄັງຮູບ ຫຼື ຈາກຄັງຮູບຂອງທ່ານເອງ.",
-  // en: Check the preview and tap **Set wallpaper**.
-  "body.chats.appearance.themes.4.2": "ກວດເບິ່ງຕົວຢ່າງ ແລ້ວແຕະ **ຕັ້ງພາບພື້ນຫຼັງ**.",
+  "body.chats.appearance.themes.3": "",
+  // en: Open **Settings** → **Chats** → **Theme & wallpaper**.
+  "body.chats.appearance.themes.4.0": "",
+  // en: Choose a chat theme or upload a wallpaper from your photo library.
+  "body.chats.appearance.themes.4.1": "",
+  // en: Check the preview and save your choice.
+  "body.chats.appearance.themes.4.2": "",
 
   // ── Voice and Video Calls ──
   // en: Voice and Video Calls
@@ -500,18 +499,18 @@ export const loStrings: Record<string, string> = {
   "body.calls.making-calls.make-call.0.1": "ແຕະໄອຄອນໂທລະສັບເພື່ອໂທສຽງ ຫຼື ໄອຄອນກ້ອງເພື່ອໂທວິດີໂອ.",
   // en: You can also call from the **Calls** tab, or from a contact's info screen. During a call, tap the camera icon to switch between voice and video.
   "body.calls.making-calls.make-call.1": "ທ່ານຍັງສາມາດໂທຈາກແຖບ **ໂທ** ຫຼື ຈາກໜ້າຂໍ້ມູນຜູ້ຕິດຕໍ່. ໃນລະຫວ່າງການໂທ ໃຫ້ແຕະໄອຄອນກ້ອງເພື່ອສະຫຼັບລະຫວ່າງສຽງ ແລະ ວິດີໂອ.",
-  // en: Note: The first time you call, your phone asks for microphone and camera permission. Waow cannot place a call until you allow it.
-  "body.calls.making-calls.make-call.2": "ໝາຍເຫດ: ໃນການໂທຄັ້ງທຳອິດ ໂທລະສັບຂອງທ່ານຈະຂໍສິດເຂົ້າເຖິງໄມໂຄຣໂຟນ ແລະ ກ້ອງ. Waow ບໍ່ສາມາດໂທໄດ້ຈົນກວ່າທ່ານຈະອະນຸຍາດ.",
+  // en: Note: Your device asks for microphone permission when it is needed and camera permission when you start or enable video.
+  "body.calls.making-calls.make-call.2": "",
 
   // ── Voice and Video Calls › Making Calls › How to make a group call ──
   // en: How to make a group call
   "art.calls.making-calls.group-call.title": "ວິທີໂທກຸ່ມ",
-  // en: Open a group chat and tap the call icon, or start a normal call first.
-  "body.calls.making-calls.group-call.0.0": "ເປີດການສົນທະນາກຸ່ມ ແລ້ວແຕະໄອຄອນໂທ ຫຼື ເລີ່ມການໂທທຳມະດາກ່ອນ.",
-  // en: Tap **Add participant** to bring more people in.
-  "body.calls.making-calls.group-call.0.1": "ແຕະ **ເພີ່ມຜູ້ເຂົ້າຮ່ວມ** ເພື່ອດຶງຄົນອື່ນເຂົ້າມາ.",
+  // en: Open the group chat.
+  "body.calls.making-calls.group-call.0.0": "",
+  // en: Tap the call icon and start the group call.
+  "body.calls.making-calls.group-call.0.1": "",
   // en: Everyone who joins appears in a tiled layout. Tap a tile to make that person full screen.
-  "body.calls.making-calls.group-call.1": "ທຸກຄົນທີ່ເຂົ້າຮ່ວມຈະສະແດງເປັນຊ່ອງໆໃນໜ້າຈໍ. ແຕະໃສ່ຊ່ອງຂອງຄົນໃດກໍໄດ້ ເພື່ອສະແດງຄົນນັ້ນແບບເຕັມໜ້າຈໍ",
+  "body.calls.making-calls.group-call.1": "",
 
   // ── Voice and Video Calls › Troubleshooting ──
   // en: Troubleshooting
@@ -552,10 +551,10 @@ export const loStrings: Record<string, string> = {
   // ── Voice and Video Calls › Call Security › Are Waow calls encrypted? ──
   // en: Are Waow calls encrypted?
   "art.calls.call-security.call-encryption.title": "ການໂທຂອງ Waow ປອດໄພບໍ?",
-  // en: Yes. Voice and video calls are end-to-end encrypted between the people on the call, one-to-one and in groups.
-  "body.calls.call-security.call-encryption.0": "ແມ່ນ. ການໂທສຽງ ແລະ ວິດີໂອຖືກເຂົ້າລະຫັດແບບຕົ້ນທາງເຖິງປາຍທາງລະຫວ່າງຄົນທີ່ຢູ່ໃນສາຍ ທັງແບບສ່ວນຕົວ ແລະ ໃນກຸ່ມ.",
-  // en: Waow does not record your calls and cannot listen to them. Only the call's start time, duration and participants are needed to connect it.
-  "body.calls.call-security.call-encryption.1": "Waow ບໍ່ບັນທຶກ ຫຼື ຟັງການໂທຂອງທ່ານ. ເພື່ອເຊື່ອມຕໍ່ການໂທ, ລະບົບຕ້ອງການພຽງເວລາເລີ່ມການໂທ, ໄລຍະເວລາການໂທ ແລະ ລາຍຊື່ຜູ້ເຂົ້າຮ່ວມ.",
+  // en: Voice and video calls are encrypted while in transit, for both one-to-one and group calls.
+  "body.calls.call-security.call-encryption.0": "",
+  // en: Waow does not record the audio or video content of your calls.
+  "body.calls.call-security.call-encryption.1": "",
 
   // ── Photos, Videos and Storage ──
   // en: Photos, Videos and Storage
@@ -680,8 +679,8 @@ export const loStrings: Record<string, string> = {
   // ── Privacy, Safety and Security ──
   // en: Privacy, Safety and Security
   "cat.privacy.title": "ຄວາມເປັນສ່ວນຕົວ, ຄວາມປອດໄພ ແລະ ຄວາມໝັ້ນຄົງ",
-  // en: Encryption, App Lock, locked chats, privacy settings, blocking and reporting.
-  "cat.privacy.blurb": "ການເຂົ້າລະຫັດ, ການລັອກແອັບ, ການສົນທະນາທີ່ລັອກໄວ້, ການຕັ້ງຄ່າຄວາມເປັນສ່ວນຕົວ, ການບລັອກ ແລະ ການລາຍງານ.",
+  // en: Encryption, App Lock, locked chats, blocking and reporting.
+  "cat.privacy.blurb": "",
 
   // ── Privacy, Safety and Security › Encryption ──
   // en: Encryption
@@ -692,8 +691,8 @@ export const loStrings: Record<string, string> = {
   "art.privacy.encryption.e2ee.title": "ກ່ຽວກັບການເຂົ້າລະຫັດແບບຕົ້ນທາງເຖິງປາຍທາງ",
   // en: Your messages are locked on your device with a key only the people in the chat hold, and unlocked on theirs. Nobody in between — not the network you are on, and not Waow — can read them.
   "body.privacy.encryption.e2ee.0": "ຂໍ້ຄວາມຂອງທ່ານຈະຖືກເຂົ້າລະຫັດໄວ້ໃນອຸປະກອນ ໂດຍມີພຽງຜູ້ທີ່ຢູ່ໃນການສົນທະນາເທົ່ານັ້ນທີ່ສາມາດເປີດອ່ານໄດ້. ບໍ່ມີໃຜເຂົ້າເຖິງ ຫຼື ສາມາດອ່ານຂໍ້ຄວາມຂອງທ່ານໄດ້ບໍ່ວ່າຈະເປັນເຄືອຂ່າຍທີ່ທ່ານໃຊ້ ຫຼື ແມ້ແຕ່ Waow ເອງ .",
-  // en: This covers one-to-one chats, groups, photos and videos, voice messages, and voice and video calls.
-  "body.privacy.encryption.e2ee.1": "ການຄຸ້ມຄອງຄວາມເປັນສ່ວນຕົວນີ້ແມ່ນຄອບຄຸມທັງການສົນທະນາແບບສອງຄົນ, ສົນທະນາກຸ່ມ, ຮູບພາບ ແລະ ວິດີໂອ, ຂໍ້ຄວາມສຽງ, ລວມເຖິງການໂທດ້ວຍສຽງ ແລະ ວິດີໂອ.",
+  // en: This covers one-to-one chats, groups, photos and videos, and voice messages. Voice and video calls are encrypted while in transit.
+  "body.privacy.encryption.e2ee.1": "",
   // en: Note: Encryption protects a message in transit. It cannot stop the person you sent it to from screenshotting, saving or forwarding it.
   "body.privacy.encryption.e2ee.2": "ໝາຍເຫດ: ການເຂົ້າລະຫັດຈະປົກປ້ອງຂໍ້ຄວາມໃນຂະນະທີ່ກຳລັງສົ່ງ. ແຕ່ບໍ່ສາມາດປ້ອງກັນຄົນທີ່ທ່ານສົ່ງຂໍ້ຄວາມໃຫ້ ຈາກການຖ່າຍພາບໜ້າຈໍ, ບັນທຶກ ຫຼື ສົ່ງຕໍ່ຂໍ້ຄວາມນັ້ນໄດ້.",
 
@@ -749,26 +748,6 @@ export const loStrings: Record<string, string> = {
   // en: Note: Screenshots inside conversations cannot be prevented on every device. Treat anything you send as something the other person can keep.
   "body.privacy.app-chat-lock.screenshot.1": "ໝາຍເຫດ: ບໍ່ແມ່ນທຸກອຸປະກອນທີ່ສາມາດປ້ອງກັນການຖ່າຍພາບໜ້າຈໍໃນແຊັດໄດ້. ດັ່ງນັ້ນ ຄວນຄຳນຶງຢູ່ສະເໝີວ່າ ສິ່ງທີ່ທ່ານສົ່ງສາມາດຖືກອີກຝ່າຍເກັບໄວ້ໄດ້.",
 
-  // ── Privacy, Safety and Security › Privacy Settings ──
-  // en: Privacy Settings
-  "sec.privacy.privacy-settings.title": "ການຕັ້ງຄ່າຄວາມເປັນສ່ວນຕົວ",
-
-  // ── Privacy, Safety and Security › Privacy Settings › How to choose who can see your last seen, photo and About ──
-  // en: How to choose who can see your last seen, photo and About
-  "art.privacy.privacy-settings.audience.title": "ວິທີເລືອກວ່າໃຜສາມາດເຫັນເວລາອອນລາຍລ່າສຸດ, ຮູບ ແລະ ຂໍ້ມູນ ຂອງທ່ານໄດ້",
-  // en: Open **Settings** → **Privacy**.
-  "body.privacy.privacy-settings.audience.0.0": "ເປີດ **ການຕັ້ງຄ່າ** → **ຄວາມເປັນສ່ວນຕົວ**.",
-  // en: Tap **Last seen**, **Profile photo** or **About**.
-  "body.privacy.privacy-settings.audience.0.1": "ແຕະ ໃຊ້ງານລ່າສຸດ, ຮູບໂປຣໄຟລ໌ ຫຼື ຂໍ້ມູນກ່ຽວກັບທ່ານ.",
-  // en: Choose **Everyone**, **My Contacts**, or **My Contacts Except…** and pick who to exclude.
-  "body.privacy.privacy-settings.audience.0.2": "ເລືອກ **ທຸກຄົນ**, **ຜູ້ຕິດຕໍ່ຂອງຂ້ອຍ** ຫຼື **ຜູ້ຕິດຕໍ່ຂອງຂ້ອຍ ຍົກເວັ້ນ…** ແລ້ວເລືອກຄົນທີ່ຈະຍົກເວັ້ນ.",
-  // en: Profile photo and About can also be set to **Same as Last seen**, so one change covers all three.
-  "body.privacy.privacy-settings.audience.1": "ທ່ານສາມາດຕັ້ງຮູບໂປຣໄຟລ໌ ແລະ ຂໍ້ມູນກ່ຽວກັບທ່ານ ໃຫ້ໃຊ້ການຕັ້ງຄ່າດຽວກັນກັບ “ໃຊ້ງານລ່າສຸດ” ໄດ້, ດັ່ງນັ້ນປ່ຽນຄັ້ງດຽວກໍມີຜົນກັບທັງ 3 ຢ່າງ.",
-  // en: Read receipts
-  "body.privacy.privacy-settings.audience.2": "ສະຖານະການອ່ານ",
-  // en: Read receipts are a single switch in the same screen. If you turn them off, you stop sending blue ticks and you stop seeing them from other people.
-  "body.privacy.privacy-settings.audience.3": "ປຸ່ມເປີດ/ປິດ ສະຖານະການອ່ານ ແມ່ນຢູ່ໃນໜ້າດຽວກັນ. ຖ້າປິດການຕັ້ງຄ່ານີ້ ເຄື່ອງໝາຍຖືກສີຟ້າສອງອັນຈະບໍ່ຖືກສົ່ງ ແລະ ທ່ານກໍຈະບໍ່ເຫັນເຄື່ອງໝາຍນີ້ຈາກຄົນອື່ນເຊັ່ນກັນ.",
-
   // ── Privacy, Safety and Security › Safety ──
   // en: Safety
   "sec.privacy.safety.title": "ຄວາມປອດໄພ",
@@ -782,32 +761,14 @@ export const loStrings: Record<string, string> = {
   "body.privacy.safety.block.0.1": "ເລື່ອນລົງ ແລ້ວແຕະ **ບລັອກ** ຫຼື **ລາຍງານ**.",
   // en: Choose whether to block and report in the same step.
   "body.privacy.safety.block.0.2": "ເລືອກວ່າຈະບລັອກ ແລະ ລາຍງານພ້ອມກັນໃນຂັ້ນຕອນດຽວກັນຫຼືບໍ່.",
-  // en: Blocking stops their messages and calls reaching you, and they are not told that you blocked them. Reporting sends the most recent messages from that chat to us so we can review the account.
-  "body.privacy.safety.block.1": "ເມື່ອທ່ານບລັອກຜູ້ຕິດຕໍ່ໃດໜຶ່ງ, ຂໍ້ຄວາມ ແລະ ສາຍໂທຈາກຄົນນັ້ນຈະບໍ່ສາມາດສົ່ງມາຫາທ່ານໄດ້, ແລະ ຜູ້ຕິດຕໍ່ນັ້ນຈະບໍ່ຮູ້ວ່າທ່ານໄດ້ບລັອກລາວ. ສ່ວນການລາຍງານແມ່ນຈະສົ່ງຂໍ້ຄວາມລ່າສຸດຈາກການສົນທະນານັ້ນໃຫ້ພວກເຮົາເພື່ອກວດສອບບັນຊີໃນຂັ້ນຕອນຕໍ່ໄປ.",
+  // en: Blocking stops their messages and calls reaching you, and they are not told that you blocked them. Reporting a message sends that selected message, the identifiers needed to investigate it and the reason you choose. A general contact report opens an email so you can decide what to send.
+  "body.privacy.safety.block.1": "",
   // en: Unblock someone
   "body.privacy.safety.block.2": "ຍົກເລີກການບລັອກ",
   // en: Open **Settings** → **Privacy** → **Blocked**.
   "body.privacy.safety.block.3.0": "ເປີດ **ການຕັ້ງຄ່າ** → **ຄວາມເປັນສ່ວນຕົວ** → **ຖືກບລັອກ**.",
   // en: Tap the contact and tap **Unblock**.
   "body.privacy.safety.block.3.1": "ແຕະຜູ້ຕິດຕໍ່ ແລ້ວແຕະ **ຍົກເລີກການບລັອກ**.",
-
-  // ── Privacy, Safety and Security › Safety › About two-step verification ──
-  // en: About two-step verification
-  "art.privacy.safety.two-step.title": "ກ່ຽວກັບການຢືນຢັນສອງຂັ້ນຕອນ",
-  // en: Two-step verification adds a six-digit PIN that is needed whenever your phone number is registered on a device. Even someone who intercepts an SMS code cannot take over your number without it.
-  "body.privacy.safety.two-step.0": "ການຢືນຢັນ 2 ຂັ້ນຕອນຈະເພີ່ມ PIN 6 ຕົວເລກ ທີ່ຈຳເປັນຕ້ອງໃສ່ທຸກຄັ້ງທີ່ເບີໂທຂອງທ່ານຖືກນຳໄປລົງທະບຽນໃນອຸປະກອນ. ດັ່ງນັ້ນ ໃນກໍລະນີທີ່ມີຄົນສາມາດຈັບລະຫັດ SMS ໄດ້ ກໍບໍ່ສາມາດເຂົ້າຍຶດບັນຊີຂອງທ່ານໄດ້ຫາກບໍ່ມີ PIN ນີ້.",
-  // en: Open **Settings** → **Account** → **Security**.
-  "body.privacy.safety.two-step.1.0": "ເປີດ **ການຕັ້ງຄ່າ** → **ບັນຊີ** → **ຄວາມປອດໄພ**.",
-  // en: Tap **Set up two-step verification**.
-  "body.privacy.safety.two-step.1.1": "ແຕະ **ຕັ້ງຄ່າການຢືນຢັນສອງຂັ້ນຕອນ**.",
-  // en: Enter a six-digit PIN and confirm it.
-  "body.privacy.safety.two-step.1.2": "ປ້ອນລະຫັດ PIN ຫົກຕົວເລກ ແລ້ວຢືນຢັນ.",
-  // en: Use a passkey instead
-  "body.privacy.safety.two-step.2": "ໃຊ້ passkey ແທນ",
-  // en: On supported phones you can create a passkey in the same screen, so registration is confirmed with Face ID or Touch ID rather than a code.
-  "body.privacy.safety.two-step.3": "ຖ້າໂທລະສັບຂອງທ່ານຮອງຮັບ, ທ່ານສາມາດສ້າງ Passkey ໄດ້ຈາກໜ້າດຽວກັນ. ຈາກນັ້ນ ສາມາດໃຊ້ Face ID ຫຼື Touch ID ເພື່ອຢືນຢັນການລົງທະບຽນ ແທນການໃຊ້ລະຫັດ.",
-  // en: Note: Choose a PIN you will remember. It is not a password you can reset — there is no way to look it up later.
-  "body.privacy.safety.two-step.4": "ໝາຍເຫດ: ເລືອກ PIN ທີ່ທ່ານຈື່ໄດ້. PIN ນີ້ບໍ່ສາມາດຕັ້ງໃໝ່ໄດ້ ແລະ ບໍ່ມີວິທີກູ້ຄືນ ຫຼື ເບິ່ງ PIN ນີ້ໃນພາຍຫຼັງ.",
 
   // ── Notifications ──
   // en: Notifications
@@ -822,8 +783,8 @@ export const loStrings: Record<string, string> = {
   // ── Notifications › Notification Settings › How to turn notifications on ──
   // en: How to turn notifications on
   "art.notifications.notification-settings.turn-on.title": "ວິທີເປີດການແຈ້ງເຕືອນ",
-  // en: Waow asks for notification permission the first time you open it. If you said no, you can change it in your phone's settings.
-  "body.notifications.notification-settings.turn-on.0": "Waow ຈະຂໍອະນຸຍາດໃຫ້ສົ່ງການແຈ້ງເຕືອນໃນຄັ້ງທຳອິດທີ່ທ່ານເປີດແອັບ. ຖ້າທ່ານເລືອກ “ບໍ່ອະນຸຍາດ”, ທ່ານສາມາດໄປປ່ຽນການຕັ້ງຄ່າໄດ້ໃນ ການຕັ້ງຄ່າ ຂອງໂທລະສັບ",
+  // en: Waow asks for notification permission when notifications are needed. If you said no, you can change it in your device settings.
+  "body.notifications.notification-settings.turn-on.0": "",
   // en: Open your phone's **Settings** → **Notifications** → **Waow**.
   "body.notifications.notification-settings.turn-on.1.0": "ເປີດ **ການຕັ້ງຄ່າ** → **ການແຈ້ງເຕືອນ** → **Waow** ຂອງໂທລະສັບທ່ານ.",
   // en: Allow notifications.
@@ -855,11 +816,11 @@ export const loStrings: Record<string, string> = {
   // en: How to mute a chat
   "art.notifications.notification-settings.mute.title": "ວິທີປິດສຽງການສົນທະນາ",
   // en: Tap and hold the conversation in your chat list.
-  "body.notifications.notification-settings.mute.0.0": "ແຕະການສົນທະນາໃນລາຍການສົນທະນາຂອງທ່ານຄ້າງໄວ້.",
-  // en: Tap **Mute** and choose how long for.
-  "body.notifications.notification-settings.mute.0.1": "ແຕະ **ປິດສຽງ** ແລ້ວເລືອກໄລຍະເວລາ.",
-  // en: Muted chats still receive messages, they just don't make a sound or raise a banner. **Settings** → **Notifications** → **Muted chats** lists everything you have silenced, with an **Unmute all** option.
-  "body.notifications.notification-settings.mute.1": "ການສົນທະນາທີ່ປິດສຽງຍັງຮັບຂໍ້ຄວາມໄດ້ປົກກະຕິ, ແຕ່ຈະບໍ່ມີສຽງ ຫຼື ແຈ້ງເຕືອນໃນແຖບ. ໃນ ການຕັ້ງຄ່າ → ການແຈ້ງເຕືອນ → ການສົນທະນາທີ່ປິດສຽງ ທ່ານສາມາດເບິ່ງການສົນທະນທັງໝົດທີ່ປິດສຽງໄວ້ ແລະ ເລືອກ ເປີດສຽງທັງໝົດ ເພື່ອເປີດສຽງຄືນທັງໝົດ.",
+  "body.notifications.notification-settings.mute.0.0": "",
+  // en: Tap **Mute**.
+  "body.notifications.notification-settings.mute.0.1": "",
+  // en: Muted chats still receive messages, but they do not make a sound or raise a banner. Use the same chat action to unmute one chat, or open **Settings** → **Notifications** → **Unmute all** to clear every mute.
+  "body.notifications.notification-settings.mute.1": "",
 
   // ── Notifications › Troubleshooting ──
   // en: Troubleshooting
@@ -876,12 +837,6 @@ export const loStrings: Record<string, string> = {
   "body.notifications.notification-troubleshooting.no-notifications.0.2": "ກວດເບິ່ງວ່າໂໝດ Focus ຫຼື Do Not Disturb ບໍ່ໄດ້ປິດກັ້ນການແຈ້ງເຕືອນ.",
   // en: Turn off battery-saving modes that stop background activity.
   "body.notifications.notification-troubleshooting.no-notifications.0.3": "ປິດໂໝດປະຢັດແບັດເຕີຣີທີ່ຈຳກັດການເຮັດວຽກຂອງແອັບໃນເບື້ອງຫຼັງ.",
-
-  // ── Notifications › Troubleshooting › If messages are encrypted, how can a notification show the text? ──
-  // en: If messages are encrypted, how can a notification show the text?
-  "art.notifications.notification-troubleshooting.preview-privacy.title": "ຖ້າຂໍ້ຄວາມຖືກເຂົ້າລະຫັດ ການແຈ້ງເຕືອນສະແດງຂໍ້ຄວາມໄດ້ແນວໃດ?",
-  // en: The notification arrives as ciphertext and is unlocked on your phone, by your phone, just before it is shown. The push service only ever carries the encrypted version.
-  "body.notifications.notification-troubleshooting.preview-privacy.0": "ການແຈ້ງເຕືອນຈະສົ່ງມາໃນຮູບແບບຂໍ້ຄວາມທີ່ຕ້ອງເຂົ້າລະຫັດ ແລະ ໂທລະສັບຂອງທ່ານຈະເປັນຜູ້ຖອດລະຫັດກ່ອນທີ່ຈະສະແດງໃນແຈ້ງເຕືອນ.",
 
   // ── Linked Devices ──
   // en: Linked Devices
@@ -922,8 +877,8 @@ export const loStrings: Record<string, string> = {
   "body.linked-devices.using-other-devices.review.0.1": "ກວດເບິ່ງລາຍການ ແລະ ເວລາທີ່ແຕ່ລະອຸປະກອນໃຊ້ງານລ່າສຸດ.",
   // en: Tap a device you want to remove, then confirm to unlink it.
   "body.linked-devices.using-other-devices.review.0.2": "ແຕະອຸປະກອນທີ່ທ່ານຢາກລົບ ແລ້ວຢືນຢັນເພື່ອຍົກເລີກການເຊື່ອມຕໍ່.",
-  // en: Note: If you see a device you don't recognise, unlink it and then set up two-step verification.
-  "body.linked-devices.using-other-devices.review.1": "ໝາຍເຫດ: ຖ້າທ່ານເຫັນອຸປະກອນທີ່ທ່ານບໍ່ຮູ້ຈັກ ໃຫ້ຍົກເລີກການເຊື່ອມ ແລ້ວຕັ້ງຄ່າການຢືນຢັນສອງຂັ້ນຕອນ.",
+  // en: Note: If you see a device you do not recognise, unlink it immediately and contact support@waow.app if you think your account was accessed.
+  "body.linked-devices.using-other-devices.review.1": "",
 
   // ── Linked Devices › Using Waow on Other Devices › Are linked devices end-to-end encrypted? ──
   // en: Are linked devices end-to-end encrypted?
@@ -931,59 +886,17 @@ export const loStrings: Record<string, string> = {
   // en: Yes. Each device has its own keys, and your personal messages stay end-to-end encrypted on all of them.
   "body.linked-devices.using-other-devices.device-encryption.0": "ແມ່ນ. ແຕ່ລະອຸປະກອນຈະມີ Key ການເຂົ້າລະຫັດຂອງຕົນເອງ ແລະ ຂໍ້ຄວາມສ່ວນຕົວຂອງທ່ານຈະຍັງຄົງຖືກເຂົ້າລະຫັດແບບຕົ້ນທາງຫາປາຍທາງຢູ່ໃນທຸກອຸປະກອນ.",
 
-  // ── Account and Bans ──
-  // en: Account and Bans
-  "cat.account.title": "ບັນຊີ ແລະ ການລະງັບ",
-  // en: Changing your number, multiple accounts, deletion and banned accounts.
-  "cat.account.blurb": "ການປ່ຽນເບີໂທ, ຫຼາຍບັນຊີ, ການລຶບບັນຊີ ແລະ ບັນຊີທີ່ຖືກລະງັບ.",
+  // ── Account and Reports ──
+  // en: Account and Reports
+  "cat.account.title": "",
+  // en: Profile changes, account deactivation, permanent-erasure requests and support.
+  "cat.account.blurb": "",
 
-  // ── Account and Bans › Manage Your Account ──
-  // en: Manage Your Account
-  "sec.account.manage-account.title": "ຈັດການບັນຊີຂອງທ່ານ",
-
-  // ── Account and Bans › Manage Your Account › How to change your phone number ──
-  // en: How to change your phone number
-  "art.account.manage-account.change-number.title": "ວິທີປ່ຽນເບີໂທລະສັບຂອງທ່ານ",
-  // en: Open **Settings** → **Account** → **Change number**.
-  "body.account.manage-account.change-number.0.0": "ເປີດ **ການຕັ້ງຄ່າ** → **ບັນຊີ** → **ປ່ຽນເບີໂທ**.",
-  // en: Enter your old number and your new number.
-  "body.account.manage-account.change-number.0.1": "ປ້ອນເບີເກົ່າ ແລະ ເບີໃໝ່ຂອງທ່ານ.",
-  // en: Confirm the new number with the code we send you.
-  "body.account.manage-account.change-number.0.2": "ຢືນຢັນເບີໃໝ່ດ້ວຍລະຫັດທີ່ພວກເຮົາສົ່ງໃຫ້ທ່ານ.",
-  // en: Your chats, groups and settings move with you.
-  "body.account.manage-account.change-number.1": "ການສົນທະນາ, ກຸ່ມ ແລະ ການຕັ້ງຄ່າຂອງທ່ານຈະຍ້າຍໄປນຳ.",
-  // en: Note: Do this before you cancel the old SIM — you need to be able to receive the verification code.
-  "body.account.manage-account.change-number.2": "ໝາຍເຫດ: ໃຫ້ເຮັດຂັ້ນຕອນນີ້ກ່ອນທີ່ຈະຍົກເລີກ SIM ເກົ່າ, ເພາະທ່ານຍັງຕ້ອງສາມາດຮັບລະຫັດຢືນຢັນໄດ້",
-
-  // ── Account and Bans › Manage Your Account › How to use two accounts on one phone ──
-  // en: How to use two accounts on one phone
-  "art.account.manage-account.multi-account.title": "ວິທີໃຊ້ສອງບັນຊີໃນໂທລະສັບເຄື່ອງດຽວ",
-  // en: Open **Settings** → **Account** → **Switch account**.
-  "body.account.manage-account.multi-account.0.0": "ເປີດ **ການຕັ້ງຄ່າ** → **ບັນຊີ** → **ສະຫຼັບບັນຊີ**.",
-  // en: Tap **Add account** and register the second number.
-  "body.account.manage-account.multi-account.0.1": "ແຕະ **ເພີ່ມບັນຊີ** ແລ້ວລົງທະບຽນເບີທີສອງ.",
-  // en: Use the same screen to move between accounts.
-  "body.account.manage-account.multi-account.0.2": "ໃຊ້ໜ້າດຽວກັນນີ້ເພື່ອສະຫຼັບໄປມາລະຫວ່າງບັນຊີ.",
-  // en: Each account keeps its own chats, contacts and settings. You do not have to sign out of the first one.
-  "body.account.manage-account.multi-account.1": "ແຕ່ລະບັນຊີຈະມີການສົນທະນາ, ລາຍຊື່ຕິດຕໍ່ ແລະ ການຕັ້ງຄ່າຂອງຕົນເອງ. ທ່ານບໍ່ຈຳເປັນຕ້ອງອອກຈາກລະບົບບັນຊີທຳອິດ.",
-
-  // ── Account and Bans › Manage Your Account › How to request your account information ──
-  // en: How to request your account information
-  "art.account.manage-account.request-info.title": "ວິທີຮ້ອງຂໍຂໍ້ມູນບັນຊີຂອງທ່ານ",
-  // en: Open **Settings** → **Account** → **Request account info**.
-  "body.account.manage-account.request-info.0.0": "ເປີດ **ການຕັ້ງຄ່າ** → **ບັນຊີ** → **ຮ້ອງຂໍຂໍ້ມູນບັນຊີ**.",
-  // en: Tap **Request report**.
-  "body.account.manage-account.request-info.0.1": "ແຕະ **ຮ້ອງຂໍລາຍງານ**.",
-  // en: Come back in a few days to download it.
-  "body.account.manage-account.request-info.0.2": "ກັບມາອີກໃນສອງສາມມື້ເພື່ອດາວໂຫຼດມັນ.",
-  // en: Note: Because your messages are end-to-end encrypted, the report cannot include their contents. Use Export chat if you want a copy of a conversation.
-  "body.account.manage-account.request-info.1": "ໝາຍເຫດ: ເນື່ອງຈາກຂໍ້ຄວາມຖືກເຂົ້າລະຫັດແບບຕົ້ນທາງຫາປາຍທາງ, ລາຍງານຈະບໍ່ລວມເນື້ອຫາຂອງຂໍ້ຄວາມ. ຖ້າຕ້ອງການເກັບສຳເນົາການສົນທະນາ, ໃຫ້ໃຊ້ “ສົ່ງອອກການສົນທະນາ”.",
-
-  // ── Account and Bans › Deleting Your Account ──
+  // ── Account and Reports › Deleting Your Account ──
   // en: Deleting Your Account
   "sec.account.delete-account.title": "ການລຶບບັນຊີຂອງທ່ານ",
 
-  // ── Account and Bans › Deleting Your Account › How to delete your Waow account ──
+  // ── Account and Reports › Deleting Your Account › How to delete your Waow account ──
   // en: How to delete your Waow account
   "art.account.delete-account.delete.title": "ວິທີລຶບບັນຊີ Waow ຂອງທ່ານ",
   // en: Open **Settings** → **Account** → **Delete account**.
@@ -992,34 +905,22 @@ export const loStrings: Record<string, string> = {
   "body.account.delete-account.delete.0.1": "ປ້ອນເບີໂທລະສັບຂອງທ່ານພ້ອມລະຫັດປະເທດ.",
   // en: Tap **Delete my account**.
   "body.account.delete-account.delete.0.2": "ແຕະ ລົບບັນຊີຂອງຂ້ອຍ.",
-  // en: Deleting removes your account, your profile, your group memberships and your message history from our servers.
-  "body.account.delete-account.delete.1": "ຂັ້ນຕອນນີ້ຈະລົບບັນຊີຂອງທ່ານ, ໂປຣໄຟລ໌, ການເຂົ້າຮ່ວມກຸ່ມ ແລະ ປະຫວັດຂໍ້ຄວາມຂອງທ່ານອອກຈາກເຊີບເວີຂອງພວກເຮົາ.",
-  // en: Note: This cannot be undone, and messages other people already received stay on their devices. Export anything you want to keep first.
-  "body.account.delete-account.delete.2": "ໝາຍເຫດ: ການລຶບບັນຊີບໍ່ສາມາດກູ້ຄືນໄດ້. ຂໍ້ຄວາມທີ່ຄົນອື່ນໄດ້ຮັບໄປແລ້ວ ຈະຍັງຄົງຢູ່ໃນອຸປະກອນຂອງພວກເຂົາ. ຖ້າມີຂໍ້ມູນໃດທີ່ທ່ານຕ້ອງການເກັບໄວ້, ໃຫ້ໃຊ້ “ສົ່ງອອກການສົນທະນາ” ເພື່ອເກັບສຳເນົາກ່ອນ.",
+  // en: This deactivates the account immediately and revokes its linked-device sessions. You can recover it for seven days by verifying the same phone number.
+  "body.account.delete-account.delete.1": "",
+  // en: Note: Messages other people already received stay on their devices. Contact privacy@waow.app to request permanent erasure or ask what information remains after deactivation.
+  "body.account.delete-account.delete.2": "",
 
-  // ── Account and Bans › Bans and Reports ──
+  // ── Account and Reports › Bans and Reports ──
   // en: Bans and Reports
   "sec.account.bans.title": "ການລະງັບ ແລະ ການລາຍງານ",
 
-  // ── Account and Bans › Bans and Reports › About banned accounts ──
-  // en: About banned accounts
-  "art.account.bans.banned.title": "ກ່ຽວກັບບັນຊີທີ່ຖືກລະງັບ",
-  // en: Accounts are restricted for sending bulk or automated messages, impersonating other people, or behaviour reported repeatedly by other users.
-  "body.account.bans.banned.0": "ບັນຊີອາດຖືກຈຳກັດການໃຊ້ງານ ຖ້າມີການສົ່ງຂໍ້ຄວາມຈຳນວນຫຼາຍ ຫຼື ສົ່ງຂໍ້ຄວາມແບບອັດຕະໂນມັດ, ປອມແປງເປັນຄົນອື່ນ, ຫຼື ມີພຶດຕິກຳທີ່ຖືກຜູ້ໃຊ້ອື່ນລາຍງານຊ້ຳໆ.",
-  // en: Temporarily banned
-  "body.account.bans.banned.1": "ຖືກລະງັບຊົ່ວຄາວ",
-  // en: A temporary ban usually means unofficial software was detected. Uninstall it, install the official Waow app and wait for the countdown to finish.
-  "body.account.bans.banned.2": "ການລະງັບຊົ່ວຄາວມັກໝາຍເຖິງວ່າລະບົບກວດພົບວ່າທ່ານກຳລັງໃຊ້ຊອບແວ ຫຼື ແອັບ Waow ເວີຊັ່ນທາງການ. ໃຫ້ຖອນການຕິດຕັ້ງແອັບນັ້ນ ແລະ ຕິດຕັ້ງ Waow ເວີຊັ່ນທາງການແທນ",
-  // en: If you believe the decision was wrong, contact support@waow.app and ask for a review.
-  "body.account.bans.banned.3": "ຖ້າທ່ານຄິດວ່າການລະງັບນີ້ເກີດຈາກຄວາມຜິດພາດ, ໃຫ້ຕິດຕໍ່ support@waow.app ເພື່ອຂໍໃຫ້ກວດສອບຄືນ.",
-
-  // ── Account and Bans › Bans and Reports › How to report a problem ──
+  // ── Account and Reports › Bans and Reports › How to report a problem ──
   // en: How to report a problem
   "art.account.bans.report-problem.title": "ວິທີລາຍງານບັນຫາ",
   // en: Open **Settings** → **Help** → **Report a problem**.
   "body.account.bans.report-problem.0.0": "ເປີດ **ການຕັ້ງຄ່າ** → **ຊ່ວຍເຫຼືອ** → **ລາຍງານບັນຫາ**.",
   // en: Describe what happened and tap send.
   "body.account.bans.report-problem.0.1": "ອະທິບາຍສິ່ງທີ່ເກີດຂຶ້ນ ແລ້ວແຕະສົ່ງ.",
-  // en: Note: The report includes diagnostic details about your app and device — never your messages, your media or your encryption keys.
-  "body.account.bans.report-problem.1": "ໝາຍເຫດ: ລາຍງານນີ້ມີພຽງຂໍ້ມູນສຳລັບການກວດສອບບັນຫາຂອງແອັບ ແລະ ອຸປະກອນຂອງທ່ານເທົ່ານັ້ນ — ຈະບໍ່ມີຂໍ້ຄວາມ, ໄຟລ໌ສື່ ຫຼື Key ຕ່າງໆຂອງທ່ານ.",
+  // en: Note: Include your app version, device model and steps that reproduce the problem. Never email verification codes, passwords, encryption keys or private message content.
+  "body.account.bans.report-problem.1": "",
 };
