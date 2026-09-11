@@ -40,7 +40,21 @@ const worker = {
       }, allowedWidths);
     }
 
-    return handler.fetch(request, env, ctx);
+    const response = await handler.fetch(request, env, ctx);
+    const isLaoDocument =
+      (url.pathname === "/lo" || url.pathname.startsWith("/lo/")) &&
+      response.headers.get("content-type")?.includes("text/html");
+
+    if (!isLaoDocument) return response;
+
+    const html = (await response.text()).replace('<html lang="en"', '<html lang="lo"');
+    const headers = new Headers(response.headers);
+    headers.delete("content-length");
+    return new Response(html, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
   },
 };
 

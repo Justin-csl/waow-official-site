@@ -3,7 +3,11 @@ import { AboutPageContent } from "./content";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Learn about Waow and its mission.",
+  description: "Meet Waow, a private messaging app built in Laos to help people communicate safely and feel closer.",
+  alternates: {
+    canonical: "/about",
+    languages: { en: "/about", lo: "/lo/about", "x-default": "/about" },
+  },
 };
 
 export default function Page() {

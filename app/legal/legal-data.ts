@@ -145,7 +145,7 @@ const privacy: LegalBlock[] = [
   { type: "h2", text: "Deleting your account" },
   {
     type: "p",
-    text: "In the app: Settings → Account → Delete Account",
+    text: "In the app: Settings → Account → Delete Account. From a browser, without installing the app: waow.la/delete-account.",
   },
   {
     type: "p",

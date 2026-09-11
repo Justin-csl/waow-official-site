@@ -99,9 +99,13 @@ const legacyLegalLo: Record<string, string> = {
   "legal.privacy.27.5": "ລຶບບັນຊີຂອງທ່ານໄດ້ທຸກເວລາ.",
   // en: Deleting your account
   "legal.privacy.28": "ການລຶບບັນຊີຂອງທ່ານ",
-  // en: In the app: Settings → Account → Delete Account
-  "legal.privacy.29": "ໃນແອັບ: ການຕັ້ງຄ່າ → ບັນຊີ → ລຶບບັນຊີ.",
+  // en: In the app: Settings → Account → Delete Account. From a browser, without installing the app: waow.la/delete-account.
+  "legal.privacy.29": "ໃນແອັບ: ການຕັ້ງຄ່າ → ບັນຊີ → ລຶບບັນຊີ. ຈາກບຣາວເຊີ ໂດຍບໍ່ຕ້ອງຕິດຕັ້ງແອັບ: waow.la/delete-account.",
+  // en: When you delete your account in the app, Waow deactivates it immediately and revokes its linked-device sessions. The account can be recovered for seven days by verifying its phone number. Messages already delivered to other people may remain on their devices. For permanent erasure requests or questions about information that remains after deactivation, write to privacy@waow.app.
   "legal.privacy.30": "ເມື່ອທ່ານລຶບບັນຊີໃນແອັບ Waow ຈະປິດການໃຊ້ງານບັນຊີທັນທີ ແລະ ຍົກເລີກເຊດຊັນອຸປະກອນທີ່ເຊື່ອມໂຍງ. ບັນຊີສາມາດກູ້ຄືນໄດ້ພາຍໃນ 7 ວັນໂດຍຢືນຢັນເບີໂທ. ຂໍ້ຄວາມທີ່ສົ່ງແລ້ວອາດຍັງຢູ່ໃນອຸປະກອນຂອງຜູ້ຮັບ. ສຳລັບການຂໍລຶບຖາວອນ ຫຼື ຄຳຖາມກ່ຽວກັບຂໍ້ມູນທີ່ຍັງເຫຼືອ ກະລຸນາຂຽນຫາ privacy@waow.app.",
+  // en: Age
+  "legal.privacy.31": "ອາຍຸ",
+  // en: Waow is for people aged 16 and over. If you are under 18, you confirm that a parent or legal guardian permits you to use Waow. If we learn that an account belongs to someone under 16, we close it. If you believe someone under 16 is using Waow, tell us at safety@waow.app.
   "legal.privacy.32": "Waow ແມ່ນສຳລັບຜູ້ທີ່ມີອາຍຸ 16 ປີຂຶ້ນໄປ. ຖ້າທ່ານມີອາຍຸຕ່ຳກວ່າ 18 ປີ ທ່ານຢືນຢັນວ່າພໍ່ແມ່ ຫຼື ຜູ້ປົກຄອງຕາມກົດໝາຍອະນຸຍາດໃຫ້ທ່ານໃຊ້ Waow. ຖ້າພວກເຮົາຮູ້ວ່າບັນຊີໃດເປັນຂອງຜູ້ທີ່ມີອາຍຸຕ່ຳກວ່າ 16 ປີ ພວກເຮົາຈະປິດມັນ. ຖ້າທ່ານເຊື່ອວ່າມີຜູ້ທີ່ມີອາຍຸຕ່ຳກວ່າ 16 ປີໃຊ້ Waow ກະລຸນາແຈ້ງພວກເຮົາທີ່ safety@waow.app.",
   // en: Changes to this policy
   "legal.privacy.33": "ການປ່ຽນແປງນະໂຍບາຍນີ້",
@@ -177,8 +181,8 @@ const legacyLegalLo: Record<string, string> = {
   "legal.terms.22": "ຖ້າທ່ານຄິດວ່າພວກເຮົາຕັດສິນຜິດ ກະລຸນາຂຽນຫາ support@waow.app ຫຼື safety@waow.app ແລ້ວພວກເຮົາຈະທົບທວນຄືນ.",
   // en: 11. Ending your use of Waow
   "legal.terms.23": "11. ການສິ້ນສຸດການໃຊ້ Waow ຂອງທ່ານ",
-  // en: You may stop using Waow and delete your account at any time, in the app or at waow.app/delete-account.
-  "legal.terms.24": "ທ່ານສາມາດຢຸດໃຊ້ Waow ແລະ ລຶບບັນຊີຂອງທ່ານໄດ້ທຸກເວລາ ບໍ່ວ່າຈະໃນແອັບ ຫຼື ທີ່ waow.app/delete-account.",
+  // en: You may stop using Waow and delete your account at any time, in the app or at waow.la/delete-account.
+  "legal.terms.24": "ທ່ານສາມາດຢຸດໃຊ້ Waow ແລະ ລຶບບັນຊີຂອງທ່ານໄດ້ທຸກເວລາ ບໍ່ວ່າຈະໃນແອັບ ຫຼື ທີ່ waow.la/delete-account.",
   // en: 12. Liability
   "legal.terms.25": "12. ຄວາມຮັບຜິດຊອບ",
   // en: To the fullest extent Lao law allows, we are not responsible for content created by users, or for indirect or consequential losses. Nothing in these Terms limits liability that cannot be limited by law.
@@ -395,7 +399,7 @@ const legacyLegalLo: Record<string, string> = {
   // ── website-privacy ──
   // en: Website Privacy Notice
   "legal.website-privacy.title": "ແຈ້ງການຄວາມເປັນສ່ວນຕົວຂອງເວັບໄຊ",
-  // en: This notice covers waow.app itself. Our Privacy Policy covers the Waow app.
+  // en: This notice covers waow.la itself. Our Privacy Policy covers the Waow app.
   "legal.website-privacy.0": "ແຈ້ງການນີ້ຄຸ້ມຄອງ waow.la ເອງ. ນະໂຍບາຍຄວາມເປັນສ່ວນຕົວຂອງພວກເຮົາຄຸ້ມຄອງແອັບ Waow.",
   // en: Our website host records standard technical information about visits — IP address, browser type, pages requested and time of request — to keep the site available and secure.
   "legal.website-privacy.1.0": "ຜູ້ໃຫ້ບໍລິການໂຮສເວັບໄຊຂອງພວກເຮົາບັນທຶກຂໍ້ມູນທາງເຕັກນິກມາດຕະຖານກ່ຽວກັບການເຂົ້າຊົມ — ທີ່ຢູ່ IP, ປະເພດບຣາວເຊີ, ໜ້າທີ່ຮ້ອງຂໍ ແລະ ເວລາຂອງການຮ້ອງຂໍ — ເພື່ອຮັກສາໃຫ້ເວັບໄຊໃຊ້ງານໄດ້ ແລະ ປອດໄພ.",

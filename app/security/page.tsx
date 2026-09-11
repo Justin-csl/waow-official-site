@@ -4,6 +4,10 @@ import { SecurityPageContent } from "./content";
 export const metadata: Metadata = {
   title: "Security",
   description: "Learn how Waow approaches authentication, device security and responsible disclosure.",
+  alternates: {
+    canonical: "/security",
+    languages: { en: "/security", lo: "/lo/security", "x-default": "/security" },
+  },
 };
 
 export default function Page() {

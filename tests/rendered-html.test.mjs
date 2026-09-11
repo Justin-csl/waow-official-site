@@ -29,19 +29,68 @@ test("server-renders the finished Waow homepage and metadata", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Waow — Keep love moving<\/title>/i);
+  assert.match(html, /<title>Waow — Private messaging app from Laos<\/title>/i);
+  assert.match(html, /<link rel="canonical" href="https:\/\/waow\.la\/"\s*\/>/i);
+  assert.match(html, /https:\/\/waow\.la\/#organization/);
+  assert.match(html, /CommunicationApplication/);
   assert.match(html, /Keep love moving/);
   assert.match(html, /End-to-end encrypted messaging/);
   assert.match(html, /waow-app-icon\.png/);
   assert.match(html, /new-land\.png/);
-  assert.match(html, /screens\/chat-list-real\.png/);
   assert.match(html, /screens\/chat-real\.png/);
   assert.match(html, /screens\/translation-real\.png/);
+  assert.match(html, /screens\/showcase-chat-list\.webp/);
+  assert.match(html, /screens\/showcase-chat\.webp/);
+  assert.match(html, /screens\/showcase-translation\.webp/);
   assert.match(html, /21st42\.png/);
   assert.match(html, /traslation\.png/);
-  assert.match(html, /screens\/login-real\.png/);
+  assert.match(html, /screens\/showcase-login\.webp/);
   assert.match(html, /https:\/\/web\.waow\.app\//);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton|Starter Project/);
+});
+
+test("publishes crawler discovery files for the canonical domain", async () => {
+  const robotsResponse = await render("/robots.txt");
+  assert.equal(robotsResponse.status, 200);
+  const robots = await robotsResponse.text();
+  assert.match(robots, /Allow: \/$/m);
+  assert.match(robots, /Disallow: \/healthz$/m);
+  assert.match(robots, /Sitemap: https:\/\/waow\.la\/sitemap\.xml/);
+
+  const sitemapResponse = await render("/sitemap.xml");
+  assert.equal(sitemapResponse.status, 200);
+  const sitemap = await sitemapResponse.text();
+  assert.match(sitemap, /<loc>https:\/\/waow\.la\/<\/loc>/);
+  assert.match(sitemap, /<loc>https:\/\/waow\.la\/features<\/loc>/);
+  assert.match(sitemap, /<loc>https:\/\/waow\.la\/legal\/privacy<\/loc>/);
+  assert.match(sitemap, /<loc>https:\/\/waow\.la\/lo<\/loc>/);
+  assert.match(sitemap, /<loc>https:\/\/waow\.la\/lo\/faq<\/loc>/);
+  assert.doesNotMatch(sitemap, /waow\.chat|\/healthz/);
+});
+
+test("server-renders Lao routes with Lao copy and reciprocal language links", async () => {
+  const expectations = [
+    ["/lo", /ຮັກສາຄວາມຮັກໃຫ້ເຄື່ອນໄຫວ/],
+    ["/lo/features", /ທຸກສິ່ງທີ່ທ່ານຕ້ອງການ/],
+    ["/lo/download", /ພາ Waow ໄປກັບທ່ານ/],
+    ["/lo/help", /ພວກເຮົາຊ່ວຍທ່ານໄດ້ແນວໃດ/],
+    ["/lo/faq", /ສູນຊ່ວຍເຫຼືອ/],
+    ["/lo/security", /ຄວາມປອດໄພແມ່ນການປະຕິບັດ/],
+    ["/lo/about", /ເຕັກໂນໂລຊີຄວນເຮັດໃຫ້ຄົນ/],
+  ];
+
+  for (const [pathname, content] of expectations) {
+    const response = await render(pathname);
+    assert.equal(response.status, 200, pathname);
+    const html = await response.text();
+    assert.match(html, content, pathname);
+    assert.match(html, /hreflang="lo"/i, pathname);
+    assert.match(html, /hreflang="en"/i, pathname);
+    assert.match(html, /<html lang="lo">/i, pathname);
+  }
+
+  const english = await (await render("/features")).text();
+  assert.match(english, /hrefLang="lo" href="https:\/\/waow\.la\/lo\/features"/i);
 });
 
 test("server-renders every official public route", async () => {
@@ -119,7 +168,7 @@ test("keeps the official site isolated from the chat application", async () => {
 
   assert.match(strings, /Keep love/);
   assert.match(strings, /moving, one/);
-  assert.match(layout, /Waow — Keep love moving/);
+  assert.match(layout, /Waow — Private messaging app from Laos/);
   assert.doesNotMatch(packageJson, /react-native|react-loading-skeleton/);
   assert.deepEqual(JSON.parse(hosting), {
     project_id: "appgprj_6a62e18d1cb08191b5b331a9cbff858c",

@@ -1,14 +1,29 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
+import { LanguageProvider } from "./i18n/lang";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ variable: "--font-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://waow.chat"),
-  title: { default: "Waow — Keep love moving", template: "%s · Waow" },
-  description: "End-to-end encrypted messaging, expressive media and clear calling—made to keep your favourite people close.",
+  metadataBase: new URL("https://waow.la"),
+  applicationName: "Waow",
+  title: { default: "Waow — Private messaging app from Laos", template: "%s · Waow" },
+  description:
+    "Waow is a messaging app from Laos with end-to-end encrypted chats, clear calls, expressive media and instant translation.",
+  keywords: [
+    "Waow",
+    "Laos messaging app",
+    "Lao chat app",
+    "private messaging",
+    "end-to-end encrypted messaging",
+    "Lao translation",
+  ],
+  authors: [{ name: "Dynamic Solution Sole Co., Ltd." }],
+  creator: "Dynamic Solution Sole Co., Ltd.",
+  publisher: "Dynamic Solution Sole Co., Ltd.",
+  category: "technology",
   icons: {
     icon: [
       { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
@@ -19,14 +34,18 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Waow — Keep love moving",
-    description: "End-to-end encrypted messaging, expressive media and clear calling—made for the people you love.",
+    title: "Waow — Private messaging app from Laos",
+    description:
+      "Private chats, clear calls, expressive media and instant translation—built in Laos for the people you love.",
     type: "website",
+    siteName: "Waow",
+    locale: "en_US",
   },
   twitter: {
     card: "summary",
-    title: "Waow — Keep love moving",
-    description: "End-to-end encrypted messaging, expressive media and clear calling—made for the people you love.",
+    title: "Waow — Private messaging app from Laos",
+    description:
+      "Private chats, clear calls, expressive media and instant translation—built in Laos for the people you love.",
   },
 };
 
@@ -46,7 +65,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           rel="stylesheet"
         />
       </head>
-      <body className={`${plusJakartaSans.variable} ${geistMono.variable}`}>{children}</body>
+      <body className={`${plusJakartaSans.variable} ${geistMono.variable}`}>
+        <LanguageProvider lang="en">{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

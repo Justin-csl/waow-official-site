@@ -3,7 +3,11 @@ import { FeaturesPageContent } from "./content";
 
 export const metadata: Metadata = {
   title: "Features",
-  description: "Discover end-to-end encrypted messaging, calls, media, groups and iPad experiences in Waow.",
+  description: "Explore Waow's encrypted chats, calls, groups, media sharing and instant Lao translation.",
+  alternates: {
+    canonical: "/features",
+    languages: { en: "/features", lo: "/lo/features", "x-default": "/features" },
+  },
 };
 
 export default function Page() {

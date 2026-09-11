@@ -7,7 +7,10 @@ export const metadata: Metadata = {
   title: "FAQ",
   description:
     "Answers about Waow: getting started, chats and groups, calls, translation, media and storage, privacy and encryption, notifications, linked devices and your account.",
-  alternates: { canonical: "/faq" },
+  alternates: {
+    canonical: "/faq",
+    languages: { en: "/faq", lo: "/lo/faq", "x-default": "/faq" },
+  },
 };
 
 // Structured data uses the English source; it is the canonical version of the page.

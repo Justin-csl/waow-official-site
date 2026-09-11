@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { SiteFooter, SiteHeader } from "./site-shell";
-import { useT } from "./i18n/lang";
+import { useLocalizedPath, useT } from "./i18n/lang";
 
 const features = [
   {
@@ -40,6 +40,7 @@ const trustPoints = [
 
 export function HomeContent() {
   const t = useT();
+  const featuresHref = useLocalizedPath("/features");
   return (
     <main>
       <SiteHeader />
@@ -57,7 +58,7 @@ export function HomeContent() {
             <Link className="button button-primary" href="https://web.waow.app/" target="_blank" rel="noreferrer">
               {t("home.cta.download")} <span>↗</span>
             </Link>
-            <Link className="text-link" href="/features">
+            <Link className="text-link" href={featuresHref}>
               {t("home.cta.explore")} <span>→</span>
             </Link>
           </div>
@@ -207,17 +208,17 @@ export function HomeContent() {
           </div>
           <div className="screen-gallery">
             <div className="gallery-phone gallery-left">
-              <img src="/screens/chat-list-real.png" alt="Real Waow chats screen" />
+              <img src="/screens/showcase-chat-list.webp" alt="Waow chat list with recent personal and group conversations" />
             </div>
             <div className="gallery-phone gallery-centre">
-              <img src="/screens/chat-real.png" alt="Real Waow conversation screen" />
+              <img src="/screens/showcase-chat.webp" alt="Waow conversation using a Lao-inspired chat background" />
             </div>
             <div className="gallery-phone gallery-right">
-              <img src="/screens/translation-real.png" alt="Real Waow instant translation conversation" />
+              <img src="/screens/showcase-translation.webp" alt="Waow conversation showing instant English to Lao translation" />
             </div>
           </div>
           <div className="campaign-action">
-            <Link className="button button-light" href="/features">Explore every feature <span>→</span></Link>
+            <Link className="button button-light" href={featuresHref}>{t("home.cta.explore")} <span>→</span></Link>
           </div>
         </div>
       </section>
@@ -255,7 +256,7 @@ export function HomeContent() {
       <section className="onboarding-band">
         <div className="shell onboarding-layout">
           <div className="onboarding-screens">
-            <div className="setup-phone setup-back"><img src="/screens/login-real.png" alt="Real Waow phone-number login screen" /></div>
+            <div className="setup-phone setup-back"><img src="/screens/showcase-login.webp" alt="Waow phone-number login screen with Lao country code" /></div>
             <div className="setup-phone setup-middle"><img src="/screens/onboarding-stay-connected.png" alt="Real Waow stay-connected onboarding screen" /></div>
             <div className="setup-phone setup-front"><img src="/screens/onboarding-connection.png" alt="Real Waow connection onboarding screen" /></div>
           </div>

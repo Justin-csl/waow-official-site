@@ -1,6 +1,14 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useSyncExternalStore } from "react";
+import {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useSyncExternalStore,
+  type ReactNode,
+} from "react";
 import { loStrings } from "./lo";
 import { siteStrings, type SiteKey } from "./strings";
 
@@ -12,6 +20,12 @@ export const LANGS: { code: Lang; label: string }[] = [
 ];
 
 export const LANG_STORAGE_KEY = "waow-lang";
+
+const RouteLangContext = createContext<Lang | null>(null);
+
+export function LanguageProvider({ lang, children }: { lang: Lang; children: ReactNode }) {
+  return <RouteLangContext.Provider value={lang}>{children}</RouteLangContext.Provider>;
+}
 
 /**
  * The chosen language lives in localStorage so it survives navigation. It is
@@ -41,7 +55,22 @@ export const langStore = {
 };
 
 export function useLang(): Lang {
-  return useSyncExternalStore(langStore.subscribe, langStore.get, langStore.serverGet);
+  const routeLang = useContext(RouteLangContext);
+  const storedLang = useSyncExternalStore(langStore.subscribe, langStore.get, langStore.serverGet);
+  return routeLang ?? storedLang;
+}
+
+const laoRoutes = new Set(["/", "/about", "/features", "/download", "/help", "/faq", "/security"]);
+
+export function localizedPath(path: string, lang: Lang): string {
+  if (lang !== "lo") return path;
+  const [pathname, hash] = path.split("#", 2);
+  if (!laoRoutes.has(pathname)) return path;
+  return `/lo${pathname === "/" ? "" : pathname}${hash ? `#${hash}` : ""}`;
+}
+
+export function useLocalizedPath(path: string): string {
+  return localizedPath(path, useLang());
 }
 
 /**
@@ -78,6 +107,15 @@ export function useDocT(overlay: Record<string, string>) {
 export function LanguageToggle() {
   const lang = useLang();
   const t = useT();
+
+  const changeLanguage = (next: Lang) => {
+    langStore.set(next);
+    const currentPath = window.location.pathname;
+    const englishPath = currentPath === "/lo" ? "/" : currentPath.replace(/^\/lo\//, "/");
+    const nextPath = next === "lo" ? localizedPath(englishPath, "lo") : englishPath;
+    if (nextPath !== currentPath) window.location.assign(`${nextPath}${window.location.hash}`);
+  };
+
   return (
     <div className="lang-toggle" role="group" aria-label={t("ui.changeLanguage")}>
       {LANGS.map((option) => (
@@ -87,7 +125,7 @@ export function LanguageToggle() {
           lang={option.code}
           className={option.code === lang ? "active" : undefined}
           aria-pressed={option.code === lang}
-          onClick={() => langStore.set(option.code)}
+          onClick={() => changeLanguage(option.code)}
         >
           {option.label}
         </button>
