@@ -29,12 +29,12 @@ test("server-renders the finished Waow homepage and metadata", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, /<title>Waow — Private messaging app from Laos<\/title>/i);
+  assert.match(html, /<title>Waow — Lao chat and messaging app<\/title>/i);
   assert.match(html, /<link rel="canonical" href="https:\/\/waow\.la\/"\s*\/>/i);
   assert.match(html, /https:\/\/waow\.la\/#organization/);
   assert.match(html, /CommunicationApplication/);
-  assert.match(html, /Keep love moving/);
-  assert.match(html, /End-to-end encrypted messaging/);
+  assert.match(html, /A Lao chat app for every/);
+  assert.match(html, /English–Lao translation/);
   assert.match(html, /waow-app-icon\.png/);
   assert.match(html, /new-land\.png/);
   assert.match(html, /screens\/chat-real\.png/);
@@ -70,13 +70,13 @@ test("publishes crawler discovery files for the canonical domain", async () => {
 
 test("server-renders Lao routes with Lao copy and reciprocal language links", async () => {
   const expectations = [
-    ["/lo", /ຮັກສາຄວາມຮັກໃຫ້ເຄື່ອນໄຫວ/],
-    ["/lo/features", /ທຸກສິ່ງທີ່ທ່ານຕ້ອງການ/],
-    ["/lo/download", /ພາ Waow ໄປກັບທ່ານ/],
+    ["/lo", /ແອັບແຊັດລາວສຳລັບທຸກ/],
+    ["/lo/features", /ສົ່ງຂໍ້ຄວາມລາວ, ແຊັດກຸ່ມ/],
+    ["/lo/download", /ດາວໂຫຼດແອັບແຊັດລາວ Waow/],
     ["/lo/help", /ພວກເຮົາຊ່ວຍທ່ານໄດ້ແນວໃດ/],
     ["/lo/faq", /ສູນຊ່ວຍເຫຼືອ/],
     ["/lo/security", /ຄວາມປອດໄພແມ່ນການປະຕິບັດ/],
-    ["/lo/about", /ເຕັກໂນໂລຊີຄວນເຮັດໃຫ້ຄົນ/],
+    ["/lo/about", /ແອັບສົ່ງຂໍ້ຄວາມທີ່ສ້າງຢູ່ລາວ/],
   ];
 
   for (const [pathname, content] of expectations) {
@@ -95,14 +95,14 @@ test("server-renders Lao routes with Lao copy and reciprocal language links", as
 
 test("server-renders every official public route", async () => {
   const expectations = [
-    ["/features", /Everything you need to keep the conversation moving/],
+    ["/features", /Lao messaging, group chat, voice and video calls in one app/],
     ["/legal/privacy", /Waow is a communication service operated by Dynamic Solution Sole Co/],
     ["/legal/terms", /These Terms are an agreement between you and Dynamic Solution Sole Co/],
     ["/faq", /How can we help you/],
     ["/security", /Security is a practice, not a slogan/],
-    ["/download", /Bring Waow with you/],
+    ["/download", /Download the Waow Lao chat app/],
     ["/help", /How can we help/],
-    ["/about", /Technology should make people feel closer/],
+    ["/about", /A messaging app created in Laos to bring people closer/],
   ];
 
   for (const [pathname, content] of expectations) {
@@ -166,9 +166,9 @@ test("keeps the official site isolated from the chat application", async () => {
     readFile(new URL("../.openai/hosting.json", import.meta.url), "utf8"),
   ]);
 
-  assert.match(strings, /Keep love/);
-  assert.match(strings, /moving, one/);
-  assert.match(layout, /Waow — Private messaging app from Laos/);
+  assert.match(strings, /A Lao chat app for every/);
+  assert.match(strings, /Lao chat translation/);
+  assert.match(layout, /Waow — Lao chat and messaging app/);
   assert.doesNotMatch(packageJson, /react-native|react-loading-skeleton/);
   assert.deepEqual(JSON.parse(hosting), {
     project_id: "appgprj_6a62e18d1cb08191b5b331a9cbff858c",

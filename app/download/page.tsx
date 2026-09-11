@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import { DownloadPageContent } from "./content";
 
 export const metadata: Metadata = {
-  title: "Download",
-  description: "Download Waow, the private messaging app from Laos, for iPhone and iPad or use Waow on the web.",
+  title: "Download Waow — Lao chat app for iPhone and iPad",
+  description: "Download Waow, a Lao chat and messaging app for iPhone and iPad, or open the official Waow web app.",
   alternates: {
     canonical: "/download",
     languages: { en: "/download", lo: "/lo/download", "x-default": "/download" },

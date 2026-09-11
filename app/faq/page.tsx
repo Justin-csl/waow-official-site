@@ -4,7 +4,7 @@ import { FaqBrowser } from "./faq-browser";
 import { faqCategories } from "./faq-data";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "Waow FAQ — Lao chat, calls and message translation",
   description:
     "Answers about Waow: getting started, chats and groups, calls, translation, media and storage, privacy and encryption, notifications, linked devices and your account.",
   alternates: {

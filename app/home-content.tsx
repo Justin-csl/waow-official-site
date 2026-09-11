@@ -173,13 +173,9 @@ export function HomeContent() {
           <div className="privacy-copy">
             <span className="eyebrow eyebrow-light">{t("home.trust.eyebrow")}</span>
             <h2>{t("home.trust.title")}</h2>
-            <p>
-              End-to-end encryption protects personal and group messages, while calls are encrypted in transit.
-              Face ID chat lock, hidden conversations and discreet previews give
-              you clear control over your private spaces.
-            </p>
+            <p>{t("home.trust.copy")}</p>
             <Link className="button button-light" href="/privacy">
-              Explore privacy <span>→</span>
+              {t("home.trust.cta")} <span>→</span>
             </Link>
           </div>
           <div className="privacy-list">
@@ -225,7 +221,7 @@ export function HomeContent() {
 
       <section className="translation-band">
         <div className="shell translation-layout">
-          <div className="translation-visual" aria-label="Instant translation inside a real Waow conversation">
+          <div className="translation-visual" aria-label="English and Lao message translation inside a real Waow conversation">
             <div className="translation-glow" />
             <img
               className="translation-product-art"
@@ -239,13 +235,9 @@ export function HomeContent() {
             />
           </div>
           <div className="translation-copy">
-            <span className="eyebrow eyebrow-light">Instant translation</span>
-            <h2>Understand every conversation, instantly.</h2>
-            <p>
-              Translate messages inside the chat while keeping the original
-              meaning close at hand. Move naturally between Lao and English
-              without leaving Waow.
-            </p>
+            <span className="eyebrow eyebrow-light">{t("home.translation.eyebrow")}</span>
+            <h2>{t("home.translation.title")}</h2>
+            <p>{t("home.translation.copy")}</p>
             <div className="language-pills">
               <span>ລາວ</span><b>⇄</b><span>English</span>
             </div>
@@ -261,9 +253,9 @@ export function HomeContent() {
             <div className="setup-phone setup-front"><img src="/screens/onboarding-connection.png" alt="Real Waow connection onboarding screen" /></div>
           </div>
           <div className="onboarding-copy">
-            <span className="eyebrow eyebrow-light">Simple from the start</span>
-            <h2>From hello to your first message in a few clear steps.</h2>
-            <p>Sign in with your phone number, verify securely, set up your profile and start talking.</p>
+            <span className="eyebrow eyebrow-light">{t("home.onboarding.eyebrow")}</span>
+            <h2>{t("home.onboarding.title")}</h2>
+            <p>{t("home.onboarding.copy")}</p>
             <div className="onboarding-preview-row" aria-label="Real Waow onboarding screens">
               <img src="/screens/onboarding-stay-connected.png" alt="Stay connected onboarding preview" />
               <img src="/screens/onboarding-typing.png" alt="Typing and conversation onboarding preview" />
@@ -276,12 +268,12 @@ export function HomeContent() {
       <section className="download-cta">
         <div className="shell download-inner">
           <div>
-            <span className="eyebrow eyebrow-light">Start your next conversation</span>
-            <h2>Say hello to Waow.</h2>
+            <span className="eyebrow eyebrow-light">{t("home.download.eyebrow")}</span>
+            <h2>{t("home.download.title")}</h2>
           </div>
           <div className="download-action">
-            <Link className="button button-light" href="https://web.waow.app/" target="_blank" rel="noreferrer">Get Waow for iOS <span>↗</span></Link>
-            <p>Available for iPhone and iPad</p>
+            <Link className="button button-light" href="https://web.waow.app/" target="_blank" rel="noreferrer">{t("home.download.cta")} <span>↗</span></Link>
+            <p>{t("home.download.availability")}</p>
           </div>
         </div>
       </section>

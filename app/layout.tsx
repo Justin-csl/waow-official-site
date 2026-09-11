@@ -9,17 +9,9 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 export const metadata: Metadata = {
   metadataBase: new URL("https://waow.la"),
   applicationName: "Waow",
-  title: { default: "Waow — Private messaging app from Laos", template: "%s · Waow" },
+  title: { default: "Waow — Lao chat and messaging app", template: "%s · Waow" },
   description:
-    "Waow is a messaging app from Laos with end-to-end encrypted chats, clear calls, expressive media and instant translation.",
-  keywords: [
-    "Waow",
-    "Laos messaging app",
-    "Lao chat app",
-    "private messaging",
-    "end-to-end encrypted messaging",
-    "Lao translation",
-  ],
+    "Waow is a Lao chat and messaging app with private conversations, clear voice and video calls, expressive media and English–Lao message translation.",
   authors: [{ name: "Dynamic Solution Sole Co., Ltd." }],
   creator: "Dynamic Solution Sole Co., Ltd.",
   publisher: "Dynamic Solution Sole Co., Ltd.",
@@ -34,18 +26,18 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: "Waow — Private messaging app from Laos",
+    title: "Waow — Lao chat and messaging app",
     description:
-      "Private chats, clear calls, expressive media and instant translation—built in Laos for the people you love.",
+      "Private messages, group chat, voice and video calls, expressive media and English–Lao translation—built in Laos.",
     type: "website",
     siteName: "Waow",
     locale: "en_US",
   },
   twitter: {
     card: "summary",
-    title: "Waow — Private messaging app from Laos",
+    title: "Waow — Lao chat and messaging app",
     description:
-      "Private chats, clear calls, expressive media and instant translation—built in Laos for the people you love.",
+      "Private messages, group chat, voice and video calls, expressive media and English–Lao translation—built in Laos.",
   },
 };
 

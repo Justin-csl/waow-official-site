@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { HomeContent } from "./home-content";
 
 export const metadata: Metadata = {
+  title: { absolute: "Waow — Lao chat and messaging app" },
+  description:
+    "Waow is a Lao chat and messaging app for private messages, group conversations, voice and video calls, and English–Lao chat translation.",
   alternates: {
     canonical: "/",
     languages: { en: "/", lo: "/lo", "x-default": "/" },
@@ -41,7 +44,7 @@ const structuredData = {
       applicationCategory: "CommunicationApplication",
       operatingSystem: "iOS, iPadOS, Web",
       description:
-        "A messaging app from Laos with end-to-end encrypted chats, calls, media sharing and instant translation.",
+        "A Lao messaging app with end-to-end encrypted chats, voice and video calls, group conversations, media sharing and user-requested English–Lao translation.",
       publisher: { "@id": "https://waow.la/#organization" },
     },
   ],
