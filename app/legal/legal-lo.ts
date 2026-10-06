@@ -481,6 +481,7 @@ export const legalLo: Record<string, string> = {
       ([key]) => !staleExactKeys.has(key) && !stalePrefixes.some((prefix) => key.startsWith(prefix)),
     ),
   ),
+  "legal.privacy.5.4": "ລາຍງານ, ຄຳອຸທອນ ແລະ ຂໍ້ຄວາມຂໍຄວາມຊ່ວຍເຫຼືອທີ່ທ່ານສົ່ງຫາພວກເຮົາ.",
   "legal.ai-translation.title": "ແຈ້ງການກ່ຽວກັບການແປພາສາ",
   "legal.delete-account.title": "ປິດການໃຊ້ງານ ຫຼື ຂໍລຶບບັນຊີ",
 };

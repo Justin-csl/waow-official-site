@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Geist_Mono } from "next/font/google";
-import { LanguageProvider } from "./i18n/lang";
 import "./globals.css";
 
 const plusJakartaSans = Plus_Jakarta_Sans({ variable: "--font-sans", subsets: ["latin"] });
@@ -58,7 +57,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         />
       </head>
       <body className={`${plusJakartaSans.variable} ${geistMono.variable}`}>
-        <LanguageProvider lang="en">{children}</LanguageProvider>
+        {children}
       </body>
     </html>
   );
